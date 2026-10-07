@@ -1,38 +1,27 @@
-# UmweltMetrik React
+# UmweltMetrik bilingual React site
 
-نسخه React/Vite پروژه UmweltMetrik.
+The supplied single-file HTML site has been converted to React without duplicating the page. Its original layout, CSS, section anchors, content and contact payload fields are retained.
 
-## اجرا در سیستم محلی
+## Run and build
 
-```bash
-npm install
-npm run dev
-```
+- `npm ci`
+- `npm run dev`
+- `npm run build`
+- `npm run preview`
 
-برای build نهایی:
+Deploy the contents of `dist/` to the existing static host. The build copies the existing CNAME. Serve the built files, rather than the source index.html. No deployment has been performed.
 
-```bash
-npm run build
-```
+## Files
 
-## فرم تماس
+Modified: `index.html` (React entry with German SEO defaults).
+Added: `src/App.jsx` (existing layout and contact submission), `src/main.jsx`, `src/styles.css` (original CSS plus compact selector and navigation spacing), `src/LanguageSwitcher.jsx`, `src/i18n/LanguageContext.jsx`, `src/i18n/translations.js`, `package.json`, `package-lock.json`, `vite.config.js`, `.gitignore`, `playwright.config.js`, `tests/bilingual.spec.js`, and this README.
 
-فرم تماس به Cloudflare Worker فعلی متصل است:
+German is the default regardless of browser locale. Explicit language selections are saved as `umweltmetrik-language`; storage failures do not prevent switching. HTML language, title, description, validation and status messages follow the selected language. Language selection closes the mobile menu. Contact fields retain entered values during language changes.
 
-`https://umweltmetrik-contact.alibahramali.workers.dev`
+The endpoint remains `https://umweltmetrik-contact.alibahramali.workers.dev`; fields remain company, name, email, phone, place, service, message and website. The service field now uses stable internal values. No frontend API keys were added.
 
-Resend API Key نباید داخل React یا GitHub قرار بگیرد. کلید باید فقط در Cloudflare Worker به عنوان Secret با نام `RESEND_API_KEY` ذخیره شود.
+## Verification
 
-## انتشار روی GitHub Pages
+`npm test` uses Chromium at `/usr/bin/chromium`; adjust the executablePath in playwright.config.js for another machine. Tests cover default German, English switching, persistence, switching back, translated copy/SEO, form validation, contact payload, success/error handling, language changes during a request, and mobile/tablet/desktop layouts at 375/768/1024/1280/1440px.
 
-Workflow آماده در `.github/workflows/deploy.yml` قرار دارد.
-
-1. همه فایل‌های این پروژه را روی branch `main` قرار دهید.
-2. در GitHub به `Settings > Pages` بروید.
-3. در بخش `Build and deployment > Source` گزینه `GitHub Actions` را انتخاب کنید.
-4. Push جدید انجام دهید یا workflow را دستی اجرا کنید.
-5. فایل `public/CNAME` باعث می‌شود دامنه سفارشی `umweltmetrik.de` داخل build نهایی حفظ شود.
-
-## نکته DNS
-
-تبدیل پروژه به React مشکل DNS/SSL دامنه را حل نمی‌کند. GitHub Pages همچنان باید DNS دامنه را صحیح تشخیص دهد تا HTTPS certificate صادر شود.
+Contact tests intercept the unchanged endpoint and simulate Worker responses. They do not send real email, and do not establish live Worker email-delivery or backend acceptance of the new service identifiers; the Worker source was not supplied. Existing legal placeholders, phone placeholder and prototype notice remain translated as supplied.

@@ -1,18 +1,6 @@
 {
-  "name": "umweltmetrik",
-  "private": true,
-  "version": "1.0.0",
-  "type": "module",
-  "scripts": {
-    "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
-  },
-  "dependencies": {
-    "@vitejs/plugin-react": "latest",
-    "vite": "latest",
-    "react": "latest",
-    "react-dom": "latest"
-  },
-  "devDependencies": {}
+  "name": "umweltmetrik", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {"dev":"vite --host 0.0.0.0", "build":"vite build && cp CNAME dist/CNAME", "preview":"vite preview --host 0.0.0.0", "test":"playwright test"},
+  "dependencies": {"react":"^19.0.0", "react-dom":"^19.0.0"},
+  "devDependencies": {"vite":"^7.0.0", "@playwright/test":"^1.56.0"}
 }
