@@ -16,7 +16,7 @@ export const translations = {
       "umweltmetrikEnvironmentWaterSoilWaste": "UmweltMetrik · Umwelt · Wasser · Boden · Abfall",
       "reliableSamplingStartsBeforeAnalysis": "Fachgerechte Probenahme beginnt vor der Analyse.",
       "planningExecutionAndDocumentationOfEnvironmentalSampling": "Planung, Durchführung und Dokumentation von Umweltprobenahmen und Monitoringprojekten – mit geowissenschaftlichem Hintergrund, langjähriger Felderfahrung und konsequenter Orientierung an den jeweils einschlägigen Regelwerken.",
-      "discussYourProject": "Projekt anfragen →",
+      "discussYourProject": "Projekt anfragen",
       "exploreServices": "Leistungen ansehen",
       "areasOfExpertise": "Schwerpunkte",
       "technicalExpertise": "Fachliche Schwerpunkte",
@@ -97,7 +97,7 @@ export const translations = {
     "prozess": {
       "ourApproach": "Arbeitsweise",
       "fromInvestigationObjectivesToReliableSamples": "Vom Untersuchungsziel zur belastbaren Probe.",
-      "theWebsiteFollowsTheSamePrinciplesAs": "Die Nutzerführung der Website folgt demselben Prinzip wie die fachliche Arbeit: erst Ziel und Randbedingungen klären, dann Verfahren und Dokumentation festlegen.",
+      "theWebsiteFollowsTheSamePrinciplesAs": "Ein abgestimmter Ablauf von der Planung bis zur Laborübergabe.",
       "label01": "01",
       "defineTheScope": "Auftrag klären",
       "sampleMediumObjectivesParametersLocationAndProject": "Medium, Ziel, Parameter, Ort und projektspezifische Anforderungen.",
@@ -185,7 +185,7 @@ export const translations = {
     "kontakt": {
       "contact": "Kontakt",
       "startWithATechnicalAssessmentOfYour": "Projekt technisch vorqualifizieren.",
-      "thisFormRequestsOnlyTheInformationUseful": "Das Formular fragt nur Informationen ab, die für eine erste Einschätzung wirklich hilfreich sind. Für sensible Projektunterlagen sollte später ein datenschutzkonformer Upload eingerichtet werden.",
+      "thisFormRequestsOnlyTheInformationUseful": "Beschreiben Sie kurz das Probenmedium, den Standort und den gewünschten Zeitraum. Diese Angaben helfen bei der ersten fachlichen Einschätzung.",
       "berlinFieldAssignmentsByArrangement": "Berlin · Einsätze nach Vereinbarung",
       "email": "E-Mail",
       "infoUmweltmetrikDe": "info@umweltmetrik.de",
@@ -229,6 +229,82 @@ export const translations = {
     "seo": {
       "title": "UmweltMetrik | Umweltprobenahme, Monitoring & Ingenieurdienstleistungen",
       "description": "UmweltMetrik – fachgerechte Umweltprobenahme, Monitoring und Ingenieurdienstleistungen für Wasser, Grundwasser, Trinkwasser, Boden, Bodenluft, Altlasten und Abfall."
+    },
+    "ui": {
+      "optional": "optional",
+      "learnMore": "Mehr erfahren",
+      "contactDetails": "Kontaktdaten",
+      "projectDetails": "Projektdetails",
+      "projectCTA": "Besprechen wir Ihr Projekt.",
+      "aboutPreview": "Geowissenschaft und praktische Felderfahrung.",
+      "typicalTasks": "Typische Aufgaben",
+      "references": "Relevante Regelwerke",
+      "qualityIntro": "Relevante Regelwerke werden entsprechend dem Projektkontext zugeordnet. Umfang, Verfahren und Dokumentation werden vor dem Einsatz abgestimmt.",
+      "noAccreditation": "Die Nennung beschreibt Erfahrung im Qualitätsmanagement und stellt keine Akkreditierung von UmweltMetrik dar.",
+      "groups": {
+        "water": "Wasser",
+        "drinking": "Trinkwasser & Mikrobiologie",
+        "soil": "Boden",
+        "waste": "Abfall",
+        "pool": "Schwimm- und Badebeckenwasser",
+        "management": "Qualitätsmanagement"
+      },
+      "applicability": [
+        "Für Grundwasseruntersuchungen und wiederkehrende Messstellenprogramme.",
+        "Für Untersuchungen in Trinkwasserinstallationen und abgestimmte Laboraufträge.",
+        "Für Untersuchungen von Fließgewässern, Seen und Teichen.",
+        "Für Bodenuntersuchungen und die Erkundung von Altlasten.",
+        "Für die Untersuchung von Haufwerken und mineralischen Materialien.",
+        "Für wiederkehrende Probenahmen und ergänzende Feldaufgaben."
+      ],
+      "partnerNeed": "Unterstützung, wenn Feldkapazität gebraucht wird.",
+      "partnerIntro": "Für Labore und Ingenieurbüros: abgestimmte Feldarbeit bei Auftragsspitzen, wiederkehrenden Programmen oder Vertretungsbedarf. Zuständigkeiten und Übergaben werden vorab festgelegt.",
+      "deployment": "Einsatzmodelle",
+      "partnerSections": [
+        [
+          "Probenahme nach Labor-SOPs",
+          "Probenahmeverfahren, Gefäße und Konservierung werden mit Ihrem Labor abgestimmt. Maßgeblich sind die vereinbarten SOPs und der Untersuchungsauftrag."
+        ],
+        [
+          "Felddokumentation",
+          "Probenkennzeichnung, Vor-Ort-Parameter, Standortbedingungen und Fotodokumentation werden in den vereinbarten Formaten erfasst."
+        ],
+        [
+          "Probenlogistik",
+          "Transportvorbereitung und Laborübergabe werden mit den Anforderungen an Probenbehandlung und Zeitplanung abgestimmt."
+        ],
+        [
+          "Monitoring & Vertretung",
+          "Wiederkehrende Runden, Unterstützung bei Auftragsspitzen sowie Urlaubs- und Krankheitsvertretung nach Vereinbarung."
+        ]
+      ],
+      "home": "Startseite",
+      "skip": "Zum Inhalt",
+      "closeMenu": "Menü schließen",
+      "notFound": "Seite nicht gefunden",
+      "backHome": "Zur Startseite"
+    },
+    "routes": {
+      "services": {
+        "title": "Leistungen | UmweltMetrik",
+        "description": "Die Leistung wird nicht über eine starre Normenliste definiert, sondern über Untersuchungsziel, Medium, Probenahmesituation und die Anforderungen des jeweiligen Projekts. Regelwerke werden dort zugeordnet, wo sie fachlich tatsächlich einschlägig sind."
+      },
+      "quality": {
+        "title": "Qualität & Regelwerke | UmweltMetrik",
+        "description": "Relevante Regelwerke werden entsprechend dem Projektkontext zugeordnet. Umfang, Verfahren und Dokumentation werden vor dem Einsatz abgestimmt."
+      },
+      "laboratories": {
+        "title": "Für Labore & Ingenieurbüros | UmweltMetrik",
+        "description": "Projektbezogene oder regelmäßige Unterstützung bei Probenahmen, Monitoring und Felddokumentation. Arbeitsanweisungen, Formblätter, Probengefäße, Konservierung, Transport und QM-Anforderungen können projektspezifisch abgestimmt werden."
+      },
+      "about": {
+        "title": "Über mich | UmweltMetrik",
+        "description": "Geologe mit ingenieurwissenschaftlichem Hintergrund und langjähriger Erfahrung in geologischer Feldarbeit, Umweltprobenahme, Monitoring und Qualitätssicherung."
+      },
+      "contact": {
+        "title": "Projekt anfragen | UmweltMetrik",
+        "description": "Beschreiben Sie kurz das Probenmedium, den Standort und den gewünschten Zeitraum. Diese Angaben helfen bei der ersten fachlichen Einschätzung."
+      }
     }
   },
   "en": {
@@ -240,7 +316,7 @@ export const translations = {
       "qualityStandards": "Quality & Standards",
       "forLaboratories": "For Laboratories",
       "aboutMe": "About Me",
-      "discussYourProject": "Discuss Your Project",
+      "discussYourProject": "Request a Project",
       "openMenu": "Open menu",
       "symbol9": "☰"
     },
@@ -248,7 +324,7 @@ export const translations = {
       "umweltmetrikEnvironmentWaterSoilWaste": "UmweltMetrik · Environment · Water · Soil · Waste",
       "reliableSamplingStartsBeforeAnalysis": "Reliable sampling starts before analysis.",
       "planningExecutionAndDocumentationOfEnvironmentalSampling": "Planning, execution and documentation of environmental sampling and monitoring projects — supported by a geoscientific background, extensive field experience and consistent application of the standards relevant to each project.",
-      "discussYourProject": "Discuss Your Project →",
+      "discussYourProject": "Request a Project",
       "exploreServices": "Explore Services",
       "areasOfExpertise": "Areas of expertise",
       "technicalExpertise": "Technical Expertise",
@@ -329,7 +405,7 @@ export const translations = {
     "prozess": {
       "ourApproach": "Our Approach",
       "fromInvestigationObjectivesToReliableSamples": "From investigation objectives to reliable samples.",
-      "theWebsiteFollowsTheSamePrinciplesAs": "The website follows the same principles as the technical work: first establish objectives and conditions, then define procedures and documentation.",
+      "theWebsiteFollowsTheSamePrinciplesAs": "A coordinated process from planning to laboratory handover.",
       "label01": "01",
       "defineTheScope": "Define the scope",
       "sampleMediumObjectivesParametersLocationAndProject": "Sample medium, objectives, parameters, location and project-specific requirements.",
@@ -417,7 +493,7 @@ export const translations = {
     "kontakt": {
       "contact": "Contact",
       "startWithATechnicalAssessmentOfYour": "Start with a technical assessment of your project.",
-      "thisFormRequestsOnlyTheInformationUseful": "This form requests only the information useful for an initial assessment. A data protection compliant upload facility for sensitive project documents should be set up at a later stage.",
+      "thisFormRequestsOnlyTheInformationUseful": "Briefly describe the sample medium, location and preferred timeframe. This helps with an initial technical assessment.",
       "berlinFieldAssignmentsByArrangement": "Berlin · Field assignments by arrangement",
       "email": "Email",
       "infoUmweltmetrikDe": "info@umweltmetrik.de",
@@ -461,6 +537,82 @@ export const translations = {
     "seo": {
       "title": "UmweltMetrik | Environmental Sampling, Monitoring & Engineering Services",
       "description": "UmweltMetrik – Professional environmental sampling, monitoring and engineering services for water, groundwater, drinking water, soil, soil gas, contaminated sites and waste."
+    },
+    "ui": {
+      "optional": "optional",
+      "learnMore": "Learn more",
+      "contactDetails": "Contact details",
+      "projectDetails": "Project details",
+      "projectCTA": "Let’s discuss your project.",
+      "aboutPreview": "Geoscience and practical field experience.",
+      "typicalTasks": "Typical tasks",
+      "references": "Relevant standards",
+      "qualityIntro": "Relevant standards are assigned according to project context. Scope, procedures and documentation are agreed before fieldwork.",
+      "noAccreditation": "This describes quality management experience and does not constitute accreditation of UmweltMetrik.",
+      "groups": {
+        "water": "Water",
+        "drinking": "Drinking water & microbiology",
+        "soil": "Soil",
+        "waste": "Waste",
+        "pool": "Swimming pool water",
+        "management": "Quality management"
+      },
+      "applicability": [
+        "For groundwater investigations and recurring monitoring well programmes.",
+        "For investigations in drinking water installations and agreed laboratory assignments.",
+        "For investigations of rivers, lakes and ponds.",
+        "For soil investigations and contaminated site assessment.",
+        "For investigations of stockpiles and mineral materials.",
+        "For recurring sampling and additional field assignments."
+      ],
+      "partnerNeed": "Support when you need field capacity.",
+      "partnerIntro": "For laboratories and engineering firms: coordinated fieldwork during workload peaks, recurring programmes or staff absence. Responsibilities and handovers are agreed in advance.",
+      "deployment": "Deployment models",
+      "partnerSections": [
+        [
+          "Sampling to laboratory SOPs",
+          "Sampling procedures, containers and preservation are coordinated with your laboratory. Agreed SOPs and the investigation brief guide the work."
+        ],
+        [
+          "Field documentation",
+          "Sample identifiers, on-site parameters, site conditions and photographic records are captured in the agreed formats."
+        ],
+        [
+          "Sample logistics",
+          "Transport preparation and laboratory handover are coordinated with sample handling requirements and schedules."
+        ],
+        [
+          "Monitoring & cover",
+          "Recurring rounds, peak workload support and holiday or sickness cover by arrangement."
+        ]
+      ],
+      "home": "Home",
+      "skip": "Skip to content",
+      "closeMenu": "Close menu",
+      "notFound": "Page not found",
+      "backHome": "Back to home"
+    },
+    "routes": {
+      "services": {
+        "title": "Services | UmweltMetrik",
+        "description": "Services are defined by the investigation objective, sample medium, sampling conditions and project requirements, rather than a fixed list of standards. Standards are applied where they are technically relevant."
+      },
+      "quality": {
+        "title": "Quality & Standards | UmweltMetrik",
+        "description": "Relevant standards are assigned according to project context. Scope, procedures and documentation are agreed before fieldwork."
+      },
+      "laboratories": {
+        "title": "For Laboratories & Engineering Firms | UmweltMetrik",
+        "description": "Project-based or ongoing support with sampling, monitoring and field documentation. Work instructions, forms, sample containers, preservation, transport and quality management requirements can be agreed for each project."
+      },
+      "about": {
+        "title": "About Me | UmweltMetrik",
+        "description": "Geologist with an engineering background and extensive experience in geological fieldwork, environmental sampling, monitoring and quality assurance."
+      },
+      "contact": {
+        "title": "Request a Project | UmweltMetrik",
+        "description": "Briefly describe the sample medium, location and preferred timeframe. This helps with an initial technical assessment."
+      }
     }
   }
 };

@@ -43,7 +43,7 @@ for (const width of [375,768,1024,1280,1440]) test(`language controls and layout
   }
 });
 test('form validation, stable payload, success, errors and switching mid-request',async ({page})=>{
-  await page.goto('/');await switchTo(page,'en');
+  await page.goto('/#/contact');await switchTo(page,'en');
   await page.locator('#submit-button').click();
   expect(await page.locator('#name').evaluate(el=>el.validationMessage)).toBe(translations.en.form.required);
   await page.locator('#name').fill('Test Person');await page.locator('#email').fill('invalid');

@@ -15,8 +15,6 @@ export function LanguageProvider({ children }) {
   }
   useEffect(() => {
     document.documentElement.lang = language;
-    document.title = t.seo.title;
-    document.querySelector('meta[name="description"]').content = t.seo.description;
     // Native validity strings must be recomputed in the selected language.
     document.querySelectorAll('input, textarea').forEach(field => field.setCustomValidity(''));
   }, [language, t]);
