@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>UmweltMetrik | Umweltprobenahme, Monitoring & Ingenieurdienstleistungen</title>
+    <meta name="description" content="UmweltMetrik – fachgerechte Umweltprobenahme, Monitoring und Ingenieurdienstleistungen für Wasser, Grundwasser, Trinkwasser, Boden, Bodenluft, Altlasten und Abfall." />
+    <style>
+        :root{--ink:#0d2430;--muted:#5b6b72;--line:#dbe4e7;--bg:#f4f7f6;--card:#fff;--brand:#0b6f73;--brand2:#104f62;--accent:#d8efec;--warm:#e8efe8;--shadow:0 18px 50px rgba(13,36,48,.08);--r:22px;--max:1180px}
+        *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:#fff;line-height:1.55} a{color:inherit;text-decoration:none} button,input,textarea,select{font:inherit}
+        .container{width:min(var(--max),calc(100% - 40px));margin:auto}.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:.78rem;font-weight:800;letter-spacing:.09em;text-transform:uppercase;color:var(--brand)}
+        header{position:sticky;top:0;z-index:30;background:rgba(255,255,255,.92);backdrop-filter:blur(14px);border-bottom:1px solid rgba(219,228,231,.8)} .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{font-weight:850;line-height:1.05}.brand small{display:block;color:var(--muted);font-weight:650;font-size:.72rem;margin-top:5px}.links{display:flex;align-items:center;gap:24px;font-size:.92rem;font-weight:700}.cta{padding:12px 17px;border-radius:999px;background:var(--ink);color:#fff}.menu{display:none;border:0;background:none;font-size:1.5rem}
+        .hero{padding:96px 0 58px;background:linear-gradient(135deg,#f5fbfa 0%,#fff 52%,#eef5f4 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:64px;align-items:center}.hero h1{font-size:clamp(2.7rem,5.4vw,5.7rem);line-height:.98;letter-spacing:-.055em;margin:18px 0 24px;max-width:850px}.hero p{font-size:1.15rem;color:var(--muted);max-width:700px}.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 19px;border-radius:12px;font-weight:800;border:1px solid var(--ink)}.btn.primary{background:var(--ink);color:#fff}.btn.light{background:#fff}.hero-card{background:var(--ink);color:#fff;border-radius:30px;padding:32px;box-shadow:var(--shadow);position:relative}.hero-card:before{content:"";position:absolute;width:180px;height:180px;border-radius:50%;background:rgba(216,239,236,.12);right:-45px;top:-45px}.metric{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:28px}.metric div{padding:17px;border:1px solid rgba(255,255,255,.14);border-radius:16px;background:rgba(255,255,255,.05)}.metric b{font-size:1.35rem;display:block}.metric span{font-size:.82rem;color:#c9d6da}.hero-card ul{padding:0;margin:18px 0 0;list-style:none}.hero-card li{padding:10px 0;border-bottom:1px solid rgba(255,255,255,.1)}
+        .trust{padding:20px 0;border-bottom:1px solid var(--line);border-top:1px solid var(--line)}.trust-row{display:flex;gap:18px;flex-wrap:wrap;justify-content:space-between;color:var(--muted);font-size:.88rem;font-weight:800}.trust-row span{white-space:nowrap}
+        section{padding:88px 0}.section-head{display:grid;grid-template-columns:.75fr 1.25fr;gap:60px;align-items:end;margin-bottom:38px}.section-head h2{font-size:clamp(2.1rem,4vw,4rem);line-height:1.02;letter-spacing:-.04em;margin:8px 0 0}.section-head p{color:var(--muted);font-size:1.05rem;max-width:720px;margin:0}
+        .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.card{padding:26px;border:1px solid var(--line);border-radius:var(--r);background:#fff;transition:.2s}.card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}.icon{width:46px;height:46px;border-radius:14px;background:var(--accent);display:grid;place-items:center;font-size:1.3rem;margin-bottom:20px}.card h3{font-size:1.25rem;margin:0 0 10px}.card p{color:var(--muted);margin:0 0 18px}.card ul{padding-left:18px;color:#33474f;font-size:.93rem}.tag{display:inline-flex;padding:6px 9px;border-radius:999px;background:var(--bg);font-size:.74rem;font-weight:800;margin:3px 4px 0 0}
+        .dark{background:var(--ink);color:#fff}.dark .section-head p{color:#c6d0d4}.process{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}.step{padding:20px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:rgba(255,255,255,.04)}.step em{font-style:normal;color:#8dd1cb;font-weight:900}.step h3{font-size:1rem;margin:26px 0 7px}.step p{font-size:.88rem;color:#c6d0d4;margin:0}
+        .standards{background:var(--bg)}.standards-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.standard{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px}.standard b{display:block;margin-bottom:4px}.standard small{color:var(--muted)}.note{margin-top:20px;padding:18px 20px;border-left:4px solid var(--brand);background:#fff;border-radius:10px;color:#3a4b51}
+        .about{display:grid;grid-template-columns:.88fr 1.12fr;gap:56px;align-items:start}.profile{position:sticky;top:110px;background:linear-gradient(160deg,var(--brand2),var(--ink));color:#fff;padding:30px;border-radius:28px}.profile h3{font-size:2rem;line-height:1.05;margin:14px 0}.profile p{color:#d5e0e3}.facts{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}.facts div{border:1px solid rgba(255,255,255,.14);border-radius:14px;padding:14px}.about-text h3{font-size:1.55rem;margin-top:0}.about-text p{color:var(--muted)}.qualification{padding:16px 0;border-bottom:1px solid var(--line)}.qualification b{display:block}.qualification small{color:var(--muted)}
+        .labs{background:linear-gradient(135deg,#eaf5f3,#f7faf9)}.labs-box{display:grid;grid-template-columns:1fr 1fr;gap:40px;background:#fff;border:1px solid var(--line);border-radius:28px;padding:34px}.labs-box ul{columns:2;padding-left:18px;color:#405158}
+        .contact{display:grid;grid-template-columns:.8fr 1.2fr;gap:44px}.contact-card{background:var(--ink);color:#fff;border-radius:26px;padding:30px}.contact-card p{color:#c8d4d8}.form{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.82rem;font-weight:800}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);border-radius:11px;padding:13px 14px;background:#fff}.field textarea{min-height:120px;resize:vertical}.submit{grid-column:1/-1;border:0;background:var(--brand);color:#fff;border-radius:12px;padding:14px 18px;font-weight:850;cursor:pointer}
+        footer{padding:36px 0;background:#081a22;color:#d6e0e3}.footer-grid{display:grid;grid-template-columns:1.2fr .8fr .8fr;gap:30px}.footer-grid small{color:#92a4aa}.legal{margin-top:28px;padding-top:20px;border-top:1px solid rgba(255,255,255,.1);display:flex;justify-content:space-between;gap:20px;font-size:.8rem;color:#93a4aa}
+        @media(max-width:900px){.links{display:none}.menu{display:block}.hero-grid,.section-head,.about,.contact,.labs-box{grid-template-columns:1fr}.hero{padding-top:62px}.grid{grid-template-columns:1fr 1fr}.process{grid-template-columns:1fr 1fr}.profile{position:static}.footer-grid{grid-template-columns:1fr}.section-head{gap:18px}.standards-grid{grid-template-columns:1fr}}
+        @media(max-width:600px){.container{width:min(100% - 28px,var(--max))}.grid,.process,.form{grid-template-columns:1fr}.field.full,.submit{grid-column:1}.hero h1{font-size:2.65rem}.metric{grid-template-columns:1fr 1fr}.trust-row{justify-content:flex-start;gap:10px 18px}.labs-box ul{columns:1}.facts{grid-template-columns:1fr}.legal{flex-direction:column}}
+        .mobile{display:none;position:fixed;top:76px;left:0;right:0;background:#fff;border-bottom:1px solid var(--line);padding:18px 20px;z-index:25}.mobile.open{display:grid;gap:14px}.mobile a{font-weight:800}
+    </style>
+</head>
+<body>
+<header>
+    <div class="container nav">
+        <a class="brand" href="#top">UMWELTMETRIK<small>Umweltprobenahme · Monitoring · Ingenieurdienstleistungen</small></a>
+        <nav class="links" aria-label="Hauptnavigation">
+            <a href="#leistungen">Leistungen</a><a href="#qualitaet">Qualität & Regelwerke</a><a href="#labore">Für Labore</a><a href="#ueber-mich">Über mich</a><a class="cta" href="#kontakt">Projekt anfragen</a>
+        </nav>
+        <button class="menu" id="menu" aria-label="Menü öffnen">☰</button>
+    </div>
+</header>
+<div class="mobile" id="mobile"><a href="#leistungen">Leistungen</a><a href="#qualitaet">Qualität & Regelwerke</a><a href="#labore">Für Labore</a><a href="#ueber-mich">Über mich</a><a href="#kontakt">Projekt anfragen</a></div>
+
+<main id="top">
+    <section class="hero">
+        <div class="container hero-grid">
+            <div>
+                <span class="eyebrow">UmweltMetrik · Umwelt · Wasser · Boden · Abfall</span>
+                <h1>Fachgerechte Probenahme beginnt vor der Analyse.</h1>
+                <p>Planung, Durchführung und Dokumentation von Umweltprobenahmen und Monitoringprojekten – mit geowissenschaftlichem Hintergrund, langjähriger Felderfahrung und konsequenter Orientierung an den jeweils einschlägigen Regelwerken.</p>
+                <div class="actions"><a class="btn primary" href="#kontakt">Projekt anfragen →</a><a class="btn light" href="#leistungen">Leistungen ansehen</a></div>
+            </div>
+            <aside class="hero-card" aria-label="Schwerpunkte">
+                <span class="eyebrow" style="color:#8dd1cb">Fachliche Schwerpunkte</span>
+                <ul><li>Grund-, Oberflächen- & Trinkwasser</li><li>Boden, Bodenluft & Altlasten</li><li>Abfall- & Haufwerksprobenahme</li><li>Monitoring & Vor-Ort-Messungen</li><li>Probenahmestellen & Felddokumentation</li></ul>
+                <div class="metric"><div><b>15+ Jahre</b><span>Feld- und Projekterfahrung</span></div><div><b>M.Sc.</b><span>Geologie</span></div><div><b>VDI 6023 A</b><span>Trinkwasserhygiene</span></div><div><b>ISO/IEC 17025</b><span>QM- & Auditerfahrung</span></div></div>
+            </aside>
+        </div>
+    </section>
+    <div class="trust"><div class="container trust-row"><span>DIN EN ISO 5667</span><span>DIN EN ISO 19458</span><span>VDI 6023</span><span>LAGA PN 98</span><span>BBodSchV</span><span>DIN EN ISO/IEC 17025</span></div></div>
+
+    <section id="leistungen">
+        <div class="container">
+            <div class="section-head"><div><span class="eyebrow">Leistungen</span><h2>Ein Ansprechpartner für die Arbeit im Feld.</h2></div><p>Die Leistung wird nicht über eine starre Normenliste definiert, sondern über Untersuchungsziel, Medium, Probenahmesituation und die Anforderungen des jeweiligen Projekts. Regelwerke werden dort zugeordnet, wo sie fachlich tatsächlich einschlägig sind.</p></div>
+            <div class="grid">
+                <article class="card"><div class="icon">💧</div><h3>Grundwasser</h3><p>Probenahme, Messstellenaufnahme, Grundwasserstände und Monitoring.</p><ul><li>Grundwasserprobenahme</li><li>Vor-Ort-Parameter</li><li>Stichtagsmessungen</li><li>Fließrichtung / Grundwassergleichen</li></ul><span class="tag">ISO 5667-11</span><span class="tag">DIN EN ISO 5667-3</span></article>
+                <article class="card"><div class="icon">🚰</div><h3>Trinkwasser</h3><p>Mikrobiologische und chemische Probenahmen sowie Aufnahme geeigneter Probenahmestellen.</p><ul><li>Legionellen</li><li>Temperaturen & Dokumentation</li><li>Systemische Untersuchungen</li><li>Probenahmestellen</li></ul><span class="tag">DIN EN ISO 19458</span><span class="tag">VDI 6023</span><span class="tag">UBA</span></article>
+                <article class="card"><div class="icon">🌊</div><h3>Oberflächenwasser</h3><p>Probenahmen aus Fließ- und Stillgewässern für umwelttechnische Untersuchungen.</p><ul><li>Bäche & Flüsse</li><li>Seen & Teiche</li><li>Entnahmetiefe & Standortdaten</li><li>Vor-Ort-Parameter</li></ul><span class="tag">DIN EN ISO 5667-6</span><span class="tag">ISO 5667-4</span></article>
+                <article class="card"><div class="icon">🌱</div><h3>Boden & Altlasten</h3><p>Geologische Ansprache, Probenahme und Felddokumentation im Altlastenkontext.</p><ul><li>Horizont-/schichtbezogene Proben</li><li>Bodenansprache</li><li>Schichtenverzeichnisse</li><li>Altlastenuntersuchungen</li></ul><span class="tag">BBodSchV</span><span class="tag">KA5</span></article>
+                <article class="card"><div class="icon">♻️</div><h3>Abfall & Haufwerk</h3><p>Repräsentative Probenahme von festen und stichfesten Materialien.</p><ul><li>Haufwerke</li><li>Mineralische Materialien</li><li>Hot-Spots</li><li>Altholz</li></ul><span class="tag">LAGA PN 98</span><span class="tag">DIN 19698</span></article>
+                <article class="card"><div class="icon">🧭</div><h3>Monitoring & Feldtechnik</h3><p>Planung und Umsetzung wiederkehrender Untersuchungen mit nachvollziehbarer Dokumentation.</p><ul><li>Probenahmeplanung</li><li>Messstellenmanagement</li><li>Fotodokumentation</li><li>Laborübergabe & Logistik</li></ul><span class="tag">projektbezogen</span><span class="tag">QM-orientiert</span></article>
+            </div>
+        </div>
+    </section>
+
+    <section class="dark" id="prozess">
+        <div class="container">
+            <div class="section-head"><div><span class="eyebrow" style="color:#8dd1cb">Arbeitsweise</span><h2>Vom Untersuchungsziel zur belastbaren Probe.</h2></div><p>Die Nutzerführung der Website folgt demselben Prinzip wie die fachliche Arbeit: erst Ziel und Randbedingungen klären, dann Verfahren und Dokumentation festlegen.</p></div>
+            <div class="process"><div class="step"><em>01</em><h3>Auftrag klären</h3><p>Medium, Ziel, Parameter, Ort und projektspezifische Anforderungen.</p></div><div class="step"><em>02</em><h3>Probenahme planen</h3><p>Stellen, Verfahren, Gefäße, Konservierung und Messtechnik.</p></div><div class="step"><em>03</em><h3>Vor Ort umsetzen</h3><p>Fachgerechte Entnahme und Erfassung relevanter Feldparameter.</p></div><div class="step"><em>04</em><h3>Dokumentieren</h3><p>Eindeutige Zuordnung, Randbedingungen, Messwerte und Auffälligkeiten.</p></div><div class="step"><em>05</em><h3>Übergeben</h3><p>Probenmanagement, Transportvorbereitung und geordnete Laborübergabe.</p></div></div>
+        </div>
+    </section>
+
+    <section class="standards" id="qualitaet">
+        <div class="container">
+            <div class="section-head"><div><span class="eyebrow">Qualität & Regelwerke</span><h2>Normen richtig zuordnen statt nur aufzählen.</h2></div><p>Die folgenden Regelwerke sind Beispiele für fachlich relevante Bezüge. Welche Anforderungen im konkreten Projekt gelten, hängt vom Untersuchungszweck, Rechtsbereich, Medium, Auftrag und ggf. den Vorgaben der beauftragenden Untersuchungsstelle ab.</p></div>
+            <div class="standards-grid">
+                <div class="standard"><b>Wasserproben – DIN EN ISO 5667-3:2024-09</b><small>Konservierung, Handhabung, Transport und Lagerung von Wasserproben.</small></div>
+                <div class="standard"><b>Fließgewässer – DIN EN ISO 5667-6:2016-12</b><small>Planung und Durchführung der Probenahme aus Flüssen und Bächen; ergänzt durch A11:2022-04.</small></div>
+                <div class="standard"><b>Mikrobiologie – DIN EN ISO 19458:2006-12</b><small>Probenahme für mikrobiologische Untersuchungen; im Trinkwasserbereich abhängig vom Untersuchungszweck.</small></div>
+                <div class="standard"><b>Trinkwasserhygiene – VDI 6023 Blatt 1:2023-09</b><small>Hygiene in Trinkwasser-Installationen; Anforderungen an Planung, Ausführung, Betrieb und Instandhaltung.</small></div>
+                <div class="standard"><b>Legionellen – TrinkwV + UBA-Empfehlung</b><small>Systemische Untersuchungen, repräsentative Probenahmestellen und Untersuchungsablauf nach den jeweils geltenden Vorgaben.</small></div>
+                <div class="standard"><b>Boden – BBodSchV</b><small>Vorerkundung, repräsentative Probenahme, Bodenansprache und Dokumentation; konkrete Normbezüge ergeben sich aus der Fragestellung.</small></div>
+                <div class="standard"><b>Abfall – LAGA PN 98 / DIN 19698-Reihe</b><small>Probenahmestrategien für feste und stichfeste Materialien, Haufwerke und Hot-Spots.</small></div>
+                <div class="standard"><b>Badebeckenwasser – DIN 19643-1:2023-06</b><small>Allgemeine Anforderungen an Aufbereitung, Wasserqualität, Probenahmestellen und Betriebskontrolle.</small></div>
+            </div>
+            <div class="note"><strong>Fachlicher Hinweis:</strong> Die Website verspricht keine pauschale „Probenahme nach Norm X“. Vor jedem Projekt wird geprüft, welches Regelwerk für den konkreten Untersuchungszweck einschlägig ist. Bei gesetzlich geregelten Trinkwasseruntersuchungen erfolgt die Probenahme im Rahmen des Auftrags der zugelassenen Untersuchungsstelle.</div>
+        </div>
+    </section>
+
+    <section id="labore" class="labs"><div class="container">
+        <div class="labs-box"><div><span class="eyebrow">Für Laboratorien & Ingenieurbüros</span><h2 style="font-size:2.5rem;line-height:1.05;letter-spacing:-.035em">Zusätzliche Kapazität im Außendienst – fachlich integrierbar.</h2><p style="color:var(--muted)">Projektbezogene oder regelmäßige Unterstützung bei Probenahmen, Monitoring und Felddokumentation. Arbeitsanweisungen, Formblätter, Probengefäße, Konservierung, Transport und QM-Anforderungen können projektspezifisch abgestimmt werden.</p><a class="btn primary" href="#kontakt">Zusammenarbeit anfragen</a></div><div><h3>Mögliche Einsatzformen</h3><ul><li>Probenahmetouren</li><li>Monitoringkampagnen</li><li>Auftragsspitzen</li><li>Urlaubs-/Krankheitsvertretung</li><li>Regionale Außendiensteinsätze</li><li>Probenahme nach Labor-SOP</li><li>Vor-Ort-Messungen</li><li>Messstellenaufnahme</li><li>Fotodokumentation</li><li>Probenlogistik</li></ul></div></div>
+    </div></section>
+
+    <section id="ueber-mich"><div class="container about">
+        <aside class="profile"><span class="eyebrow" style="color:#8dd1cb">Über mich</span><h3></h3><p>Geologe mit ingenieurwissenschaftlichem Hintergrund und langjähriger Erfahrung in geologischer Feldarbeit, Umweltprobenahme, Monitoring und Qualitätssicherung.</p><div class="facts"><div><b>2011</b><small>Beginn geologischer Feldarbeit</small></div><div><b>seit 2017</b><small>Schwerpunkt Umweltprobenahme</small></div><div><b>seit 2022</b><small>Leitungs- & Projektverantwortung</small></div><div><b>2 Abschlüsse</b><small>Geologie & Natürliche Ressourcen</small></div></div></aside>
+        <div class="about-text"><span class="eyebrow">Akademischer & beruflicher Hintergrund</span><h2 style="font-size:3rem;line-height:1.04;letter-spacing:-.04em">Geowissenschaftliche Tiefe trifft praktische Felderfahrung.</h2><p>Meine akademische Grundlage bilden ein <strong>Master of Science in Geologie</strong> mit Schwerpunkt Stratigraphie und Paläontologie sowie ein <strong>Bachelorabschluss im Ingenieurwesen für Natürliche Ressourcen</strong>. Beide Abschlüsse sind in Deutschland anerkannt.</p><p>Die berufliche Laufbahn begann mit geologischen Feldarbeiten und seismischen Erkundungsprojekten. Später folgten die Leitung und Koordination von Bohrteams und großflächigen Erkundungsarbeiten. Seit 2017 liegt mein Schwerpunkt in der Umweltprobenahme und Altlastenbearbeitung; seit 2022 zusätzlich in der fachlichen und personellen Leitung sowie der Planung komplexer Probenahme- und Monitoringprojekte.</p><h3>Ausgewählte Qualifikationen</h3>
+            <div class="qualification"><b>VDI 6023 Kategorie A</b><small>Hygiene in Trinkwasser-Installationen</small></div>
+            <div class="qualification"><b>VDI 6022 Kategorie A</b><small>Hygiene in der Raumlufttechnik</small></div>
+            <div class="qualification"><b>Trinkwasser-Probenahme</b><small>DIN EN ISO 19458 / DIN EN ISO 5667 – aktualisierte Fachkunde</small></div>
+            <div class="qualification"><b>LAGA PN 98</b><small>Sachkunde Abfallprobenahme</small></div>
+            <div class="qualification"><b>DIN EN ISO/IEC 17025</b><small>Interner Fachauditor und praktische Erfahrung in Qualitätssicherung und Auditbegleitung</small></div>
+            <div class="qualification"><b>DGUV Regel 101-004</b><small>Sicherheit und Gesundheitsschutz bei Arbeiten in kontaminierten Bereichen</small></div>
+        </div></div></section>
+
+    <section id="kontakt" style="background:var(--bg)"><div class="container contact">
+        <div class="contact-card"><span class="eyebrow" style="color:#8dd1cb">Kontakt</span><h2 style="font-size:2.6rem;line-height:1.05">Projekt technisch vorqualifizieren.</h2><p>Das Formular fragt nur Informationen ab, die für eine erste Einschätzung wirklich hilfreich sind. Für sensible Projektunterlagen sollte später ein datenschutzkonformer Upload eingerichtet werden.</p><p><strong></strong><br>Berlin · Einsätze nach Vereinbarung</p><p><strong>E-Mail</strong><br>kontakt@ihre-domain.de<br><br><strong>Telefon</strong><br>[geschäftliche Telefonnummer]</p></div>
+        <form class="form" onsubmit="event.preventDefault(); alert('Demo: Das Formular ist im Prototyp noch nicht an ein Backend angebunden.');">
+            <div class="field"><label for="company">Firma / Auftraggeber</label><input id="company" autocomplete="organization"></div><div class="field"><label for="name">Ansprechpartner</label><input id="name" autocomplete="name"></div>
+            <div class="field"><label for="email">E-Mail</label><input id="email" type="email" autocomplete="email"></div><div class="field"><label for="phone">Telefon</label><input id="phone" autocomplete="tel"></div>
+            <div class="field"><label for="place">Einsatzort / PLZ</label><input id="place"></div><div class="field"><label for="service">Leistungsbereich</label><select id="service"><option>Bitte wählen</option><option>Grundwasser</option><option>Trinkwasser</option><option>Oberflächenwasser</option><option>Boden / Altlasten</option><option>Abfall / Haufwerk</option><option>Monitoring / sonstige Feldleistung</option></select></div>
+            <div class="field full"><label for="message">Projekt / Untersuchungsziel / gewünschter Termin</label><textarea id="message" placeholder="z. B. 6 Grundwassermessstellen, Monitoring, gewünschter Termin, Labor bereits festgelegt …"></textarea></div>
+            <button class="submit" type="submit">Anfrage vorbereiten →</button>
+        </form>
+    </div></section>
+</main>
+
+<footer><div class="container">
+    <div class="footer-grid"><div>
+        <strong>UMWELTMETRIK</strong><br>
+        <small>Umweltprobenahme · Monitoring · Ingenieurdienstleistungen</small></div><div><strong>Navigation</strong><br><small>Leistungen<br>Qualität & Regelwerke<br>Über mich<br>Kontakt</small></div><div><strong>Rechtliches</strong><br><small>Impressum<br>Datenschutz<br>Cookie-/Tracking-Einstellungen (falls erforderlich)</small></div></div><div class="legal"><span>Prototyp · Regelwerksstand geprüft am 18.09.2026</span><span>Vor Veröffentlichung: Impressum, Datenschutz, Firmenbezeichnung und Leistungsformulierungen final rechtlich/fachlich prüfen.</span></div></div></footer>
+<script>const m=document.getElementById('menu'),p=document.getElementById('mobile');m.onclick=()=>p.classList.toggle('open');p.querySelectorAll('a').forEach(a=>a.onclick=()=>p.classList.remove('open'));</script>
+</body></html>
