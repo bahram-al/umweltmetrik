@@ -1,27 +1,15 @@
-# UmweltMetrik bilingual React site
+# UmweltMetrik bilingual React website
 
-The supplied single-file HTML site has been converted to React without duplicating the page. Its original layout, CSS, section anchors, content and contact payload fields are retained.
+Run npm ci, npm run dev, npm run build, npm run preview and npm test.
 
-## Run and build
+Six React Router HashRouter pages: /, /services, /quality, /laboratories, /about and /contact. Public URLs use #/services, with service anchors such as #/services#soil. Hash routing supports refresh on GitHub Pages without rewrites. Each route updates its title and description; independent search indexing of hash routes is not guaranteed.
 
-- `npm ci`
-- `npm run dev`
-- `npm run build`
-- `npm run preview`
+German remains default. LanguageContext stores explicit selections under umweltmetrik-language. Changing language preserves route, form values and scroll. Translations and route metadata are centralized in src/i18n/translations.js. Shared services are defined in src/serviceData.js.
 
-Deploy the contents of `dist/` to the existing static host. The build copies the existing CNAME. Serve the built files, rather than the source index.html. No deployment has been performed.
+The contact endpoint remains https://umweltmetrik-contact.alibahramali.workers.dev. JSON fields remain company, name, email, phone, place, service, message and website. Stable service values, honeypot, JSON POST, validation, loading, success reset and error retention are preserved. Reply-To and Resend remain backend responsibilities. No frontend API keys are added.
 
-## Files
+The existing GitHub Actions workflow, Vite configuration, public/CNAME, Cloudflare Worker and DNS configuration are unchanged. Build output includes CNAME. No deployment was performed.
 
-Modified: `index.html` (React entry with German SEO defaults).
-Added: `src/App.jsx` (existing layout and contact submission), `src/main.jsx`, `src/styles.css` (original CSS plus compact selector and navigation spacing), `src/LanguageSwitcher.jsx`, `src/i18n/LanguageContext.jsx`, `src/i18n/translations.js`, `package.json`, `package-lock.json`, `vite.config.js`, `.gitignore`, `playwright.config.js`, `tests/bilingual.spec.js`, and this README.
+Production build and 12 Playwright tests pass. All routes are checked in both languages at 1440/1024/768/390px, including metadata, reload, active navigation, overflow, mobile menu, keyboard Escape, persistence, scroll and anchors. Contact tests verify payload and success/error handling using intercepted responses; they do not send real email or establish live Worker/Resend delivery. A remote GitHub Actions run was not performed. Tests use /usr/bin/chromium as configured in playwright.config.js.
 
-German is the default regardless of browser locale. Explicit language selections are saved as `umweltmetrik-language`; storage failures do not prevent switching. HTML language, title, description, validation and status messages follow the selected language. Language selection closes the mobile menu. Contact fields retain entered values during language changes.
-
-The endpoint remains `https://umweltmetrik-contact.alibahramali.workers.dev`; fields remain company, name, email, phone, place, service, message and website. The service field now uses stable internal values. No frontend API keys were added.
-
-## Verification
-
-`npm test` uses Chromium at `/usr/bin/chromium`; adjust the executablePath in playwright.config.js for another machine. Tests cover default German, English switching, persistence, switching back, translated copy/SEO, form validation, contact payload, success/error handling, language changes during a request, and mobile/tablet/desktop layouts at 375/768/1024/1280/1440px.
-
-Contact tests intercept the unchanged endpoint and simulate Worker responses. They do not send real email, and do not establish live Worker email-delivery or backend acceptance of the new service identifiers; the Worker source was not supplied. Existing legal placeholders, phone placeholder and prototype notice remain translated as supplied.
+The supplied prototype/legal review notice remains. The unconfigured phone placeholder is omitted from rendered contact details.
