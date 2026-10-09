@@ -1,5 +1,15 @@
 export const translations = {
   "de": {
+    "privacy": {
+      "settings": "Cookie-Einstellungen",
+      "title": "Datenschutz & Browser-Speicher",
+      "summary": "Diese Website setzt im aktuellen Stand keine Cookies und verwendet keine Analyse- oder Werbetracker. localStorage merkt sich Ihre Sprachwahl und die Kenntnisnahme dieses Hinweises. Es gibt keine optionalen Speicherzwecke zur Einwilligung.",
+      "storage": "Wir verwenden localStorage in Ihrem Browser: „umweltmetrik-language“ merkt sich Ihre gewählte Sprache; „umweltmetrik-privacy“ merkt sich, dass Sie diesen Hinweis zur Kenntnis genommen haben. Dies ist keine Einwilligung in Tracking.",
+      "control": "Sie können diese Einträge über die Website-Daten Ihres Browsers löschen. Danach wird die Sprache auf Deutsch zurückgesetzt und dieser Hinweis erneut angezeigt. Wenn der Browser das Speichern verhindert, bleibt die Website nutzbar; Ihre Auswahl kann dann nach dem Neuladen verloren gehen.",
+      "contact": "Erst beim Absenden des Kontaktformulars werden die eingegebenen Daten an unseren Cloudflare-Worker-Endpunkt zur Bearbeitung Ihrer Anfrage übermittelt.",
+      "review": "Die vollständigen rechtlichen Angaben und Datenschutzhinweise stehen noch zur Prüfung durch den Betreiber aus. Dieser Speicherhinweis ersetzt sie nicht.",
+      "acknowledge": "Zur Kenntnis genommen"
+    },
     "nav": {
       "umweltmetrik": "UMWELTMETRIK",
       "environmentalSamplingMonitoringEngineeringServices": "Umweltprobenahme · Monitoring · Ingenieurdienstleistungen",
@@ -308,6 +318,16 @@ export const translations = {
     }
   },
   "en": {
+    "privacy": {
+      "settings": "Cookie Settings",
+      "title": "Privacy & Browser Storage",
+      "summary": "The current website does not set cookies or use analytics or advertising trackers. localStorage remembers your language choice and acknowledgment of this notice. There are no optional storage purposes requiring consent.",
+      "storage": "We use localStorage in your browser: “umweltmetrik-language” remembers your selected language; “umweltmetrik-privacy” remembers that you have acknowledged this notice. This is not consent to tracking.",
+      "control": "You can delete these entries through your browser’s website data settings. This resets the language to German and displays this notice again. If your browser prevents storage, the website remains usable; your choice may be lost after reloading.",
+      "contact": "Only when you submit the contact form are the entered details sent to our Cloudflare Worker endpoint to process your enquiry.",
+      "review": "The complete legal disclosures and privacy information still require review by the site owner. This storage notice does not replace them.",
+      "acknowledge": "Acknowledged"
+    },
     "nav": {
       "umweltmetrik": "UMWELTMETRIK",
       "environmentalSamplingMonitoringEngineeringServices": "Environmental Sampling · Monitoring · Engineering Services",
