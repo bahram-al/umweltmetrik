@@ -122,7 +122,7 @@ test('no optional technologies or cookies; contact request occurs only on submis
   });
   await page.goto('/#/contact');
   await expect(notice(page)).toBeVisible();
-  await page.locator('#name').fill('Privacy Test');
+  await page.locator('#company').fill('Privacy Test');
   await page.locator('#email').fill('test@example.com');
   await page.locator('#message').fill('Test enquiry');
   expect(externalRequests).toEqual([]);
@@ -133,7 +133,7 @@ test('no optional technologies or cookies; contact request occurs only on submis
   // Essential form works without acknowledging the notice.
   await page.locator('#submit-button').click();
   await expect(page.locator('#form-status')).toHaveText(translations.de.form.success);
-  expect(payload.name).toBe('Privacy Test');
+  expect(payload.company).toBe('Privacy Test');
   expect(externalRequests).toEqual([new URL(endpoint).href]);
   await acknowledge(page);
   await settings(page);
@@ -179,4 +179,25 @@ test('quota failure when writing storage does not interrupt acknowledgment', asy
   await page.reload();
   await expect(notice(page)).toBeVisible();
   expect(errors).toEqual([]);
+});
+
+test('short mobile viewport keeps notice scrollable and dismissal available', async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 480 });
+  await page.goto('/');
+  await notice(page).locator('summary').click();
+  await expect(notice(page).locator('details')).toHaveAttribute('open', '');
+  const box = await notice(page).boundingBox();
+  expect(box.x).toBeGreaterThanOrEqual(0);
+  expect(box.y).toBeGreaterThanOrEqual(0);
+  expect(box.x + box.width).toBeLessThanOrEqual(320);
+  expect(box.y + box.height).toBeLessThanOrEqual(480);
+  expect(await notice(page).evaluate(el => getComputedStyle(el).overflowY)).toBe('auto');
+  await notice(page).locator('summary').focus();
+  await page.keyboard.press('Tab');
+  await expect(notice(page).getByRole('button')).toBeFocused();
+  await page.keyboard.press('Enter');
+  await expect(notice(page)).toHaveCount(0);
+  await settings(page);
+  await page.keyboard.press('Escape');
+  await expect(notice(page)).toHaveCount(0);
 });
