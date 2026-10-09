@@ -24,6 +24,7 @@ export default function PrivacyNotice() {
   useEffect(() => {
     if (!open) return;
     if (reopened.current) title.current?.focus({ preventScroll: true });
+    setHeight(panel.current?.offsetHeight || 0);
     const observer = new ResizeObserver(() => setHeight(panel.current?.offsetHeight || 0));
     observer.observe(panel.current);
     return () => observer.disconnect();
@@ -52,13 +53,13 @@ export default function PrivacyNotice() {
     {open && <>
       {/* Reserve scrolling space so the fixed notice cannot hide the footer. */}
       <div aria-hidden="true" style={{ height: height + 24 }} />
-      <div id="privacy-notice" className="privacy-notice" ref={panel} role="region" aria-labelledby="privacy-title"
+      <div id="privacy-notice" className="privacy-notice" ref={panel} role="region" aria-labelledby="privacy-title" aria-describedby="privacy-summary"
         onKeyDown={event => {
           if (event.key === 'Escape') { event.stopPropagation(); close(); }
         }}>
         <div className="privacy-copy">
           <h2 id="privacy-title" ref={title} tabIndex={-1}>{t.privacy.title}</h2>
-          <p>{t.privacy.summary}</p>
+          <p id="privacy-summary">{t.privacy.summary}</p>
           <details open={expanded} onToggle={event => setExpanded(event.currentTarget.open)}>
             <summary>{t.privacy.settings}</summary>
             <p>{t.privacy.storage}</p>

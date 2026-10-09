@@ -38,3 +38,15 @@
 
 .brand{display:flex;align-items:center;width:220px;max-width:calc(100% - 64px)}.brand-logo{display:block;width:100%;height:48px;object-fit:contain;object-position:left center}
 @media(max-width:600px){.brand{width:180px}.brand-logo{height:40px}}
+
+/* Non-modal storage notice: site navigation and forms remain available. */
+.privacy-settings{margin-top:20px;padding:10px 12px;border:1px solid #92a4aa;border-radius:8px;background:transparent;color:#d6e0e3;font-size:.9rem}
+.privacy-settings:focus-visible{outline-color:#8dd1cb}
+.privacy-notice{position:fixed;z-index:40;bottom:16px;left:50%;transform:translateX(-50%);width:min(960px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;display:flex;align-items:flex-start;gap:24px;padding:20px 24px;border:1px solid var(--line);border-radius:12px;background:var(--card);color:var(--ink);box-shadow:var(--shadow);font-size:.9rem}
+.privacy-copy{flex:1;min-width:0;overflow-wrap:anywhere}
+.privacy-notice h2{font-size:1.15rem;margin:0 0 8px}
+.privacy-notice p{margin:8px 0;max-width:none}
+.privacy-notice summary{cursor:pointer;color:var(--brand);font-weight:600;padding:8px 0}
+.privacy-notice details p{color:var(--muted)}
+.privacy-notice .btn{flex-shrink:0;min-height:44px}
+@media(max-width:600px){.privacy-notice{bottom:8px;width:calc(100% - 16px);max-height:calc(100dvh - 16px);padding:16px;gap:12px;flex-direction:column}.privacy-notice .btn{width:100%}}
