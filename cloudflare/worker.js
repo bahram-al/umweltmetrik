@@ -37,20 +37,19 @@ export default {
       return new Response(JSON.stringify({ error: 'Invalid JSON' }), { status: 400, headers: corsHeaders })
     }
 
-    const { name, email, company, phone, place, service, message, website } = data
+    const { email, company, phone, place, service, message, website } = data
 
     if (website) {
       return new Response(JSON.stringify({ success: true }), { status: 200, headers: corsHeaders })
     }
 
-    if (!name || !email || !message) {
-      return new Response(JSON.stringify({ error: 'Name, email and message are required' }), { status: 400, headers: corsHeaders })
+    if (!email || !message) {
+      return new Response(JSON.stringify({ error: 'Email and message are required' }), { status: 400, headers: corsHeaders })
     }
 
-    const subject = `Neue Website-Anfrage${service ? ` - ${service}` : ''} - ${name}`
+    const subject = `Neue Website-Anfrage${service ? ` - ${service}` : ''}`
     const emailHtml = `
       <h2>Neue Anfrage über umweltmetrik.de</h2>
-      <p><strong>Name:</strong> ${escapeHtml(name)}</p>
       <p><strong>E-Mail:</strong> ${escapeHtml(email)}</p>
       <p><strong>Firma:</strong> ${escapeHtml(company || '-')}</p>
       <p><strong>Telefon:</strong> ${escapeHtml(phone || '-')}</p>
