@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from 'react';
 import { HashRouter, Link, NavLink, Route, Routes, useLocation } from 'react-router-dom';
 import { useLanguage } from './i18n/LanguageContext';
 import LanguageSwitcher from './LanguageSwitcher';
+import PrivacyNotice from './components/PrivacyNotice';
 import Home from './pages/Home';
 import Services from './pages/Services';
 import Quality from './pages/Quality';
