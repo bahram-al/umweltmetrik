@@ -181,6 +181,17 @@ html[lang="en"] .test-banner .banner-en{display:block}
 @media(max-width:1120px){.brand .brand-symbol{width:25px!important;height:27px!important;flex-basis:25px!important}}
 @media(max-width:620px){.brand .brand-symbol{width:23px!important;height:25px!important;flex-basis:23px!important}}
 @media(max-width:620px){.test-banner .container{padding:12px 17px 14px}}
+.contact-form h2{font-size:19px;color:var(--deep);margin:4px 0 21px}
+.contact-panel h2{color:#fff;font-size:25px;line-height:1.2;letter-spacing:-1px;margin:15px 0}
+.contact-form h2:not(:first-child){margin-top:17px}
+.contact-form .optional{font-weight:500;color:var(--muted)}
+.contact-form .form-status{display:none;margin:18px 0 0;padding:12px 14px;border-radius:9px;font-size:13px;font-weight:700;line-height:1.5}
+.contact-form .form-status.show{display:block}
+.contact-form .form-status.ok{background:#e7f6ef;color:#155f43;border:1px solid #b9e5d1}
+.contact-form .form-status.error{background:#fff0f0;color:#8a2525;border:1px solid #f0c2c2}
+.contact-form .contact-submit{cursor:pointer;margin-top:19px;min-height:48px}
+.contact-form .contact-submit:disabled{opacity:.65;cursor:wait}
+.contact-form .hp{position:absolute!important;left:-9999px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 </style>
 </head>
 <body>
@@ -362,9 +373,44 @@ function knowledgePage(){return `<section class="knowledge-hero"><div class="con
 pageHero=function(title,summary,id){return `<section class="page-hero"><div class="container"><div class="page-text"><div class="crumb"><a href="#/">${t('Startseite','Home')}</a> / <a href="#/wissen">${t('Fachwissen & Regelwerke','Knowledge & standards')}</a></div><h1>${esc(title)}</h1><p>${esc(summary)}</p><div class="hero-actions"><a class="btn btn-primary" href="#/contact?service=${encodeURIComponent(id||'')}">${t('Projekt anfragen','Request a project')} →</a><a href="#/wissen" class="btn btn-outline">${t('Alle Fachkapitel','All chapters')}</a></div></div>${photo(id||'hero',title)}</div></section>`;};
 const detailPageOld=detailPage;
 detailPage=function(id){let markup=detailPageOld(id);markup=markup.replaceAll('href="#/services"','href="#/wissen"').replaceAll('href="#/services/','href="#/wissen/');markup=markup.replaceAll(I[lang].back,t('Zurück zur Fachübersicht','Back to technical chapters'));return markup;};
-contactPage=function(){return `<section class="section" style="background:#eaf4ed;padding-bottom:48px"><div class="container"><span class="eyebrow">${t('KONTAKT','CONTACT')}</span><h1 class="heading">${t('Kontakt','Contact')}</h1><p class="lead">${t('Diese Website ist eine Testfassung. Das Kontaktformular ist derzeit nicht verfügbar.','This website is a test version. The contact form is currently unavailable.')}</p></div></section><section class="section"><div class="container"><div class="contact-form" style="max-width:720px"><h2 style="color:var(--deep);margin-top:0">${t('Projektanfrage per E-Mail','Project inquiry by email')}</h2><p>${t('Für Anfragen können Sie Ihr eigenes E-Mail-Programm verwenden. Bitte beachten Sie, dass diese Testseite noch keine Datenschutzhinweise enthält.','You can use your own email program for inquiries. Please note that this test site does not yet have a privacy notice.')}</p><p><a class="btn btn-primary" href="mailto:info@umweltmetrik.de">info@umweltmetrik.de ↗</a></p></div></div></section>`;};
+const CONTACT_ENDPOINT='https://umweltmetrik-contact.alibahramali.workers.dev';
+async function submitContactForm(event){
+ event.preventDefault();
+ const form=event.currentTarget;
+ if(form.dataset.sending==='true')return;
+ if(!form.reportValidity())return;
+ const status=form.querySelector('#form-status');
+ const button=form.querySelector('button[type="submit"]');
+ status.textContent='';status.className='form-status';status.setAttribute('role','status');
+ form.dataset.sending='true';form.setAttribute('aria-busy','true');
+ button.disabled=true;button.textContent=t('Wird gesendet …','Sending …');
+ try{
+  const payload=Object.fromEntries(new FormData(form).entries());
+  const response=await fetch(CONTACT_ENDPOINT,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)});
+  if(!response.ok)throw new Error('Contact request failed');
+  form.reset();
+  status.textContent=t('Vielen Dank. Ihre Anfrage wurde erfolgreich gesendet.','Thank you. Your enquiry has been sent successfully.');
+  status.className='form-status show ok';
+ }catch(error){
+  status.textContent=t('Senden fehlgeschlagen. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@umweltmetrik.de.','Sending failed. Please try again or email info@umweltmetrik.de directly.');
+  status.className='form-status show error';status.setAttribute('role','alert');
+ }finally{
+  form.dataset.sending='false';form.setAttribute('aria-busy','false');
+  button.disabled=false;button.textContent=t('Anfrage senden →','Send enquiry →');
+ }
+}
+contactPage=function(){return `<section class="section" style="background:#eaf4ed;padding-bottom:48px"><div class="container"><span class="eyebrow">${t('KONTAKT','CONTACT')}</span><h1 class="heading">${t('Projekt technisch vorqualifizieren.','Start with a technical assessment of your project.')}</h1><p class="lead">${t('Beschreiben Sie kurz das Probenmedium, den Standort und den gewünschten Zeitraum. Diese Angaben helfen bei der ersten fachlichen Einschätzung.','Briefly describe the sample medium, location and preferred timeframe. This helps with an initial technical assessment.')}</p></div></section>
+<section class="section"><div class="container contact-layout"><aside class="contact-panel"><span class="eyebrow">${t('KONTAKT','CONTACT')}</span><h2>${t('Sprechen wir über Ihr Projekt.','Let’s discuss your project.')}</h2><p>${t('Berlin · Einsätze nach Vereinbarung','Berlin · Field assignments by arrangement')}</p><p><a href="mailto:info@umweltmetrik.de">info@umweltmetrik.de</a></p></aside>
+<form class="contact-form" id="contact-form" onsubmit="submitContactForm(event)"><h2>${t('Kontaktdaten','Contact details')}</h2>
+<div class="field-row"><div class="field"><label for="f-company">${t('Firma / Auftraggeber','Company / client')} <span class="optional">(${t('optional','optional')})</span></label><input id="f-company" name="company" autocomplete="organization"></div><div class="field"><label for="f-name">${t('Ansprechpartner *','Contact person *')}</label><input id="f-name" name="name" autocomplete="name" required></div></div>
+<div class="field-row"><div class="field"><label for="f-email">${t('E-Mail *','Email *')}</label><input id="f-email" name="email" type="email" autocomplete="email" required></div><div class="field"><label for="f-phone">${t('Telefon','Phone')} <span class="optional">(${t('optional','optional')})</span></label><input id="f-phone" name="phone" type="tel" autocomplete="tel"></div></div>
+<h2>${t('Projektdetails','Project details')}</h2><div class="field-row"><div class="field"><label for="f-place">${t('Einsatzort / PLZ','Project location / postcode')} <span class="optional">(${t('optional','optional')})</span></label><input id="f-place" name="place" autocomplete="postal-code"></div><div class="field"><label for="f-sector">${t('Leistungsbereich','Service area')} <span class="optional">(${t('optional','optional')})</span></label><select id="f-sector" name="service"><option value="">${t('Bitte wählen','Please select')}</option><option value="groundwater">${t('Grundwasser & Monitoring','Groundwater & monitoring')}</option><option value="drinking">${t('Trinkwasser & Hygiene','Drinking water & hygiene')}</option><option value="soil">${t('Boden / Altlasten','Soil / contaminated sites')}</option><option value="cooling">${t('Kühltürme & Verdunstungskühlanlagen','Cooling towers & evaporative cooling systems')}</option><option value="wastewater">${t('Abwasser & Einleitungen','Wastewater & discharges')}</option><option value="waste">${t('Abfall / Haufwerk','Waste / stockpiles')}</option><option value="surface">${t('Oberflächenwasser & Gewässer','Surface water & water bodies')}</option><option value="field">${t('Vor-Ort-Parameter & Feldtechnik','Field parameters & field equipment')}</option></select></div></div>
+<div class="field"><label for="f-message">${t('Projekt / Untersuchungsziel / gewünschter Termin *','Project / investigation objective / preferred date *')}</label><textarea id="f-message" name="message" required placeholder="${t('z. B. 6 Grundwassermessstellen, Monitoring, gewünschter Termin, Labor bereits festgelegt …','e.g. 6 groundwater monitoring wells, monitoring scope, preferred date, laboratory already selected …')}"></textarea></div>
+<div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off"></div>
+<p class="form-note">${t('Beim Absenden werden Ihre Angaben an den bestehenden Kontakt-Endpunkt übermittelt. Diese Testseite enthält noch keine Datenschutzhinweise. Alternativ können Sie direkt per E-Mail schreiben.','When you submit, your details are sent to the existing contact endpoint. This test site does not yet have a privacy notice. You can alternatively email us directly.')}</p>
+<p class="form-status" id="form-status" role="status" aria-live="polite"></p><button class="btn btn-primary contact-submit" type="submit">${t('Anfrage senden →','Send enquiry →')}</button></form></div></section>`;};
 render=function(){let path=decodeURIComponent((location.hash||'#/').slice(2).split('?')[0]).split('#')[0];let segments=path.split('/').filter(Boolean);let page=segments[0]||'home';mobileOpen=false;document.body.classList.remove('nav-open');document.documentElement.lang=lang;
- let title=page==='home'?t('Fachgerechte Probenahme beginnt vor der Analyse.','Professional sampling begins before analysis.'):page==='wissen'?t('Fachwissen & Regelwerke','Knowledge & standards'):page==='services'?t('Leistungen','Services'):page;
+ let title=page==='home'?t('Fachgerechte Probenahme beginnt vor der Analyse.','Professional sampling begins before analysis.'):page==='wissen'?t('Fachwissen & Regelwerke','Knowledge & standards'):page==='services'?t('Leistungen','Services'):page==='contact'?t('Projekt anfragen','Request a project'):page;
  if(page==='wissen'&&segments[1]&&SERVICES[segments[1]])title=txt(SERVICES[segments[1]].title);
  document.title='UmweltMetrik | '+title;
  document.getElementById('shell').innerHTML=header();let out='';
