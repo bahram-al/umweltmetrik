@@ -1,0 +1,17 @@
+---
+import Layout from '../layouts/Layout.astro';
+import PageContent from '../components/PageContent.astro';
+import {routes,order,label,href,services,type Lang,type Page,type ServiceId} from '../data/site';
+export function getStaticPaths(){
+ const paths=[];
+ for(const lang of ['de','en'] as Lang[]){
+  for(const page of Object.keys(routes) as Page[]){const path=(lang==='en'?'en/':'')+routes[page][lang==='en'?1:0];paths.push({params:{page:path||undefined},props:{lang,page}});}
+  for(const id of order)for(const page of ['services','knowledge'] as Page[]){const path=(lang==='en'?'en/':'')+routes[page][lang==='en'?1:0]+'/'+id;paths.push({params:{page:path},props:{lang,page,id}});}
+ }
+ return paths;
+}
+const {lang,page,id}=Astro.props as {lang:Lang;page:Page;id?:ServiceId};
+if(page==='knowledge') return Astro.redirect(href('services',lang,id),301);
+const title=id?services[id].title[lang]:page==='home'?(lang==='de'?'Probenahme mit Weitblick':'Sampling with perspective'):label(page,lang);
+---
+<Layout title={title} lang={lang} page={page} id={id}><PageContent lang={lang} page={page} id={id} /></Layout>

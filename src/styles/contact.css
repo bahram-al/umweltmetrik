@@ -1,0 +1,68 @@
+/* Contact follows the same open typography and restrained surfaces as the main site. */
+.contact-redesign{max-width:1440px;margin:0 auto;padding-top:64px;padding-bottom:80px}
+.contact-redesign .contact-layout{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(48px,6vw,88px);align-items:start}
+.contact-introduction{padding-top:10px;min-width:0}
+.contact-introduction h1{font-size:clamp(38px,3.6vw,52px);line-height:1.12;letter-spacing:-.03em;max-width:16ch;margin:0 0 26px;text-wrap:balance}
+.contact-lead{font-size:20px;line-height:1.65;max-width:36ch;margin:0}
+.contact-direct{margin-top:42px;padding-top:28px;border-top:1px solid var(--rule);max-width:36ch}
+.contact-direct h2{font-size:22px;font-weight:500;line-height:1.35;letter-spacing:-.02em;max-width:23ch;margin:0 0 18px}
+.contact-direct p{font-size:17px;color:var(--muted);margin:0 0 12px}
+.contact-direct a{display:inline-flex;align-items:center;min-height:44px;font-size:21px;color:var(--petrol);text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:6px;overflow-wrap:anywhere;max-width:100%}
+.contact-redesign .contact-form{min-width:0;background:var(--white);border-radius:18px;padding:36px 38px 30px}
+.contact-group{border:0;padding:0;margin:0;min-width:0}
+.contact-group+.contact-group{margin-top:30px}
+.contact-group legend{display:block;width:100%;padding:0 0 18px;margin:0 0 24px;border-bottom:1px solid var(--rule);font-size:24px;font-weight:500;letter-spacing:-.02em;line-height:1.25}
+.contact-redesign .field-row{gap:20px}
+.contact-redesign .field{margin-bottom:22px}
+.contact-redesign .field label{font-size:16px;line-height:1.5;font-weight:500;margin-bottom:8px}
+.contact-redesign .optional{color:var(--muted);font-size:15px;white-space:nowrap}
+.contact-redesign :is(input,select,textarea){min-height:52px;border:1px solid #bacac4;border-radius:10px;background:var(--paper);padding:13px 14px;font-size:17px;line-height:1.5;color:var(--petrol);box-shadow:none}
+.contact-redesign textarea{min-height:180px;resize:vertical}
+.contact-redesign textarea::placeholder{font-size:16px;color:var(--muted);opacity:1}
+.contact-redesign :is(input,select,textarea):focus-visible{background:var(--white);outline:2px solid var(--green);outline-offset:3px}
+.contact-redesign .field:focus-within label{color:var(--green)}
+.contact-form-end{display:flex;gap:22px;align-items:center;margin-top:4px}
+.contact-redesign .contact-submit{flex-shrink:0;padding:14px 25px;min-height:52px}
+.contact-redesign .contact-submit span{display:inline-block}
+.contact-local-note{font-size:14px;line-height:1.55;color:var(--muted);margin:0;max-width:30ch}
+.contact-redesign .form-note{border-top:1px solid var(--rule);padding-top:20px;margin:26px 0 0;font-size:15px;line-height:1.6;color:var(--muted)}
+.contact-redesign .form-status:not(:empty){background:var(--soft);padding:16px 18px;border-radius:10px;font-size:16px;margin:22px 0 0}
+@media(max-width:1120px){
+ .contact-redesign .contact-layout{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:38px}
+ .contact-introduction h1{font-size:42px}
+ .contact-redesign .contact-form{padding:30px 26px}
+ .contact-redesign .field-row{grid-template-columns:1fr;gap:0}
+ .contact-form-end{align-items:flex-start;flex-direction:column;gap:16px}
+ .contact-local-note{max-width:45ch}
+}
+@media(max-width:900px){
+ .contact-redesign .contact-layout{grid-template-columns:1fr;gap:32px}
+ .contact-introduction h1{max-width:23ch}
+ .contact-lead{max-width:60ch}
+ .contact-redesign .field-row{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+ .contact-form-end{flex-direction:row;align-items:center;gap:22px}
+}
+@media(max-width:760px){
+ .contact-redesign{padding-top:34px;padding-bottom:50px}
+ .contact-redesign .contact-layout{grid-template-columns:1fr;gap:32px}
+ .contact-introduction{padding-top:0}
+ .contact-introduction h1{font-size:38px;max-width:19ch;margin-bottom:22px}
+ .contact-lead{font-size:19px;max-width:42ch}
+ .contact-direct{margin-top:26px;padding-top:22px;max-width:none}
+ .contact-direct h2{font-size:21px;max-width:none;margin-bottom:10px}
+ .contact-direct p{font-size:16px;margin-bottom:5px}
+ .contact-direct a{font-size:20px}
+ .contact-redesign .contact-form{padding:28px 22px 24px;border-radius:14px}
+ .contact-redesign .field-row{grid-template-columns:1fr;gap:0}
+ .contact-group legend{font-size:23px;margin-bottom:22px;padding-bottom:16px}
+ .contact-group+.contact-group{margin-top:22px}
+ .contact-redesign .field{margin-bottom:21px}
+ .contact-redesign textarea{min-height:190px}
+ .contact-form-end{flex-direction:column;align-items:flex-start;gap:16px;margin-top:4px}
+ .contact-redesign .contact-submit{width:100%}
+ .contact-local-note{font-size:14px}
+}
+@media(forced-colors:active){
+ .contact-redesign .contact-form{border:1px solid CanvasText}
+ .contact-redesign :is(input,select,textarea){border:1px solid CanvasText}
+}

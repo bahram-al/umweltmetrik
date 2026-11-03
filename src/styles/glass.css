@@ -1,0 +1,137 @@
+/* Glass material, combined with the current main site's responsive controls. */
+:root{
+ --glass-surface:rgba(250,255,252,.58);
+ --glass-edge:rgba(255,255,255,.78);
+ --glass-depth:0 14px 32px -22px rgba(13,48,58,.35),inset 0 1px 0 rgba(255,255,255,.95),inset 0 -1px 0 rgba(13,48,58,.06);
+ --glass-radius:28px;
+ --glass-blur:blur(16px) saturate(125%);
+ --paper:#e6efeb;
+ --soft:rgba(238,248,241,.6);
+}
+html{scroll-padding-top:135px}
+body{background:var(--paper);isolation:isolate}
+body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,rgba(230,239,235,.95),rgba(234,244,240,.84)),url('/images/river-landscape.jpg') center/cover no-repeat}
+/* The border and inset reflection describe the requested glass edge, not a generic card. */
+:is(.header-inner,.offer,.hero-facts,.workflow-panel,.project-start-inner,.service-detail,.article-index,.article-content,.quality-card,.about-credentials){
+ background:var(--glass-surface);
+ border:1px solid var(--glass-edge);
+ border-radius:var(--glass-radius);
+ box-shadow:var(--glass-depth);
+ -webkit-backdrop-filter:var(--glass-blur);
+ backdrop-filter:var(--glass-blur);
+}
+.site-header{position:sticky;top:0;pointer-events:none;background:transparent}
+.header-inner{pointer-events:auto;height:74px;max-width:1440px;width:calc(100% - 2*var(--gutter));padding:0 22px;transform:translateY(15px);gap:20px}
+.home-page .header-inner{background:rgba(12,49,57,.44);border-color:rgba(255,255,255,.33);box-shadow:0 14px 38px -24px rgba(0,14,19,.8),inset 0 1px 0 rgba(255,255,255,.42)}
+.desktop-nav{gap:3px}
+.desktop-nav a{padding:11px 12px;border-radius:999px}
+.desktop-nav a[aria-current=page]{background:rgba(18,63,68,.09)}
+.home-page .desktop-nav a[aria-current=page]{background:rgba(255,255,255,.18)}
+.desktop-nav a[aria-current=page]::after{display:none}
+.hero-facts{width:max-content;max-width:100%;padding:17px 24px;gap:18px 38px;background:rgba(11,46,53,.36);border-color:rgba(255,255,255,.34);box-shadow:0 18px 40px -28px rgba(0,18,25,.75),inset 0 1px 0 rgba(255,255,255,.32)}
+.landscape-content{padding-bottom:42px}
+.home-offers{overflow:visible;padding-bottom:110px}
+.offer-columns{gap:24px}
+.offer{padding:28px}
+.offer p{max-width:35ch}
+.landscape-wave{opacity:.2;height:90px;z-index:-1}
+.workflow-panel{padding:30px}
+.workflow-tabs.has-indicator button[aria-selected=false]{color:var(--muted)}
+.project-start{background:transparent;padding:16px var(--gutter) 64px}
+.project-start-inner{max-width:1280px;padding:52px;gap:70px}
+.photo{border-radius:20px;box-shadow:0 12px 24px -24px rgba(13,48,58,.5)}
+.photo::after{content:'';position:absolute;inset:0;pointer-events:none;border-radius:inherit;box-shadow:inset 0 0 0 1px rgba(255,255,255,.35),inset 0 1px 1px rgba(255,255,255,.7)}
+.service-detail{width:calc(100% - 2*var(--gutter));max-width:1280px;margin:0 auto 28px;padding:32px;gap:48px;scroll-margin-top:125px}
+.service-afterword{background:rgba(235,248,241,.58);border-top:1px solid rgba(255,255,255,.65)}
+.article-index{top:125px;padding:24px 20px}
+.article-index nav{gap:10px}
+.article-index a{padding:7px 0}
+.article-layout{gap:36px}
+.article-content{padding:32px}
+.article-content>section{scroll-margin-top:135px}
+.article-content>section:last-child{margin-bottom:0}
+.article-content h2{font-size:30px}
+.quality-card{padding:28px}
+.legacy-content .quality-grid{gap:24px}
+.legacy-content .law{border:1px solid var(--glass-edge);border-radius:20px;background:rgba(250,255,252,.5);box-shadow:inset 0 1px 0 rgba(255,255,255,.8)}
+.about-credentials{padding:30px}
+.about-card,.contact-panel{background:rgba(13,48,58,.87);border:1px solid rgba(255,255,255,.44);border-radius:var(--glass-radius);box-shadow:var(--glass-depth);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+.contact-page.contact-redesign .contact-form{background:var(--glass-surface);border:1px solid var(--glass-edge);border-radius:var(--glass-radius);box-shadow:var(--glass-depth);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur)}
+.contact-redesign .contact-form :is(input,select,textarea){background:rgba(255,255,255,.7);border:1px solid #9badab;border-radius:14px;box-shadow:inset 0 2px 4px rgba(13,48,58,.035),0 1px 0 rgba(255,255,255,.8)}
+.contact-redesign .contact-form :is(input,select,textarea):focus-visible{background:rgba(255,255,255,.95)}
+input,select,textarea{background:rgba(255,255,255,.64);border:1px solid rgba(112,143,138,.65);border-radius:14px;box-shadow:inset 0 2px 4px rgba(13,48,58,.035),0 1px 0 rgba(255,255,255,.8)}
+input:focus-visible,select:focus-visible,textarea:focus-visible{background:rgba(255,255,255,.9)}
+.preview-note{background:rgba(236,245,228,.8);border-radius:16px}
+.photo-credits>li{padding:26px!important;margin-bottom:20px;background:var(--glass-surface);border:1px solid var(--glass-edge);border-radius:var(--glass-radius);box-shadow:var(--glass-depth);-webkit-backdrop-filter:var(--glass-blur);backdrop-filter:var(--glass-blur)}
+/* Control tints distinguish the primary action from the clear glass around it. */
+.button,.btn,.menu-toggle,.menu-close{border:1px solid rgba(255,255,255,.58);box-shadow:0 8px 18px -13px rgba(13,48,58,.5),inset 0 1px 0 rgba(255,255,255,.75);-webkit-backdrop-filter:blur(10px);backdrop-filter:blur(10px);overflow:hidden;isolation:isolate}
+.button,.btn{background:rgba(201,235,116,.7)}
+.dark-button,.contact-form .btn{background:rgba(15,56,65,.9);color:#fff;box-shadow:0 8px 18px -13px rgba(13,48,58,.55),inset 0 1px 0 rgba(255,255,255,.3)}
+.menu-toggle{background:rgba(200,235,101,.72)}
+.menu-close{background:rgba(255,255,255,.58)}
+.button::after,.btn::after{content:'';position:absolute;inset:-15% -70%;z-index:-1;background:linear-gradient(110deg,transparent 38%,rgba(255,255,255,.26) 49%,transparent 61%);transform:translateX(-65%);opacity:0;pointer-events:none;transition:opacity 100ms var(--ease-out),transform 280ms var(--ease-out)}
+#menu-dialog::backdrop{background:rgba(5,30,37,.35);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.menu-sheet{height:calc(100% - 28px);margin:14px;width:calc(100% - 28px);border-radius:30px;background:rgba(243,251,248,.9);border:1px solid var(--glass-edge);box-shadow:var(--glass-depth);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.menu-body{margin-top:24px}
+.site-footer{background:rgba(11,43,51,.91);border-top:1px solid rgba(255,255,255,.32);-webkit-backdrop-filter:blur(16px);backdrop-filter:blur(16px)}
+@media(hover:hover) and (pointer:fine){
+ .button:hover::after,.btn:hover::after{opacity:1;transform:translateX(65%)}
+ .desktop-nav a:hover{background:rgba(255,255,255,.28)}
+ .home-page .desktop-nav a:hover{color:#fff;background:rgba(255,255,255,.2)}
+}
+@media(max-width:1120px){
+ .header-inner{padding:0 18px}
+ .offer-columns{gap:18px}.offer{padding:24px}.offer h3{font-size:23px}
+ .project-start-inner{padding:38px;gap:40px}
+ .service-detail{gap:30px;padding:28px}
+ .article-layout{grid-template-columns:180px minmax(0,1fr);gap:24px}
+ .article-content{padding:26px}.article-index{padding:20px 16px}
+}
+@media(max-width:760px){
+ :root{--glass-blur:blur(10px) saturate(115%);--glass-radius:24px}
+ html{scroll-padding-top:100px}
+ .header-inner{height:64px;width:calc(100% - 28px);padding:0 16px;transform:translateY(8px);border-radius:24px}
+ .home-offers{padding-bottom:60px}
+ .offer-columns{gap:18px}.offer{padding:24px;grid-template-columns:34px minmax(0,1fr);column-gap:16px}.offer svg{width:30px;height:30px}.offer h3{font-size:23px}
+ .hero-facts{padding:16px 20px;gap:10px 20px;font-size:16px;border-radius:24px}
+ .landscape-content{padding-bottom:30px}
+ .workflow-panel{padding:22px;gap:25px}
+ .workflow-panel .photo{height:210px}
+ .project-start{padding:0 var(--gutter) 45px}
+ .project-start-inner{padding:28px 24px;gap:30px}
+ .project-start-copy h2{font-size:33px}
+ .service-detail{padding:22px;gap:24px;margin-bottom:22px;scroll-margin-top:100px}
+ .service-detail-photo{height:230px}
+ .article-index{position:static;padding:0;margin-bottom:32px;background:transparent;border:0;border-radius:0;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .article-content{padding:24px 20px}
+ .article-content h2{font-size:27px}
+ .article-content>section{scroll-margin-top:105px}
+ .article-hero h1{font-size:37px}
+ .quality-card{padding:25px}.legacy-content .quality-grid{gap:20px}
+ .photo-credits>li{padding:22px!important}
+ .menu-sheet{height:calc(100% - 20px);margin:10px;width:calc(100% - 20px);padding-left:22px;padding-right:22px;border-radius:26px;-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px)}
+ .menu-top{height:82px}.menu-body{margin-top:18px}.menu-link{font-size:31px}
+}
+/* Explicit opaque fallbacks keep every label and form usable without transparency. */
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ :root{--glass-surface:#f4faf6}
+ .home-page .header-inner,.hero-facts{background:#143d45}
+ .menu-sheet{background:#f4faf6}
+}
+@media(prefers-reduced-transparency:reduce){
+ :root{--glass-surface:#f4faf6;--glass-blur:none}
+ body::before{display:none}
+ .home-page .header-inner,.hero-facts,.contact-panel,.about-card,.site-footer{background:#123b44;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .menu-sheet{background:#f4faf6;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .button,.btn,.menu-toggle,.menu-close{-webkit-backdrop-filter:none;backdrop-filter:none}
+ .dark-button,.contact-form .btn{background:#123b44}.button,.menu-toggle{background:#c8eb65}
+ .contact-redesign .contact-form :is(input,select,textarea){background:#fff;box-shadow:none}
+}
+@media(prefers-reduced-motion:reduce){.button::after,.btn::after{display:none;transition:none}}
+@media(forced-colors:active){
+ .workflow-indicator{display:none}
+ .home-page .header-inner{background:Canvas;color:CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+ body::before,.photo::after,.button::after,.btn::after{display:none}
+ :is(.header-inner,.offer,.hero-facts,.workflow-panel,.project-start-inner,.service-detail,.article-index,.article-content,.quality-card,.contact-form,.about-credentials,.photo-credits>li,.contact-panel,.about-card,.site-footer,.menu-sheet,.button,.btn,.menu-toggle,.menu-close){background:Canvas;color:CanvasText;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .contact-page.contact-redesign .contact-form,.contact-redesign .contact-form :is(input,select,textarea){background:Canvas;color:CanvasText;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+}

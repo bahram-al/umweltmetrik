@@ -1,0 +1,20 @@
+---
+import Photo from './Photo.astro';
+import {services,text,sources,originalPages,href,type Lang,type ServiceId} from '../data/site';
+const {lang,id}=Astro.props as {lang:Lang;id:ServiceId};
+const s=services[id],i=text[lang];
+const short:Record<ServiceId,[string,string]>={drinking:['Trinkwasser & Hygiene','Drinking water & hygiene'],groundwater:['Grundwasser & Monitoring','Groundwater & monitoring'],soil:['Boden & Geologie','Soil & geology'],cooling:['Kühltürme & Kühlanlagen','Cooling systems'],wastewater:['Abwasser & Einleitungen','Wastewater & discharges'],waste:['Abfall & Haufwerke','Waste & stockpiles'],surface:['Oberflächenwasser','Surface water'],field:['Feldtechnik & Parameter','Field equipment']};
+const anchors=['intro','scope','params','rules','freq','faq'];
+const hydro=originalPages[lang].hydro.replace(/[↗→←]/g,'').replaceAll('#/services/groundwater',href('services',lang)+'#groundwater').replace(/\sonchange="[^"]*"/g,'');
+---
+<section class="article-hero section-pad"><div class="article-hero-copy"><a class="back-link" href={href('services',lang)}>{lang==='de'?'Alle Leistungen':'All services'}</a><h1 data-reveal="rise">{short[id][lang==='de'?0:1]}</h1><p>{s.summary[lang]}</p>{s.title[lang]!==short[id][lang==='de'?0:1]&&<p class="article-full-name">{s.title[lang]}</p>}</div><Photo id={id} lang={lang} priority class="article-cover" /></section>
+<div class="article-layout section-pad"><aside class="article-index"><nav aria-label={lang==='de'?'Auf dieser Seite':'On this page'}>{i.sections.map((v,n)=><a href={`#${anchors[n]}`}>{v}</a>)}</nav></aside><div class="article-content">
+<section id="intro"><h2>{lang==='de'?'Überblick':'Overview'}</h2><p>{s.intro[lang]}</p><p class="notice"><strong>{lang==='de'?'Wichtig:':'Important:'}</strong> {i.noBlank}</p></section>
+<section id="scope"><h2>{i.scope}</h2><dl class="scope-list">{s.scope[lang].map(q=><div><dt>{q[0]}</dt><dd>{q[1]}</dd></div>)}</dl></section>
+{id==='groundwater'&&<div class="hydro-legacy" data-ui set:html={hydro} />}
+<section id="params"><h2>{i.params}</h2><div class="table-wrap" role="region" aria-label={i.params} tabindex="0"><table><thead><tr><th scope="col">{lang==='de'?'Parameter / Merkmal':'Parameter / feature'}</th><th scope="col">{lang==='de'?'Bedeutung / Untersuchungszweck':'Purpose / meaning'}</th></tr></thead><tbody>{s.params[lang].map(q=><tr><th scope="row">{q[0]}</th><td>{q[1]}</td></tr>)}</tbody></table></div></section>
+<section id="rules"><h2>{i.rules}</h2><p>{lang==='de'?'Die folgenden Rechtsvorschriften und Normen gelten abhängig von Untersuchungsziel und Anwendungsfall. Normen sind nicht automatisch gesetzliche Pflichten; Ausgabe und Geltungsbereich prüfen.':'The following laws and standards apply according to the sample objective and situation. A technical standard is not automatically a legal obligation. Check scope and current edition.'}</p><div class="source-list">{s.rules.map(r=><div><div><h3>{r[0]}</h3><p>{r[1]}</p></div><a href={sources[r[2] as keyof typeof sources]||sources.din} target="_blank" rel="noopener noreferrer">{lang==='de'?'Quelle öffnen':'Open source'}<span class="sr-only">{lang==='de'?' (neuer Tab)':' (new tab)'}</span></a></div>)}</div></section>
+<section id="freq"><h2>{i.freq}</h2><div class="table-wrap" role="region" aria-label={i.freq} tabindex="0"><table><thead><tr><th scope="col">{lang==='de'?'Anlass / Anlage':'Situation / system'}</th><th scope="col">{lang==='de'?'Intervall / Vorgehen':'Interval / procedure'}</th></tr></thead><tbody>{s.freq[lang].map(q=><tr><th scope="row">{q[0]}</th><td>{q[1]}</td></tr>)}</tbody></table></div></section>
+<section id="faq"><h2>{i.faq}</h2><div class="faq-list">{s.faq[lang].map(q=><details><summary>{q[0]}<span aria-hidden="true">+</span></summary><p>{q[1]}</p></details>)}</div></section>
+
+</div></div>

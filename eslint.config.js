@@ -1,0 +1,1 @@
+export default [{ignores:['dist/**','reference/**','design/**','node_modules/**','.astro/**']},{files:['**/*.mjs','src/scripts/*.js'],languageOptions:{ecmaVersion:'latest',sourceType:'module'},rules:{'no-unused-vars':['error',{argsIgnorePattern:'^_'}],'no-constant-condition':'error','no-debugger':'error'}}];

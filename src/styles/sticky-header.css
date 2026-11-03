@@ -1,0 +1,39 @@
+/* Only the navigation adopts the explicitly requested Liquid Glass material. */
+:root{--navigation-offset:114px}
+html{scroll-padding-top:var(--navigation-offset)}
+.site-header{position:sticky;top:0;background:transparent;pointer-events:none}
+.header-inner{pointer-events:auto;height:74px;max-width:1440px;width:calc(100% - 2*var(--gutter));padding:0 22px;transform:translateY(15px);gap:20px;background:rgba(250,255,252,.76);border:1px solid rgba(255,255,255,.78);border-radius:28px;box-shadow:0 14px 32px -22px rgba(13,48,58,.35),inset 0 1px 0 rgba(255,255,255,.95);-webkit-backdrop-filter:blur(16px) saturate(125%);backdrop-filter:blur(16px) saturate(125%)}
+/* Enough petrol tint for white type even when pale content scrolls underneath. */
+.home-page .header-inner{background:rgba(12,49,57,.84);border-color:rgba(255,255,255,.33);box-shadow:0 14px 38px -24px rgba(0,14,19,.65),inset 0 1px 0 rgba(255,255,255,.42)}
+.site-header .desktop-nav{gap:3px}
+.site-header .desktop-nav a{padding:11px 12px;border-radius:999px}
+.site-header .desktop-nav a[aria-current=page]{background:rgba(18,63,68,.09)}
+.home-page .site-header .desktop-nav a[aria-current=page]{background:rgba(255,255,255,.18)}
+.site-header .desktop-nav a[aria-current=page]::after{display:none}
+.site-header .menu-toggle{background:rgba(200,235,101,.8);border:1px solid rgba(255,255,255,.58);box-shadow:0 8px 18px -13px rgba(13,48,58,.5),inset 0 1px 0 rgba(255,255,255,.75)}
+.article-index{top:var(--navigation-offset)}
+.article-content>section,.service-detail{scroll-margin-top:16px}
+@media(hover:hover) and (pointer:fine){
+ .site-header .desktop-nav a:hover{background:rgba(18,63,68,.08)}
+ .home-page .site-header .desktop-nav a:hover{color:#fff;background:rgba(255,255,255,.2)}
+}
+@media(max-width:1120px){.header-inner{padding:0 18px}}
+@media(max-width:760px){
+ :root{--navigation-offset:94px}
+ .header-inner{height:64px;width:calc(100% - 28px);padding:0 16px;transform:translateY(8px);border-radius:24px;-webkit-backdrop-filter:blur(10px) saturate(115%);backdrop-filter:blur(10px) saturate(115%)}
+ .site-header .brand-word{font-size:24px}
+ .site-header .brand-word svg{height:29px;width:27px}
+}
+@supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
+ .header-inner{background:#f4faf6}
+ .home-page .header-inner{background:#143d45}
+}
+@media(prefers-reduced-transparency:reduce){
+ .header-inner{background:#f4faf6;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .home-page .header-inner{background:#143d45}
+}
+@media(forced-colors:active){
+ .header-inner,.home-page .header-inner{background:Canvas;color:CanvasText;border:1px solid CanvasText;box-shadow:none;-webkit-backdrop-filter:none;backdrop-filter:none}
+ .site-header .desktop-nav a[aria-current=page],.home-page .site-header .desktop-nav a[aria-current=page]{background:Highlight;color:HighlightText}
+ .site-header .menu-toggle{background:ButtonFace;color:ButtonText;border:1px solid ButtonText;box-shadow:none}
+}

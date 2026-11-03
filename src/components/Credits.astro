@@ -1,0 +1,32 @@
+---
+import photos from '../data/photos.json';
+import Photo from './Photo.astro';
+import type {Lang} from '../data/site';
+const {lang}=Astro.props as {lang:Lang};
+---
+<section class="page-intro section-pad">
+ <h1>{lang==='de'?'Bildquellen.':'Image credits.'}</h1>
+ <p>{lang==='de'?'Die Fotografien dieser Website und ihre Urheber.':'The photographs on this website and their creators.'}</p>
+ <p class="intro-note">{lang==='de'?'Die Aufnahmen illustrieren die Themen dieser Website. Sie zeigen keine dokumentierten Projekte oder Mitarbeitenden von UmweltMetrik. Aus der Verwendung ergibt sich keine Zusammenarbeit oder Empfehlung durch die abgebildeten Personen, Unternehmen oder Institutionen.':'These photographs illustrate the topics of this website. They do not depict documented UmweltMetrik projects or staff. Their use does not imply a partnership or endorsement by any depicted person, business or institution.'}</p>
+</section>
+<ol class="photo-credits section-pad">
+ {Object.entries(photos).map(([id,photo])=><li id={`foto-${id}`}>
+  <Photo id={id} lang={lang} />
+  <div><h2>{photo.title[lang]}</h2><p>{photo.author} · {photo.source}</p>
+   <p class="credit-links"><a href={photo.sourceUrl}>{lang==='de'?'Originalfoto':'Original photograph'}</a><a href={photo.licenseUrl}>{photo.license}</a></p>
+   <p class="credit-note">{lang==='de'?'Bilddatei unverändert übernommen; der sichtbare Ausschnitt variiert je nach Bildschirmgröße.':'Image file used unchanged; the visible crop varies with screen size.'}{id==='cooling'&&(lang==='de'?' Titel des Originals: „Closed circuit cooling towers“. © Entryadmn. Das Foto bleibt unter CC BY-SA 4.0 verfügbar.':' Original title: “Closed circuit cooling towers”. © Entryadmn. The photograph remains available under CC BY-SA 4.0.')}</p>
+  </div>
+ </li>)}
+</ol>
+
+<style>
+.photo-credits{list-style:none;padding-top:0;padding-bottom:80px;max-width:1200px;margin:auto}
+.photo-credits li{display:grid;grid-template-columns:190px minmax(0,1fr);gap:36px;padding:32px 0;border-top:1px solid var(--rule);scroll-margin-top:28px}
+.photo-credits :global(.photo){height:135px}
+.photo-credits h2{font-size:26px;line-height:1.2;margin:0 0 12px;letter-spacing:-.02em}
+.photo-credits p{font-size:18px;margin:8px 0}
+.credit-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.credit-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
+.photo-credits .credit-note{font-size:16px;color:var(--muted);max-width:66ch;line-height:1.6}
+@media(max-width:600px){.photo-credits{padding-bottom:48px}.photo-credits li{grid-template-columns:1fr;gap:22px;padding:28px 0}.photo-credits :global(.photo){width:100%;height:190px}.photo-credits h2{font-size:25px}.credit-links{gap:0 20px}}
+</style>

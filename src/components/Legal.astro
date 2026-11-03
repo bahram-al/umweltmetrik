@@ -1,0 +1,9 @@
+---
+import {label,type Lang,type Page} from '../data/site';
+interface Props {lang:Lang;page:Extract<Page,'imprint'|'privacy'>;}
+const {lang,page}=Astro.props;
+---
+<section class="page-intro section-pad">
+ <h1>{label(page,lang)}</h1>
+ <!-- Rechtstexte nach Erhalt der tatsächlichen Betreiber- und Hostingangaben ergänzen. -->
+</section>

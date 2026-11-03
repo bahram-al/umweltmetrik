@@ -1,0 +1,26 @@
+/* Phone-specific control layouts; workflow underline styling also exists on desktop. */
+@media(max-width:760px){
+ .workflow-tabs{position:relative;isolation:isolate;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-auto-rows:1fr;gap:10px 6px;padding:0;border:0;border-radius:0;background:transparent;overflow:visible;margin-bottom:26px}
+ .workflow-tabs[hidden]{display:none}
+ .workflow-tabs button{display:flex;align-items:center;justify-content:center;min-width:0;min-height:54px;padding:8px 2px 12px;border:0;border-radius:0;background:transparent;color:#687475;font-size:15px;font-weight:400;line-height:1.4;text-align:center;white-space:normal;hyphens:auto;overflow-wrap:anywhere;text-wrap:balance;touch-action:manipulation}
+ .workflow-tabs button[aria-selected=true]{background:transparent;color:var(--petrol);font-weight:600}
+ .workflow-tabs button:active{color:var(--petrol);transform:none}
+ .workflow-indicator{display:block;position:absolute;pointer-events:none;border-radius:999px;background:var(--petrol);transform-origin:top left;transition-property:none}
+ .workflow-tabs button:focus-visible{outline:2px solid var(--petrol);outline-offset:-2px}
+ .article-index nav{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:1fr;gap:1px;padding:0;border:1px solid #7b8e83;border-radius:16px;background:#7b8e83;overflow:hidden}
+ .article-index a{display:flex;align-items:center;justify-content:center;min-width:0;max-width:none;min-height:52px;margin:0;padding:12px 10px;border:0;border-radius:0;background:var(--white);color:var(--petrol);font-size:16px;font-weight:400;line-height:1.4;text-align:center;white-space:normal;hyphens:auto;overflow-wrap:anywhere;touch-action:manipulation}
+ .article-index a:active{background:var(--accent)}
+ .article-index a:focus-visible{outline:2px solid var(--petrol);outline-offset:-4px}
+ .article-index{padding-bottom:0;margin-bottom:32px}
+ .article-content h2{hyphens:auto;overflow-wrap:anywhere}
+}
+@media(max-width:360px){.workflow-tabs button{font-size:14px}}
+@media(max-width:760px) and (hover:hover) and (pointer:fine){
+ .article-index a:hover{background:var(--soft)}
+}
+@media(max-width:760px) and (forced-colors:active){
+ .article-index nav{background:CanvasText;border-color:CanvasText}
+ .workflow-indicator{display:none}
+ .workflow-tabs button{color:ButtonText}
+ .workflow-tabs button[aria-selected=true]{color:Highlight;text-decoration:underline;text-underline-offset:6px}
+}

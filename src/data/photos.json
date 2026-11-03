@@ -1,0 +1,200 @@
+{
+  "landscape": {
+    "filename": "river-landscape.jpg",
+    "width": 2400,
+    "height": 1600,
+    "title": {
+      "de": "Saarschleife in Mettlach",
+      "en": "Saar river bend in Mettlach"
+    },
+    "alt": {
+      "de": "Blick auf die bewaldete Saarschleife in Mettlach",
+      "en": "View across the forested Saar river bend in Mettlach"
+    },
+    "author": "Elona Agug",
+    "source": "Pexels",
+    "sourceUrl": "https://www.pexels.com/photo/aerial-view-of-river-bend-in-forest-14012278/",
+    "license": "Pexels License",
+    "licenseUrl": "https://www.pexels.com/license/",
+    "evidence": "Nikon D3500; taken 2022-07-16; published 2022-10-13.",
+    "downloadUrl": "https://images.pexels.com/photos/14012278/pexels-photo-14012278.jpeg?auto=compress&cs=tinysrgb&w=2400&q=88",
+    "position": "center",
+    "sha256": "5fc936d714bb29c81973d4b6a5de89815a4dccc68f453d7ffb2f04b64a160b20"
+  },
+  "drinking": {
+    "filename": "real-water-sample-laboratory.jpg",
+    "width": 1600,
+    "height": 1065,
+    "title": {
+      "de": "Untersuchung einer Wasserprobe",
+      "en": "Water sample inspection"
+    },
+    "alt": {
+      "de": "Eine Wissenschaftlerin der US-Umweltbehörde EPA prüft eine Wasserprobe im Labor",
+      "en": "An EPA scientist inspects a water sample in a laboratory"
+    },
+    "author": "Eric Vance / U.S. EPA",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg",
+    "license": "Public Domain (U.S. EPA)",
+    "licenseUrl": "https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg",
+    "evidence": "EPA photograph dated 2014-09-10; Flickr government-work license reviewed by Commons in 2018.",
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/A_scientist_inspects_a_water_sample._%2815011059180%29.jpg",
+    "position": "50% 45%",
+    "sha256": "e7caed1bc52a2fe0b149df13451f174527c23ffc764408a8282a89e0a71d1505"
+  },
+  "groundwater": {
+    "filename": "real-groundwater-sampling.jpg",
+    "width": 2448,
+    "height": 3264,
+    "title": {
+      "de": "Grundwasserprobenahme am Brunnen",
+      "en": "Groundwater sampling at a well"
+    },
+    "alt": {
+      "de": "Messstelle und Probenahmeausrüstung des USGS an einem Grundwasserbrunnen",
+      "en": "USGS monitoring well and groundwater sampling equipment"
+    },
+    "author": "Jennifer T. Wilson / USGS",
+    "source": "U.S. Geological Survey",
+    "sourceUrl": "https://www.usgs.gov/media/images/groundwater-sample-collection",
+    "license": "Public Domain (USGS)",
+    "licenseUrl": "https://www.usgs.gov/media/images/groundwater-sample-collection",
+    "evidence": "USGS photograph published 2015-04-01; named photographer; public-supply well sampling.",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/293516098325501.West_.JPG",
+    "position": "50% 60%",
+    "sha256": "0c14ddeadb972078cfbbef7c7ca41da99d5a97c32201c5bcd3e13fc37aab2656"
+  },
+  "soil": {
+    "filename": "real-soil-sampling.jpg",
+    "width": 1600,
+    "height": 1200,
+    "title": {
+      "de": "Bodenprobenahme und Dokumentation",
+      "en": "Soil sampling and documentation"
+    },
+    "alt": {
+      "de": "Zwei Forschende entnehmen und dokumentieren Bodenproben auf einer Wiese",
+      "en": "Two researchers collect and document soil samples in a field"
+    },
+    "author": "Kathleen M. Rowland / USGS",
+    "source": "U.S. Geological Survey",
+    "sourceUrl": "https://www.usgs.gov/media/images/soil-sampling",
+    "license": "Public Domain (USGS)",
+    "licenseUrl": "https://www.usgs.gov/media/images/soil-sampling",
+    "evidence": "USGS photograph published 2009-06-01; JoAnn Holloway and Ron Wiederholt collecting soil samples.",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/df.june2009_011.jpg",
+    "position": "50% 43%",
+    "sha256": "8aa304e679380f749d8ac0903e84691ae0aa02d1632a52c9741f65243c28583d"
+  },
+  "cooling": {
+    "filename": "real-closed-circuit-cooling-towers.jpg",
+    "width": 2766,
+    "height": 2007,
+    "title": {
+      "de": "Geschlossene Kühlkreisläufe",
+      "en": "Closed-circuit cooling towers"
+    },
+    "alt": {
+      "de": "Reihe blauer industrieller Kühltürme mit Rohrleitungen und Ventilatoren",
+      "en": "Blue industrial closed-circuit cooling towers with pipework and fans"
+    },
+    "author": "Entryadmn",
+    "source": "Wikimedia Commons",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:Closed_circuit_cooling_towers.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "evidence": "Samsung SM-C7000 EXIF taken 2018-11-23; Commons upload 2020-01-16; own-work photograph.",
+    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/26/Closed_circuit_cooling_towers.jpg",
+    "position": "center",
+    "sha256": "05f6fbfb82d4ab3f3eccba6d7a2505ca9e17115177dfaa5695599424cc0c2574"
+  },
+  "wastewater": {
+    "filename": "real-wastewater-treatment-plant.jpg",
+    "width": 1280,
+    "height": 853,
+    "title": {
+      "de": "Kläranlage in Kielce",
+      "en": "Wastewater treatment plant in Kielce"
+    },
+    "alt": {
+      "de": "Luftaufnahme einer Kläranlage mit runden und rechteckigen Behandlungsbecken in Kielce, Polen",
+      "en": "Aerial photograph of a wastewater treatment plant with circular and rectangular basins in Kielce, Poland"
+    },
+    "author": "Michal Jarmoluk (jarmoluk)",
+    "source": "Pixabay",
+    "sourceUrl": "https://pixabay.com/photos/treatment-plant-wastewater-2826986/",
+    "license": "Pixabay Content License",
+    "licenseUrl": "https://pixabay.com/service/license-summary/",
+    "evidence": "Published 2017-10-07; also credited by USGS Water Science School to Michal Jarmoluk.",
+    "downloadUrl": "https://cdn.pixabay.com/photo/2017/10/07/16/26/treatment-plant-wastewater-2826986_1280.jpg",
+    "position": "50% 65%",
+    "sha256": "30452a8be5103a76d6e82843679c17d0630de25d5e8a4419cbac579569930bc1"
+  },
+  "waste": {
+    "filename": "real-mineral-stockpiles.jpg",
+    "width": 1280,
+    "height": 719,
+    "title": {
+      "de": "Mineralische Haufwerke",
+      "en": "Mineral stockpiles"
+    },
+    "alt": {
+      "de": "Mineralische Haufwerke unter einer Förderanlage in einem Kieswerk",
+      "en": "Mineral stockpiles beneath conveyor belts at a gravel plant"
+    },
+    "author": "distelAPPArath",
+    "source": "Pixabay",
+    "sourceUrl": "https://pixabay.com/photos/gravel-plant-open-pit-mining-2698868/",
+    "license": "Pixabay Content License",
+    "licenseUrl": "https://pixabay.com/service/license-summary/",
+    "evidence": "Sony ILCE-6000; photograph published 2017-08-30.",
+    "downloadUrl": "https://cdn.pixabay.com/photo/2017/08/30/22/50/kieswerk-2698868_1280.jpg",
+    "position": "center",
+    "sha256": "bf1c7ed60679e3b47badd098c53d6db48e0368f1936d186c8b42be5cd92c1549"
+  },
+  "surface": {
+    "filename": "real-surface-water-sampling.jpg",
+    "width": 1434,
+    "height": 807,
+    "title": {
+      "de": "Probenahme im Oberflächenwasser",
+      "en": "Surface-water sampling"
+    },
+    "alt": {
+      "de": "Eine USGS-Fachkraft entnimmt mit einer Probenflasche am Stab eine Wasserprobe in einem Gewässer",
+      "en": "A USGS technician collects a water sample using a bottle on a sampling pole"
+    },
+    "author": "Elizabeth Nystrom / USGS",
+    "source": "U.S. Geological Survey",
+    "sourceUrl": "https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample",
+    "license": "Public Domain (USGS)",
+    "licenseUrl": "https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample",
+    "evidence": "USGS photograph published 2017-06-27; named photographer and sampling activity.",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/20170627_142104_0.jpg",
+    "position": "65% 50%",
+    "sha256": "1f7f71c4e9cf3212c60fb503c996c00bb3ca959ef948c825dd2100948c439660"
+  },
+  "field": {
+    "filename": "real-water-quality-sonde.jpg",
+    "width": 837,
+    "height": 872,
+    "title": {
+      "de": "Sensoren einer Multiparametersonde",
+      "en": "Multiparameter sonde sensors"
+    },
+    "alt": {
+      "de": "Nahaufnahme der einzelnen Sensoren einer Wasserqualitätssonde in einer behandschuhten Hand",
+      "en": "Close-up of water-quality sonde sensors held in a gloved hand"
+    },
+    "author": "Sarah Mahanic / USGS",
+    "source": "U.S. Geological Survey",
+    "sourceUrl": "https://www.usgs.gov/media/images/water-quality-sondejpg",
+    "license": "Public Domain (USGS)",
+    "licenseUrl": "https://www.usgs.gov/media/images/water-quality-sondejpg",
+    "evidence": "USGS photograph published approximately May 2022; instrument and photographer identified.",
+    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/water%20quality%20sonde.jpg",
+    "position": "50% 40%",
+    "sha256": "092d131e3ddc729d969fd03348c2207720dc0a8787f4b12a9ae60399ad70e095"
+  }
+}

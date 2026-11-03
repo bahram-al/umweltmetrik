@@ -1,0 +1,51 @@
+---
+import '../styles/contact.css';
+import {originalPages,type Lang} from '../data/site';
+const {lang}=Astro.props as {lang:Lang};
+const source=originalPages[lang].contact;
+const read=(pattern:RegExp)=>{
+ const match=source.match(pattern);
+ if(!match) throw new Error(`Missing original contact content: ${pattern}`);
+ return match[1];
+};
+const title=read(/<h1[^>]*>([\s\S]*?)<\/h1>/);
+const lead=read(/<p class="lead">([\s\S]*?)<\/p>/);
+const direct=read(/<aside[^>]*>([\s\S]*?)<\/aside>/).replace(/<span class="contact-context">[\s\S]*?<\/span>/g,'');
+const form=read(/<form[^>]*>([\s\S]*?)<\/form>/);
+const groups=[...form.matchAll(/<h2>([\s\S]*?)<\/h2>/g)].map(m=>m[1]);
+const field=(id:string)=>{
+ const match=form.match(new RegExp(`<div class="field"><label for="${id}">[\\s\\S]*?<\\/div>`));
+ if(!match) throw new Error(`Missing original contact field: ${id}`);
+ return match[0].replace('type="email"','type="email" spellcheck="false" autocapitalize="none"');
+};
+const note=read(/<p class="form-note">([\s\S]*?)<\/p>/);
+const submit=read(/<button[^>]*>([\s\S]*?)<\/button>/).replace(/[↗→←]/g,'').trim();
+---
+<section class="contact-page contact-redesign section-pad">
+ <div class="contact-layout">
+  <div class="contact-introduction">
+   <h1 set:html={title} />
+   <p class="contact-lead" set:html={lead} />
+   <aside class="contact-direct" set:html={direct} />
+  </div>
+  <form class="contact-form" id="contact-form" data-local-form aria-label={lang==='de'?'Kontaktformular':'Contact form'}>
+   <fieldset class="contact-group">
+    <legend set:html={groups[0]} />
+    <div class="field-row"><Fragment set:html={field('f-name')} /><Fragment set:html={field('f-email')} /></div>
+    <div class="field-row"><Fragment set:html={field('f-company')} /><Fragment set:html={field('f-phone')} /></div>
+   </fieldset>
+   <fieldset class="contact-group">
+    <legend set:html={groups[1]} />
+    <div class="field-row"><Fragment set:html={field('f-place')} /><Fragment set:html={field('f-sector')} /></div>
+    <Fragment set:html={field('f-message')} />
+   </fieldset>
+   <div class="hp" aria-hidden="true"><label for="f-website">Website</label><input id="f-website" name="website" tabindex="-1" autocomplete="off" /></div>
+   <div class="contact-form-end">
+    <button class="btn btn-primary contact-submit magnetic" type="submit"><span set:html={submit} /></button>
+    <p class="contact-local-note">{lang==='de'?'Lokale Designvorschau: Der Versand ist deaktiviert. Es werden keine Daten übermittelt.':'Local design preview: delivery is disabled. No data is transmitted.'}</p>
+   </div>
+   <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
+   <p class="form-note" set:html={note} />
+  </form>
+ </div>
+</section>

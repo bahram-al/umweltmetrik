@@ -1,0 +1,1856 @@
+{
+  "SOURCES": {
+    "trinkwv": "https://www.gesetze-im-internet.de/trinkwv_2023/",
+    "trinkwv31": "https://www.gesetze-im-internet.de/trinkwv_2023/__31.html",
+    "trinkwv42": "https://www.gesetze-im-internet.de/trinkwv_2023/__42.html",
+    "bimschv": "https://www.gesetze-im-internet.de/bimschv_42/",
+    "bbod": "https://www.gesetze-im-internet.de/bbodschv_2023/",
+    "ersatz": "https://www.gesetze-im-internet.de/ersatzbaustoffv/__8.html",
+    "abwv": "https://www.gesetze-im-internet.de/abwv_1997/",
+    "uba": "https://www.umweltbundesamt.de/themen/wasser/trinkwasser/rechtliche-grundlagen-empfehlungen-regelwerk/empfehlungen-stellungnahmen-zu-trinkwasser",
+    "legionella": "https://www.umweltbundesamt.de/system/files/medien/5620/dokumente/uba-empfehlung_systemische_untersuchung_legionellen_2025.pdf",
+    "risk": "https://www.umweltbundesamt.de/sites/default/files/medien/5620/dokumente/uba-empfehlung_risikoabschaetzung_ohne_aenderungen_trinkwv_2025_internet_0.pdf",
+    "din19458": "https://www.dinmedia.de/de/norm/din-en-iso-19458/89531192",
+    "dvgw": "https://www.dvgw.de/themen/wasser/ressourcenmanagement-und-gewaesserschutz/grundwasserschutz",
+    "lawa": "https://www.lawa.de/",
+    "din": "https://www.dinmedia.de/",
+    "iso17025": "https://www.dakks.de/de/akkreditierung.html"
+  },
+  "I": {
+    "de": {
+      "nav": [
+        "Leistungen",
+        "Qualität & Regelwerke",
+        "Für Labore",
+        "Über mich",
+        "Kontakt"
+      ],
+      "cta": "Projekt anfragen",
+      "more": "Mehr erfahren",
+      "all": "Alle Leistungen entdecken",
+      "back": "Zurück zu den Leistungen",
+      "badge": "UMWELTPROBENAHME · MONITORING · GEOLOGIE",
+      "heroA": "Fachgerechte Probenahme",
+      "heroB": "beginnt vor der Analyse.",
+      "heroP": "Planung, Entnahme, Vor-Ort-Messungen und lückenlose Dokumentation – für Wasser, Boden und Abfall. Fachlich fundiert, praxisnah und an den einschlägigen Regelwerken orientiert.",
+      "explore": "Leistungen ansehen",
+      "face": "Praxisnah im Feld. Sorgfältig bei jedem Schritt.",
+      "facts": [
+        "15+ Jahre",
+        "M.Sc. Geologie",
+        "PN 98",
+        "In-situ-Probenahme"
+      ],
+      "factSub": [
+        "Feld- und Projekterfahrung",
+        "Geowissenschaftlicher Hintergrund",
+        "Haufwerks- und Abfallprobenahme",
+        "Vor-Ort-Parameter & Monitoring"
+      ],
+      "svcEye": "UNSERE FACHBEREICHE",
+      "svcTitle": "Für jedes Medium die richtige Probenahme.",
+      "svcIntro": "Fachgerechte Probenahme für Trinkwasser, Grundwasser, Boden, Abfall und weitere Umweltmedien – sorgfältig geplant, ausgeführt und dokumentiert.",
+      "whyEye": "UNSER ANSPRUCH",
+      "whyTitle": "Gute Analytik braucht gute Feldarbeit.",
+      "whyItems": [
+        [
+          "◈",
+          "Regelwerksorientiert",
+          "Untersuchungsziel und Medium bestimmen das fachlich geeignete Vorgehen."
+        ],
+        [
+          "▤",
+          "Nachvollziehbar dokumentiert",
+          "Messstellen, Randbedingungen, Feldparameter und Laborübergabe im Blick."
+        ],
+        [
+          "⌁",
+          "Erfahren im Außendienst",
+          "Praxisorientierte Umsetzung auch bei anspruchsvollen Probenahmesituationen."
+        ],
+        [
+          "◎",
+          "Für Labore & Büros",
+          "Flexible Unterstützung als Schnittstelle zwischen Projekt und Analytik."
+        ]
+      ],
+      "soilEye": "BODEN & GEOLOGIE",
+      "soilTitle": "Bodenansprache direkt am gewonnenen Kern.",
+      "soilText": "Bei Rammkernsondierungen geht es nicht nur darum, Material zu entnehmen. Entscheidend sind die geologische Ansprache, die Tiefenzuordnung und die saubere Dokumentation von Schichtwechseln und Auffälligkeiten.",
+      "soilPoints": [
+        "Rammkernsonde auf der Untersuchungsfläche",
+        "Schichtenverzeichnis und geologische Beschreibung",
+        "Gezielte Proben aus definierten Tiefen",
+        "Feldgerechte Dokumentation von Bodenbeschaffenheit und Auffälligkeiten"
+      ],
+      "workEye": "ARBEITSWEISE",
+      "workTitle": "Fünf Schritte. Ein klarer Ablauf.",
+      "work": [
+        [
+          "01",
+          "Auftrag klären",
+          "Medium, Ziel, Ort und relevante Parameter abstimmen."
+        ],
+        [
+          "02",
+          "Probenahme planen",
+          "Messstellen, Verfahren, Gefäße und Konservierung vorbereiten."
+        ],
+        [
+          "03",
+          "Vor Ort umsetzen",
+          "Proben fachgerecht entnehmen und Feldwerte erheben."
+        ],
+        [
+          "04",
+          "Dokumentieren",
+          "Randbedingungen, Ergebnisse und Auffälligkeiten festhalten."
+        ],
+        [
+          "05",
+          "Laborübergabe",
+          "Proben eindeutig kennzeichnen und geordnet übergeben."
+        ]
+      ],
+      "ready": "Sie planen eine Untersuchung?",
+      "readyP": "Ob einzelne Probenahme, Regeltermin oder umfangreiches Monitoring – beschreiben Sie kurz Ihr Vorhaben.",
+      "footerTag": "Umweltprobenahme · Monitoring · Ingenieurdienstleistungen",
+      "links": "Navigation",
+      "mail": "Kontakt",
+      "made": "Fachinformationen · Stand Oktober 2026",
+      "sections": [
+        "Überblick",
+        "Leistungsumfang",
+        "Parameter & Bedeutung",
+        "Regelwerke & Quellen",
+        "Untersuchungshäufigkeit",
+        "Fragen & Antworten"
+      ],
+      "scope": "Leistungen im Überblick",
+      "params": "Parameter & ihre Bedeutung",
+      "rules": "Regelwerke & fachliche Quellen",
+      "freq": "Untersuchungshäufigkeiten",
+      "faq": "Häufige Fragen",
+      "noBlank": "Die tatsächlichen Vorgaben hängen von Anlage, Ziel, Material, behördlichen Festlegungen und der geltenden Fassung ab. Eine projektspezifische Prüfung ist erforderlich.",
+      "ask": "Probenahme besprechen",
+      "qualityTitle": "Qualität & Regelwerke",
+      "qualityP": "Eine Normenliste allein garantiert noch keine aussagekräftige Probe. Entscheidend sind das Untersuchungsziel, die Eignung des Verfahrens und eine nachvollziehbare Dokumentation.",
+      "labsTitle": "Für Labore & Ingenieurbüros",
+      "labsP": "Flexible Unterstützung bei der Probenahme und Felddokumentation – abgestimmt auf Ihre QM-Vorgaben, Projektabläufe und Laborprozesse.",
+      "aboutTitle": "Geowissenschaftlicher Hintergrund. Erfahrung im Feld.",
+      "aboutP": "Als Geologe (M.Sc.) mit ingenieurwissenschaftlichem Hintergrund bringe ich mehr als 15 Jahre Erfahrung in geologischer Feldarbeit, Umweltprobenahme und Monitoring mit. Im Mittelpunkt stehen eine sorgfältige Aufnahme vor Ort, nachvollziehbare Messdaten und eine fachgerechte Dokumentation.",
+      "contactTitle": "Besprechen wir Ihr Projekt.",
+      "contactP": "Teilen Sie uns Medium, Standort, Untersuchung und gewünschten Zeitraum mit. Über die Vorschau können Sie Ihre Anfrage in Ihrem E-Mail-Programm vorbereiten.",
+      "contactAlt": "Auf der bestehenden Website anfragen",
+      "name": "Name",
+      "company": "Firma / Organisation",
+      "email": "E-Mail",
+      "phone": "Telefon (optional)",
+      "sector": "Fachbereich",
+      "location": "Projektort / PLZ",
+      "period": "Gewünschter Zeitraum",
+      "message": "Kurzbeschreibung des Projekts",
+      "privacy": "Ich habe den Hinweis zur lokalen E-Mail-Vorschau gelesen.",
+      "send": "E-Mail-Anfrage vorbereiten",
+      "formHint": "Mit „Anfrage per E-Mail“ öffnet sich Ihr E-Mail-Programm mit den eingetragenen Projektdaten. Bitte prüfen und senden Sie die Nachricht dort.",
+      "required": "Bitte füllen Sie alle Pflichtfelder aus.",
+      "thanks": "Ihr E-Mail-Programm wird mit dem vorbereiteten Text geöffnet.",
+      "status": "Fachinformationen zu Probenahme und Monitoring.",
+      "overview": "Alle Fachbereiche",
+      "normType": "Quelle öffnen ↗"
+    },
+    "en": {
+      "nav": [
+        "Services",
+        "Quality & Standards",
+        "For Laboratories",
+        "About",
+        "Contact"
+      ],
+      "cta": "Request a project",
+      "more": "Explore service",
+      "all": "Explore all services",
+      "back": "Back to services",
+      "badge": "ENVIRONMENTAL SAMPLING · MONITORING · GEOLOGY",
+      "heroA": "Professional sampling",
+      "heroB": "begins before analysis.",
+      "heroP": "Planning, sampling, on-site measurement and traceable documentation – for water, soil and waste. Scientifically grounded, practical and aligned with applicable standards.",
+      "explore": "Explore services",
+      "face": "Practical in the field. Careful at every step.",
+      "facts": [
+        "15+ years",
+        "M.Sc. Geology",
+        "PN 98",
+        "In-situ sampling"
+      ],
+      "factSub": [
+        "Field and project experience",
+        "Geoscience background",
+        "Stockpile and waste sampling",
+        "Field parameters & monitoring"
+      ],
+      "svcEye": "OUR EXPERTISE",
+      "svcTitle": "The right sampling approach for every medium.",
+      "svcIntro": "Each field has its own detailed page with procedures, parameters, applicable regulations and typical testing reasons.",
+      "whyEye": "OUR APPROACH",
+      "whyTitle": "Reliable analysis starts with reliable fieldwork.",
+      "whyItems": [
+        [
+          "◈",
+          "Standards-based",
+          "The investigation objective and medium determine the appropriate field method."
+        ],
+        [
+          "▤",
+          "Traceable documentation",
+          "Sampling points, field conditions, on-site readings and laboratory transfer."
+        ],
+        [
+          "⌁",
+          "Experienced in the field",
+          "Practical implementation for demanding sampling situations."
+        ],
+        [
+          "◎",
+          "For labs & consultants",
+          "Flexible field support between projects and analytical laboratories."
+        ]
+      ],
+      "soilEye": "SOIL & GEOLOGY",
+      "soilTitle": "Geological logging at the recovered soil core.",
+      "soilText": "Direct-push/percussion coring is not just about recovering material. Correct geological logging, accurate depth assignment and documenting changes in soil layers are essential.",
+      "soilPoints": [
+        "Compact ram-core probe at the investigation site",
+        "Borehole logs and geological description",
+        "Targeted sampling from documented depths",
+        "The visual focus is on coring, not auger drilling"
+      ],
+      "workEye": "OUR WORKFLOW",
+      "workTitle": "Five steps. One clear process.",
+      "work": [
+        [
+          "01",
+          "Define the task",
+          "Agree on medium, objective, site and parameters."
+        ],
+        [
+          "02",
+          "Plan sampling",
+          "Prepare locations, methods, containers and preservation."
+        ],
+        [
+          "03",
+          "Work on site",
+          "Collect samples and measure field parameters."
+        ],
+        [
+          "04",
+          "Document",
+          "Record conditions, measurements and observations."
+        ],
+        [
+          "05",
+          "Transfer to lab",
+          "Label samples and hand over with proper records."
+        ]
+      ],
+      "ready": "Planning an investigation?",
+      "readyP": "Single sample, regular appointment or larger monitoring programme – tell us about your project.",
+      "footerTag": "Environmental sampling · Monitoring · Engineering services",
+      "links": "Navigation",
+      "mail": "Contact",
+      "made": "Technical preview · October 2026",
+      "sections": [
+        "Overview",
+        "Scope of services",
+        "Parameters & relevance",
+        "Regulations & sources",
+        "Sampling intervals",
+        "Questions & answers"
+      ],
+      "scope": "Services at a glance",
+      "params": "Parameters & their relevance",
+      "rules": "Regulations & technical sources",
+      "freq": "Sampling intervals",
+      "faq": "Frequently asked questions",
+      "noBlank": "Requirements depend on the installation, objective, material, authority specifications and applicable version. Project-specific verification is essential.",
+      "ask": "Discuss a sampling project",
+      "qualityTitle": "Quality & Standards",
+      "qualityP": "A list of standards does not guarantee a representative sample. Investigation objectives, appropriate methods and traceable documentation make the difference.",
+      "labsTitle": "For Laboratories & Consultancies",
+      "labsP": "Flexible field sampling and documentation support, coordinated with your quality management system and laboratory processes.",
+      "aboutTitle": "A geoscientific background. Experience in the field.",
+      "aboutP": "I am a geologist (M.Sc.) with an engineering background and more than 15 years of experience in geological fieldwork, environmental sampling and monitoring. My work focuses on careful on-site assessment, traceable measurements and reliable field documentation.",
+      "contactTitle": "Tell us about your project.",
+      "contactP": "Please provide the medium, location, testing objective and intended date. In this preview your request is prepared in your email application.",
+      "contactAlt": "Use existing contact website",
+      "name": "Name",
+      "company": "Company / organisation",
+      "email": "Email",
+      "phone": "Phone (optional)",
+      "sector": "Service area",
+      "location": "Site / postal code",
+      "period": "Preferred period",
+      "message": "Project description",
+      "privacy": "I have read the local email preview note.",
+      "send": "Prepare email inquiry",
+      "formHint": "This stand-alone HTML preview has no server-based message delivery. The button opens your email client with a prefilled message. Automated delivery requires connecting the existing backend (e.g. Resend) later.",
+      "required": "Please complete all required fields.",
+      "thanks": "Your email client will open with a prepared message.",
+      "status": "Environmental sampling and monitoring.",
+      "overview": "All services",
+      "normType": "Open source ↗"
+    }
+  },
+  "SERVICES": {
+    "drinking": {
+      "title": {
+        "de": "Trinkwasser & Hygiene",
+        "en": "Drinking Water & Hygiene"
+      },
+      "cat": {
+        "de": "Wasserhygiene",
+        "en": "Water hygiene"
+      },
+      "summary": {
+        "de": "Mikrobiologische und chemische Probenahme in Trinkwasserinstallationen: von Legionellen bis Metallen und PFAS.",
+        "en": "Microbiological and chemical sampling in drinking water installations, from Legionella to metals and PFAS."
+      },
+      "intro": {
+        "de": "Eine fachgerechte Trinkwasserprobenahme betrachtet nicht nur das Laborergebnis. Probenahmezweck, Entnahmestelle, Temperatur, Installation und Transport entscheiden wesentlich darüber, welche Aussage die Untersuchung erlaubt.",
+        "en": "Good drinking water sampling begins with the sampling objective: outlet selection, temperature, the installation and transport influence the meaning of the analytical result."
+      },
+      "scope": {
+        "de": [
+          [
+            "Mikrobiologische Proben",
+            "Systemische Untersuchung auf Legionella spec., hygienische Parameter und indikative Untersuchungen."
+          ],
+          [
+            "Chemische Proben",
+            "Probenahme für Metalle, Nitrat, organische Stoffe oder PFAS nach festgelegtem Untersuchungsplan."
+          ],
+          [
+            "Probenahmestellen",
+            "Geeignete Entnahmestellen identifizieren, kennzeichnen und den Probenahmezweck dokumentieren."
+          ],
+          [
+            "Installation & Temperatur",
+            "Warm- und Kaltwasser, Stagnation, Temperaturen und andere relevante Umstände aufnehmen."
+          ]
+        ],
+        "en": [
+          [
+            "Microbiological samples",
+            "Systemic testing for Legionella spp. and other hygienic indicator organisms."
+          ],
+          [
+            "Chemical samples",
+            "Sampling for metals, nitrate, organic substances or PFAS under a defined plan."
+          ],
+          [
+            "Sampling points",
+            "Select and document suitable outlets and the purpose of sampling."
+          ],
+          [
+            "Building conditions",
+            "Document cold and hot water, stagnation and relevant temperatures."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "Legionella spec.",
+            "Kann beim Einatmen belasteter Aerosole Legionärskrankheit auslösen; relevant in bestimmten Warmwasseranlagen."
+          ],
+          [
+            "Escherichia coli",
+            "Indikator für eine fäkale Verunreinigung."
+          ],
+          [
+            "Intestinale Enterokokken",
+            "Zusätzlicher Indikator für fäkale Belastung."
+          ],
+          [
+            "Coliforme Bakterien",
+            "Hinweis auf hygienische Mängel, Einträge oder Veränderungen im System."
+          ],
+          [
+            "Koloniezahl (22 / 36 °C)",
+            "Betriebs- und Hygienekontrolle; Bewertung abhängig von Anlagentyp und Zusammenhang."
+          ],
+          [
+            "Blei, Kupfer, Nickel",
+            "Können aus Materialien der Trinkwasserinstallation ins Wasser gelangen."
+          ],
+          [
+            "Nitrat, Nitrit, PFAS",
+            "Chemische Parameter mit unterschiedlichen Quellen und regulatorischen Anforderungen."
+          ]
+        ],
+        "en": [
+          [
+            "Legionella spp.",
+            "Inhalation of contaminated aerosols may cause Legionnaires’ disease."
+          ],
+          [
+            "Escherichia coli",
+            "Indicator of faecal contamination."
+          ],
+          [
+            "Intestinal enterococci",
+            "Additional indicator of faecal contamination."
+          ],
+          [
+            "Coliform bacteria",
+            "May indicate changes or hygienic issues in the system."
+          ],
+          [
+            "Colony counts (22 / 36 °C)",
+            "Operational/hygienic indicators interpreted in context."
+          ],
+          [
+            "Lead, copper, nickel",
+            "May be released from plumbing materials."
+          ],
+          [
+            "Nitrate, nitrite, PFAS",
+            "Chemical substances subject to different risk pathways and requirements."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "Trinkwasserverordnung (TrinkwV)",
+          "Gesetzliche Vorgaben für Trinkwasser und Untersuchungen.",
+          "trinkwv"
+        ],
+        [
+          "§ 31 TrinkwV",
+          "Bedingungen und Fristen für systemische Legionellenuntersuchungen.",
+          "trinkwv31"
+        ],
+        [
+          "§ 42 TrinkwV",
+          "Anforderungen an Probenahmeverfahren, u. a. Zweck a/b.",
+          "trinkwv42"
+        ],
+        [
+          "DIN EN ISO 19458",
+          "Mikrobiologische Wasserprobenahme; Auswahl des passenden Probenahmezwecks.",
+          "din19458"
+        ],
+        [
+          "UBA-Empfehlung, 13.10.2025",
+          "Aktuelle veröffentlichte Fassung zur systemischen Legionellenuntersuchung; Übergang der Rechtsverbindlichkeit beachten.",
+          "legionella"
+        ],
+        [
+          "UBA: Empfehlungen & Stellungnahmen",
+          "Zentrale offizielle Übersicht, u. a. chemische Parameter und PFAS.",
+          "uba"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Legionellen – gewerbliche Gebäude",
+            "Grundsätzlich mindestens alle 3 Jahre bei den in § 31 TrinkwV genannten Voraussetzungen."
+          ],
+          [
+            "Legionellen – öffentliche Abgabe",
+            "Grundsätzlich mindestens jährlich, soweit keine abweichende Entscheidung des Gesundheitsamts gilt."
+          ],
+          [
+            "Chemische und andere mikrobiologische Parameter",
+            "Abhängig von Anlage, Untersuchungspflichten, Risikobewertung und behördlichen Vorgaben. Keine pauschale Dreijahresregel."
+          ],
+          [
+            "PFAS-20",
+            "Grenzwert seit 12.01.2026 maßgeblich; PFAS-4 folgt ab 12.01.2028 (nicht automatisch identisch mit individuellem Probenahmeintervall)."
+          ]
+        ],
+        "en": [
+          [
+            "Legionella – commercial buildings",
+            "Generally at least once every 3 years where §31 TrinkwV applies."
+          ],
+          [
+            "Legionella – public provision",
+            "Generally annually unless the health authority sets a different interval."
+          ],
+          [
+            "Chemical and other biological indicators",
+            "Frequency depends on the system, duties, risk and official requirements."
+          ],
+          [
+            "PFAS-20",
+            "Limit applies from 12 Jan 2026; PFAS-4 from 12 Jan 2028. Testing frequencies differ by context."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Warum sind Legionellen relevant?",
+            "Legionellen können sich in geeigneten wasserführenden Systemen vermehren. Relevant ist insbesondere die Übertragung durch Einatmen von Aerosolen, etwa beim Duschen."
+          ],
+          [
+            "Ist jede Wohnimmobilie untersuchungspflichtig?",
+            "Nein. § 31 TrinkwV nennt bestimmte Voraussetzungen zu Erwärmungsanlagen, Aerosolbildung, Nutzungsart und Gebäudeform."
+          ],
+          [
+            "Welche UBA-Empfehlung wird berücksichtigt?",
+            "Die Fassung vom 13. Oktober 2025 ist veröffentlicht. Ob und ab wann sie in Bezug auf § 43 Abs. 5 TrinkwV rechtlich verbindlich ist, muss bei Anwendung geprüft werden."
+          ],
+          [
+            "Wer führt die Laboruntersuchung durch?",
+            "Die Analytik muss durch eine hierfür zugelassene Untersuchungsstelle erfolgen. Probenahme und Laborzuordnung werden projektbezogen abgestimmt."
+          ]
+        ],
+        "en": [
+          [
+            "Why are Legionella bacteria important?",
+            "They can grow in water systems and can cause illness when contaminated aerosols are inhaled."
+          ],
+          [
+            "Does every residential building require testing?",
+            "No. §31 TrinkwV sets conditions concerning hot water systems, aerosol-producing fixtures and use of the building."
+          ],
+          [
+            "Which UBA recommendation applies?",
+            "The UBA published a new version dated 13 October 2025. Its binding effect under the Drinking Water Ordinance requires checking the formal reference."
+          ],
+          [
+            "Who performs laboratory analysis?",
+            "Testing must be performed by an appropriately authorised testing laboratory."
+          ]
+        ]
+      }
+    },
+    "groundwater": {
+      "title": {
+        "de": "Grundwasser & Monitoring",
+        "en": "Groundwater & Monitoring"
+      },
+      "cat": {
+        "de": "Hydrogeologie",
+        "en": "Hydrogeology"
+      },
+      "summary": {
+        "de": "Grundwasserstände, Messstellenausbau, Fließrichtung, Pegelmessungen und stabile Vor-Ort-Parameter.",
+        "en": "Water levels, monitoring well records, flow direction, samples and stable field parameters."
+      },
+      "intro": {
+        "de": "Grundwasseruntersuchungen benötigen geeignete Messstellen, nachvollziehbare Wasserstandsmessungen und ein zur Fragestellung passendes Probenahmeverfahren. Für belastbare Zeitreihen müssen Randbedingungen wiederholbar erfasst werden.",
+        "en": "Groundwater surveys require suitable monitoring wells, traceable water-level measurements and fit-for-purpose sampling. Consistent field records are essential for reliable time series."
+      },
+      "scope": {
+        "de": [
+          [
+            "Pegel & Abstich",
+            "Lotrechte Messung zum festgelegten Messpunkt und Berechnung der Grundwasserstandshöhe."
+          ],
+          [
+            "Messstellenaufnahme",
+            "Ausbau, Filterlage, Tiefe, Bezugshöhe, Zustand und Zugänglichkeit dokumentieren."
+          ],
+          [
+            "Grundwasserproben",
+            "Förderrate und Absenkung beobachten, vor Ort geeignete Stabilisierungskriterien nutzen."
+          ],
+          [
+            "Monitoring & Fließrichtung",
+            "Wiederholungsmessungen; Grundwassergleichenplan und hydraulischer Gradient bei geeigneten Messpunkten."
+          ]
+        ],
+        "en": [
+          [
+            "Groundwater levels",
+            "Measure depth-to-water from a defined reference point and calculate hydraulic head."
+          ],
+          [
+            "Monitoring well survey",
+            "Document well depth, screen interval, reference elevation and condition."
+          ],
+          [
+            "Groundwater samples",
+            "Monitor abstraction rate, drawdown and appropriate field-parameter stability."
+          ],
+          [
+            "Monitoring & flow direction",
+            "Repeated data and hydraulic-gradient assessment from suitable observation points."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "Grundwasserstand / Abstich",
+            "Zeitliche Veränderung und hydrogeologischer Bezug."
+          ],
+          [
+            "pH-Wert",
+            "Säure-/Basencharakter und Probenstabilität."
+          ],
+          [
+            "Elektrische Leitfähigkeit",
+            "Hinweis auf gelöste ionische Inhaltsstoffe."
+          ],
+          [
+            "Temperatur",
+            "Einfluss auf chemische und biologische Prozesse."
+          ],
+          [
+            "Gelöster Sauerstoff",
+            "Hinweise auf Oxidations- und Reduktionsbedingungen."
+          ],
+          [
+            "Redoxpotenzial",
+            "Unterstützt die Beurteilung geochemischer Bedingungen."
+          ],
+          [
+            "Trübung",
+            "Hinweis auf Partikeleintrag und Einfluss der Probenahme."
+          ],
+          [
+            "Analysenpakete (z. B. Metalle, VOC, PAK)",
+            "Auswahl nach Verdacht, Hydrogeologie und Zielstellung."
+          ]
+        ],
+        "en": [
+          [
+            "Groundwater level",
+            "Hydrogeological conditions and changes over time."
+          ],
+          [
+            "pH",
+            "Acidity/alkalinity and sample condition."
+          ],
+          [
+            "Electrical conductivity",
+            "Proxy for dissolved ionic constituents."
+          ],
+          [
+            "Temperature",
+            "Influences chemical and biological processes."
+          ],
+          [
+            "Dissolved oxygen",
+            "Indicates relevant oxidation conditions."
+          ],
+          [
+            "Redox potential",
+            "Helps assess geochemical conditions."
+          ],
+          [
+            "Turbidity",
+            "May indicate particulate mobilisation during sampling."
+          ],
+          [
+            "Metals, VOCs, PAHs etc.",
+            "Selected to match the site history and investigation objective."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "DIN EN ISO 5667-11",
+          "Leitlinien zur Probenahme von Grundwasser.",
+          "din"
+        ],
+        [
+          "DVGW W 112",
+          "Grundsätze der Grundwasserprobenahme aus Messstellen.",
+          "dvgw"
+        ],
+        [
+          "DIN EN ISO 5667-3",
+          "Konservierung und Handhabung von Wasserproben.",
+          "din"
+        ],
+        [
+          "BBodSchV",
+          "Je nach Altlastenuntersuchung und Wirkungspfad relevant.",
+          "bbod"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Grundwassermonitoring",
+            "Intervalle richten sich nach Genehmigung, Gutachten, Schadstoffdynamik und Projektziel."
+          ],
+          [
+            "Pegel-/Stichtagsmessung",
+            "Wasserstände möglichst zeitnah an geeigneten Messstellen erfassen; saisonale Schwankungen beachten."
+          ],
+          [
+            "Fließrichtung",
+            "Für lokale Ableitung in der Regel mindestens drei geeignete, nicht kollineare Messstellen desselben hydraulischen Systems nötig."
+          ]
+        ],
+        "en": [
+          [
+            "Monitoring",
+            "Frequency is based on permits, study objectives and site dynamics."
+          ],
+          [
+            "Synoptic water levels",
+            "Measure relevant wells within a suitable time window and account for seasonality."
+          ],
+          [
+            "Flow direction",
+            "Typically requires at least three suitable non-collinear points representing the same hydraulic system."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Wie wird die Fließrichtung bestimmt?",
+            "Aus räumlich verteilten Grundwasserstandshöhen werden Grundwassergleichen und der hydraulische Gradient abgeleitet. Geologische Verhältnisse und Messunsicherheiten sind zu prüfen."
+          ],
+          [
+            "Welche Vor-Ort-Parameter werden gemessen?",
+            "Typischerweise pH-Wert, Temperatur, Leitfähigkeit, Sauerstoff, Redoxpotenzial und gegebenenfalls Trübung."
+          ],
+          [
+            "Muss jede Messstelle vor der Entnahme gepumpt werden?",
+            "Das Verfahren hängt vom Messstellenausbau, Zielparameter, Probenahmekonzept und anwendbaren Regelwerk ab. Eine pauschale Pumpdauer ist nicht fachgerecht."
+          ]
+        ],
+        "en": [
+          [
+            "How is groundwater flow direction assessed?",
+            "Using hydraulic head elevations from multiple suitable points, interpreted together with site hydrogeology."
+          ],
+          [
+            "Which field parameters are measured?",
+            "Usually pH, temperature, conductivity, dissolved oxygen, redox potential and sometimes turbidity."
+          ],
+          [
+            "Is one pumping duration suitable for every well?",
+            "No. Method and duration depend on well construction, sample objectives and relevant guidance."
+          ]
+        ]
+      }
+    },
+    "soil": {
+      "title": {
+        "de": "Bodenansprache & Rammkernsonde",
+        "en": "Soil Logging & Ram-Core Probing"
+      },
+      "cat": {
+        "de": "Boden & Altlasten",
+        "en": "Soil & contaminated land"
+      },
+      "summary": {
+        "de": "Rammkernsondierung, Schichtenverzeichnis, geologische Ansprache und tiefengerechte Bodenproben.",
+        "en": "Percussion core probing, geological descriptions, borehole logs and depth-specific sampling."
+      },
+      "intro": {
+        "de": "Die Bodenansprache ist die Verbindung zwischen Erkundung und Analytik. Bei der Rammkernsondierung werden Bodenmaterial und Schichtabfolge aufgenommen, nach geologischen Kriterien beschrieben und gezielt beprobt.",
+        "en": "Geological logging links the field investigation to the laboratory. Ram-core material is described layer by layer and sampled at the relevant depth intervals."
+      },
+      "scope": {
+        "de": [
+          [
+            "Rammkernsondierung (RKS)",
+            "Begleitende geologische Ansprache am gewonnenen Kern; geeignete Feldtechnik projektabhängig."
+          ],
+          [
+            "Schichtenverzeichnis",
+            "Bodenart, Korngrößen, Farbe, Lagerung, Feuchtigkeit, Horizont- und Schichtgrenzen."
+          ],
+          [
+            "Altlastenverdacht",
+            "Auffüllungen, Fremdbestandteile, organoleptische Auffälligkeiten und Verdachtsbereiche aufnehmen."
+          ],
+          [
+            "Gezielte Bodenproben",
+            "Tiefenintervalle dokumentieren, Gefäße sowie chemische Untersuchungen abstimmen."
+          ]
+        ],
+        "en": [
+          [
+            "Ram-core probing",
+            "Geological logging of the recovered core using appropriate field methods."
+          ],
+          [
+            "Borehole logs",
+            "Soil type, grain size, colour, moisture and layer boundaries."
+          ],
+          [
+            "Contamination indicators",
+            "Made ground, inclusions and sensory anomalies."
+          ],
+          [
+            "Targeted samples",
+            "Depth intervals, containers and analytical strategy coordinated with the lab."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "Bodenart / Kornverteilung",
+            "Sand, Schluff, Ton, Kies und Mischböden für hydrogeologische Beurteilung."
+          ],
+          [
+            "Schichtgrenzen & Tiefe",
+            "Stratigrafie, Probenzuordnung und Ausbreitungspfade."
+          ],
+          [
+            "Farbe, Feuchte, Geruch",
+            "Beschreibende Hinweise; kein Ersatz für Laboranalytik."
+          ],
+          [
+            "Anthropogene Beimengungen",
+            "Bauschutt, Schlacke, Auffüllungen oder andere Fremdbestandteile."
+          ],
+          [
+            "Schadstoffgruppen (projektspezifisch)",
+            "Dazu gehören Schwermetalle, MKW, PAK, BTEX oder LHKW."
+          ]
+        ],
+        "en": [
+          [
+            "Soil classification",
+            "Sand, silt, clay, gravel and mixed soils."
+          ],
+          [
+            "Layer boundaries and depth",
+            "Stratigraphy, accurate sample assignment and potential pathways."
+          ],
+          [
+            "Colour, moisture, odour",
+            "Field observations only, not substitutes for laboratory results."
+          ],
+          [
+            "Artificial inclusions",
+            "Debris, slag and fill materials."
+          ],
+          [
+            "Contaminants",
+            "Metals, mineral oils, PAHs, BTEX or chlorinated hydrocarbons as required."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "BBodSchV §§ 18–24",
+          "Allgemeine und spezielle Anforderungen an Bodenprobenahme.",
+          "bbod"
+        ],
+        [
+          "DIN EN ISO 22475-1",
+          "Geotechnische Erkundung / Probenentnahme und Grundwassermessungen.",
+          "din"
+        ],
+        [
+          "DIN EN ISO 14688-1/-2",
+          "Benennung, Beschreibung und Klassifizierung von Boden.",
+          "din"
+        ],
+        [
+          "DIN 19747",
+          "Vorbehandlung und Vorbereitung von Feststoffproben.",
+          "din"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Erkundung",
+            "Probenanzahl und Tiefenraster aus Erkundungsziel, Verdachtsmomenten und Standortbedingungen ableiten."
+          ],
+          [
+            "Bodenansprache",
+            "Während jeder relevanten Sondierung und bei Schichtwechsel; keine pauschale jährliche Frist."
+          ],
+          [
+            "Altlastenmonitoring",
+            "Bei Bedarf nach Untersuchungsprogramm und behördlicher Festlegung."
+          ]
+        ],
+        "en": [
+          [
+            "Site investigation",
+            "Sample count and depth intervals follow objectives and site variability."
+          ],
+          [
+            "Core logging",
+            "During relevant probing work and at layer transitions; no annual blanket interval."
+          ],
+          [
+            "Monitoring",
+            "As specified by the site programme or competent authority."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Ist eine Rammkernsonde eine Schneckenbohrung?",
+            "Nein. Bei einer Rammkernsondierung wird Material mittels einer geeigneten Kernsonde gewonnen. Das hier gezeigte Verfahren ist deshalb bewusst kein Schneckenbohrer."
+          ],
+          [
+            "Ist Bodenansprache gleich Schadstoffanalyse?",
+            "Nein. Die Ansprache beschreibt die geologische Beschaffenheit. Schadstoffgehalte werden durch geeignete Laboruntersuchungen bestimmt."
+          ],
+          [
+            "Was gehört ins Schichtenverzeichnis?",
+            "Unter anderem Tiefen, Schichtgrenzen, geologische Beschreibung, Auffüllungen, Auffälligkeiten und Probenzuordnung."
+          ]
+        ],
+        "en": [
+          [
+            "Is ram-core probing the same as auger drilling?",
+            "No. Ram-core sampling recovers soil material in a suitable sampler; the website illustration deliberately shows no prominent auger screw."
+          ],
+          [
+            "Is soil logging the same as contaminant testing?",
+            "No. Logging describes geology; chemical concentrations require appropriate lab tests."
+          ],
+          [
+            "What belongs in the borehole log?",
+            "Depths, layer changes, soil description, fill, observations and sample IDs."
+          ]
+        ]
+      }
+    },
+    "cooling": {
+      "title": {
+        "de": "Kühltürme & Verdunstungskühlanlagen",
+        "en": "Cooling Towers & Evaporative Systems"
+      },
+      "cat": {
+        "de": "Technische Wasserhygiene",
+        "en": "Technical water hygiene"
+      },
+      "summary": {
+        "de": "Legionellenproben, allgemeine Koloniezahl und dokumentierte Probenahme nach anlagenbezogenen Vorgaben.",
+        "en": "Legionella, general colony counts and traceable sampling under system-specific requirements."
+      },
+      "intro": {
+        "de": "Wasserführende Rückkühlsysteme können bei ungeeignetem Betrieb Bioaerosole freisetzen. Untersuchungsintervalle, Prüfwerte und Dokumentationspflichten hängen von der Anlageneinstufung nach der 42. BImSchV ab.",
+        "en": "Wet cooling systems can release aerosols. Monitoring intervals and action thresholds depend on the specific installation classification under Germany’s 42nd Federal Immission Control Ordinance."
+      },
+      "scope": {
+        "de": [
+          [
+            "Anlagenart bestimmen",
+            "Verdunstungskühlanlage, Nassabscheider oder Kühlturm im Sinne der Verordnung unterscheiden."
+          ],
+          [
+            "Nutzwasserproben",
+            "Geeignete Probenahmestellen und Betriebszustand bei der Entnahme erfassen."
+          ],
+          [
+            "Hygieneparameter",
+            "Legionella spp., allgemeine Koloniezahl sowie weitere Betriebsparameter nach Untersuchungsplan."
+          ],
+          [
+            "Betriebsdokumentation",
+            "Probenahmedatum, Betriebszustand, Ergebnisse und gegebenenfalls Folgemaßnahmen dokumentieren."
+          ]
+        ],
+        "en": [
+          [
+            "Classify the system",
+            "Differentiate evaporative cooling systems, wet separators and cooling towers."
+          ],
+          [
+            "Water sampling",
+            "Choose suitable points and record operating conditions."
+          ],
+          [
+            "Hygiene indicators",
+            "Legionella spp., general colony counts and selected operational parameters."
+          ],
+          [
+            "Document",
+            "Dates, operating conditions, findings and subsequent action."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "Legionella spp.",
+            "Zentrale hygienische Messgröße; Prüf- und Maßnahmenwerte in Anlage 1 der 42. BImSchV."
+          ],
+          [
+            "Allgemeine Koloniezahl",
+            "Überwachung des mikrobiologischen Betriebszustands und Entwicklung gegenüber Referenzwerten."
+          ],
+          [
+            "pH / Leitfähigkeit / Temperatur",
+            "Betriebsparameter zur Einordnung von Wasserzustand und Aufkonzentrierung."
+          ],
+          [
+            "Desinfektionsmittel / weitere Kenngrößen",
+            "Nach Betriebskonzept, technischen Regelwerken und Behandlungsverfahren."
+          ]
+        ],
+        "en": [
+          [
+            "Legionella spp.",
+            "Key hygiene indicator; action thresholds in Annex 1 of 42. BImSchV."
+          ],
+          [
+            "General colony count",
+            "Monitoring against operating reference values."
+          ],
+          [
+            "pH / conductivity / temperature",
+            "Operational context of the circulating water."
+          ],
+          [
+            "Additional process indicators",
+            "As required by the treatment concept and technical standards."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "42. BImSchV §§ 4, 7",
+          "Untersuchungen und Intervalle je nach Anlagenart.",
+          "bimschv"
+        ],
+        [
+          "42. BImSchV Anlage 1",
+          "Prüf- und Maßnahmenwerte für Legionellen.",
+          "bimschv"
+        ],
+        [
+          "VDI 2047 Blatt 2",
+          "Technische Regeln zum hygienegerechten Betrieb; Anwendbarkeit prüfen.",
+          "din"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Verdunstungskühlanlagen / Nassabscheider",
+            "Legionellen grundsätzlich mindestens alle 3 Monate (§ 4); unter bestimmten Bedingungen Halbjahresintervall möglich."
+          ],
+          [
+            "Kühltürme im Rechtssinn",
+            "Legionellen grundsätzlich mindestens monatlich (§ 7); bei erfüllten Bedingungen alle 2 Monate möglich."
+          ],
+          [
+            "Betriebsinterne Überprüfung",
+            "Bei Kühltürmen mindestens zweiwöchentlich; bei anderen Anlagen gelten die spezifischen Vorgaben der 42. BImSchV."
+          ]
+        ],
+        "en": [
+          [
+            "Evaporative cooling systems / wet separators",
+            "Legionella testing generally at least every 3 months (§4), potentially every 6 months when conditions are met."
+          ],
+          [
+            "Cooling towers (legal definition)",
+            "Legionella testing generally at least monthly (§7); every 2 months if conditions are met."
+          ],
+          [
+            "Internal checks",
+            "At least fortnightly for cooling towers; other systems have separate requirements."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Sind Verdunstungskühlanlagen und Kühltürme dasselbe?",
+            "Nein. Die 42. BImSchV unterscheidet Anlagenarten; deshalb sind die gesetzlichen Intervalle nicht pauschal austauschbar."
+          ],
+          [
+            "Was passiert bei auffälligen Legionellenwerten?",
+            "Je nach Schwellenwert werden Bestätigungsuntersuchungen, Ursachenermittlung, Maßnahmen und gegebenenfalls Meldungen erforderlich."
+          ],
+          [
+            "Ist ein fester Standardprobenort ausreichend?",
+            "Die Auswahl muss repräsentativ für das jeweilige System sein und den anwendbaren Vorgaben entsprechen."
+          ]
+        ],
+        "en": [
+          [
+            "Are cooling towers and evaporative cooling systems legally identical?",
+            "No. Germany’s regulation distinguishes system types, including different testing schedules."
+          ],
+          [
+            "What if elevated Legionella levels are found?",
+            "Depending on the thresholds, repeat testing, source investigation, operational measures and reporting may be required."
+          ],
+          [
+            "Is any tap suitable as a sample point?",
+            "The location must be representative and compatible with the relevant procedures."
+          ]
+        ]
+      }
+    },
+    "wastewater": {
+      "title": {
+        "de": "Abwasser & Einleitungen",
+        "en": "Wastewater & Discharges"
+      },
+      "cat": {
+        "de": "Abwasseranalytik",
+        "en": "Wastewater monitoring"
+      },
+      "summary": {
+        "de": "Stich-, Misch- und zeit- oder durchflussproportionale Probenahme nach Untersuchungszweck.",
+        "en": "Grab, composite and time- or flow-proportional sampling aligned with the monitoring objective."
+      },
+      "intro": {
+        "de": "Abwasser ist häufig stark schwankend. Ob Stichprobe oder automatisierte Mischprobe sinnvoll ist, hängt von Abwasserstrom, Einleitungserlaubnis, Überwachungsauftrag und gewünschter Aussage ab.",
+        "en": "Wastewater composition can vary rapidly. The choice between grab and composite sampling depends on the discharge, permit conditions and monitoring objective."
+      },
+      "scope": {
+        "de": [
+          [
+            "Abwasserproben",
+            "Stich-, qualifizierte Stich- oder Mischproben je nach Aufgabenstellung."
+          ],
+          [
+            "Einleitstellen",
+            "Zugänglichkeit, Arbeitssicherheit und repräsentative Entnahmesituation erfassen."
+          ],
+          [
+            "Feldparameter",
+            "pH-Wert, Temperatur, Leitfähigkeit und weitere geeignete Größen."
+          ],
+          [
+            "Transport",
+            "Geeignete Gefäße, Konservierung und Fristen mit Labor abstimmen."
+          ]
+        ],
+        "en": [
+          [
+            "Sampling",
+            "Grab and composite samples as applicable."
+          ],
+          [
+            "Sampling points",
+            "Assess access, safety and representativeness."
+          ],
+          [
+            "Field measurements",
+            "pH, temperature, conductivity and selected indicators."
+          ],
+          [
+            "Transport",
+            "Coordinate containers, preservation and holding times."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "CSB / BSB₅",
+            "Kenngrößen organischer Belastung."
+          ],
+          [
+            "Stickstoff / Phosphor",
+            "Nährstoffeinträge und Prozesse im Abwasser."
+          ],
+          [
+            "pH / Leitfähigkeit / Temperatur",
+            "Wichtige Randbedingungen und Abwassereigenschaften."
+          ],
+          [
+            "Schwermetalle / AOX / weitere Stoffe",
+            "Abhängig von industrieller Herkunft und Genehmigung."
+          ]
+        ],
+        "en": [
+          [
+            "COD / BOD₅",
+            "Indicators of organic load."
+          ],
+          [
+            "Nitrogen / phosphorus",
+            "Nutrient loads and wastewater processes."
+          ],
+          [
+            "pH / conductivity / temperature",
+            "Relevant process and water quality conditions."
+          ],
+          [
+            "Metals / AOX / other substances",
+            "Dependent on industrial activities and permit terms."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "DIN ISO 5667-10",
+          "Anleitung zur Probenahme von Abwasser.",
+          "din"
+        ],
+        [
+          "Abwasserverordnung (AbwV)",
+          "Anforderungen an Einleitungen und branchenbezogene Anhänge.",
+          "abwv"
+        ],
+        [
+          "DIN EN ISO 5667-3",
+          "Konservierung und Handhabung von Wasserproben.",
+          "din"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Einleiterüberwachung",
+            "Anlagen- und genehmigungsabhängig, z. B. Einzeltermine oder wiederkehrende Probenahme."
+          ],
+          [
+            "Probenart",
+            "Zeit-/Durchflussproportionalität muss zum Prüfziel und zur jeweiligen Überwachungsanforderung passen."
+          ]
+        ],
+        "en": [
+          [
+            "Discharge monitoring",
+            "Site- and permit-specific, from individual events to recurring sampling."
+          ],
+          [
+            "Type of sample",
+            "Time- or flow-proportional sampling must suit the compliance requirement."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Was unterscheidet Stich- und Mischprobe?",
+            "Die Stichprobe beschreibt den Entnahmezeitpunkt, eine Mischprobe kann Veränderungen über Zeit oder Durchfluss besser abbilden."
+          ],
+          [
+            "Muss jede Probe 24 Stunden umfassen?",
+            "Nein. Zeitbezug und Probenart werden durch Fragestellung und konkrete Vorgaben bestimmt."
+          ]
+        ],
+        "en": [
+          [
+            "How do grab and composite samples differ?",
+            "Grab samples capture one moment; composite samples can represent variation over a defined period or flow."
+          ],
+          [
+            "Is every test a 24-hour sample?",
+            "No. Duration and method follow the monitoring objective and applicable permit."
+          ]
+        ]
+      }
+    },
+    "waste": {
+      "title": {
+        "de": "Abfall & Haufwerksprobenahme",
+        "en": "Waste & Stockpile Sampling"
+      },
+      "cat": {
+        "de": "Abfall & Materialien",
+        "en": "Waste & materials"
+      },
+      "summary": {
+        "de": "Repräsentative Probenahme von Aushub, Bauschutt und Haufwerken nach LAGA PN 98 und projektspezifischen Anforderungen.",
+        "en": "Representative sampling of excavated soil, rubble and stockpiles under LAGA PN 98 and applicable project rules."
+      },
+      "intro": {
+        "de": "Bei Haufwerken ist die Repräsentativität der Probenahme oft wichtiger als die spätere einzelne Laborzahl. Materialart, Volumen, Heterogenität, Probenzahl und Zusammenstellung der Laborprobe müssen aufeinander abgestimmt werden.",
+        "en": "With stockpiles, representative sampling is essential. Material type, volume, heterogeneity, increment count and composite preparation must be planned together."
+      },
+      "scope": {
+        "de": [
+          [
+            "Probenahmeplan",
+            "Haufwerkgröße, Zugänglichkeit, Schichtung und Heterogenität bewerten."
+          ],
+          [
+            "Einzel- und Mischproben",
+            "Geeignete Teilbereiche und Probenzahl anhand des einschlägigen Regelwerks festlegen."
+          ],
+          [
+            "Feststoff & Eluat",
+            "Proben für relevante Feststoff- und Eluatuntersuchungen sichern."
+          ],
+          [
+            "Protokollierung",
+            "Mengen, Entnahmepunkte, Einzelproben, Materialzustand und Übergabe festhalten."
+          ]
+        ],
+        "en": [
+          [
+            "Sampling plan",
+            "Consider size, access, strata and heterogeneity."
+          ],
+          [
+            "Increments / composites",
+            "Determine sample numbers and sub-lots under relevant rules."
+          ],
+          [
+            "Solid and eluate tests",
+            "Prepare samples for suitable testing programmes."
+          ],
+          [
+            "Records",
+            "Document volumes, locations, material and chain of custody."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "Materialcharakter / Korngröße",
+            "Grundlage für repräsentative Entnahme und Probenvorbereitung."
+          ],
+          [
+            "Schwermetalle",
+            "z. B. Arsen, Blei, Cadmium, Chrom und Nickel."
+          ],
+          [
+            "PAK / MKW",
+            "Organische Schadstoffgruppen bei entsprechenden Verdachtsfällen."
+          ],
+          [
+            "Eluatparameter",
+            "Mobilisierbarkeit von Stoffen für eine geeignete Bewertung."
+          ]
+        ],
+        "en": [
+          [
+            "Material character / grain size",
+            "Affects sample preparation and representativeness."
+          ],
+          [
+            "Metals",
+            "e.g. arsenic, lead, cadmium, chromium and nickel."
+          ],
+          [
+            "PAHs / mineral oil hydrocarbons",
+            "Organic contaminants as relevant."
+          ],
+          [
+            "Eluate parameters",
+            "Assessment of substance release from material."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "LAGA PN 98, Stand Mai 2019",
+          "Richtlinie für Abfallprobenahmen; im jeweils einschlägigen Rechts- oder Vollzugskontext.",
+          "ersatz"
+        ],
+        [
+          "DIN 19698-1/-2",
+          "Probenahme fester und stichfester Materialien.",
+          "din"
+        ],
+        [
+          "ErsatzbaustoffV § 8",
+          "Explizite Verweisung auf PN 98 in bestimmten Verfahren der Güteüberwachung.",
+          "ersatz"
+        ],
+        [
+          "BBodSchV §§ 19, 21",
+          "Anforderungen unter anderem für bestimmte Boden- und Haufwerksuntersuchungen.",
+          "bbod"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Einmalige Materialcharakterisierung",
+            "Probenzahl wird nach Volumen, Stoffgruppe, Heterogenität und Regelwerk geplant – kein Pauschalwert."
+          ],
+          [
+            "Regelmäßige Güteüberwachung",
+            "Je nach ErsatzbaustoffV, Anlage, Materialstrom und Prüfplan."
+          ]
+        ],
+        "en": [
+          [
+            "One-off classification",
+            "The number of samples depends on stockpile volume, heterogeneity and applicable rules."
+          ],
+          [
+            "Quality monitoring",
+            "Frequency depends on legislation, processing and material streams."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Ist PN 98 bei jedem Erdhaufen zwingend?",
+            "Nein. Entscheidend sind Rechtskontext, Einstufung und Untersuchungsvorgabe. Für bestimmte Anwendungen verweist § 8 ErsatzbaustoffV ausdrücklich auf PN 98."
+          ],
+          [
+            "Reicht eine einzelne Schaufelprobe?",
+            "Bei heterogenen Haufwerken ist eine einzelne Probe oft nicht repräsentativ. Ein geeigneter Plan ist erforderlich."
+          ]
+        ],
+        "en": [
+          [
+            "Does PN 98 apply to every stockpile?",
+            "No. Applicability depends on legal context and testing objective. §8 of the substitute building materials ordinance explicitly refers to PN 98 in defined cases."
+          ],
+          [
+            "Is one scoop sufficient?",
+            "Often not for heterogeneous stockpiles. Sampling must be planned to achieve representativeness."
+          ]
+        ]
+      }
+    },
+    "surface": {
+      "title": {
+        "de": "Oberflächenwasser & Gewässer",
+        "en": "Surface Water & Waterbodies"
+      },
+      "cat": {
+        "de": "Gewässermonitoring",
+        "en": "Surface water monitoring"
+      },
+      "summary": {
+        "de": "Probenahme aus Fließgewässern und Seen mit dokumentierter Lage, Tiefe und Messbedingungen.",
+        "en": "River and lake sampling with recorded location, depth and field conditions."
+      },
+      "intro": {
+        "de": "Oberflächengewässer verändern sich räumlich und zeitlich. Probenahmestelle, Tiefe, Abfluss und Wetter können Messwerte prägen. Ein belastbares Monitoring bezieht diese Faktoren in die Planung ein.",
+        "en": "Surface water quality changes across space and time. Sampling position, depth, discharge and weather conditions are important for representative monitoring."
+      },
+      "scope": {
+        "de": [
+          [
+            "Fließgewässer",
+            "Relevante Entnahmeorte unter Berücksichtigung von Strömung und möglichen Einleitungen."
+          ],
+          [
+            "Stillgewässer",
+            "Tiefenzonen, Schichtung und saisonale Dynamik berücksichtigen."
+          ],
+          [
+            "Vor-Ort-Werte",
+            "pH, Leitfähigkeit, Temperatur, Sauerstoff und geeignete Zusatzparameter messen."
+          ],
+          [
+            "Dokumentation",
+            "Koordinaten, Probenahmetiefe, Wetter, Wasserführung und Randbedingungen."
+          ]
+        ],
+        "en": [
+          [
+            "Rivers and streams",
+            "Account for flow and relevant inputs."
+          ],
+          [
+            "Lakes",
+            "Consider depth profiles and stratification."
+          ],
+          [
+            "Field readings",
+            "pH, conductivity, temperature and oxygen."
+          ],
+          [
+            "Documentation",
+            "Coordinates, depth, weather and flow conditions."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "pH / Temperatur / Leitfähigkeit",
+            "Allgemeine physikalisch-chemische Eigenschaften."
+          ],
+          [
+            "Sauerstoff / Redox",
+            "Wichtige ökologische Bedingungen."
+          ],
+          [
+            "Nährstoffe",
+            "Nitrat, Ammonium, Phosphat etc."
+          ],
+          [
+            "Spurenstoffe / Metalle",
+            "Abhängig vom Einzugsgebiet und Untersuchungsziel."
+          ]
+        ],
+        "en": [
+          [
+            "pH / temperature / conductivity",
+            "General water characteristics."
+          ],
+          [
+            "Oxygen / redox",
+            "Ecologically relevant conditions."
+          ],
+          [
+            "Nutrients",
+            "Nitrate, ammonium, phosphate and similar analytes."
+          ],
+          [
+            "Trace substances / metals",
+            "Selected by catchment and objective."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "DIN EN ISO 5667-6",
+          "Probenahme aus Fließgewässern.",
+          "din"
+        ],
+        [
+          "DIN EN ISO 5667-4",
+          "Probenahme aus natürlichen und künstlichen Seen.",
+          "din"
+        ],
+        [
+          "DIN EN ISO 5667-3",
+          "Konservierung und Handhabung von Wasserproben.",
+          "din"
+        ],
+        [
+          "Wasserrahmenrichtlinie / Landesprogramme",
+          "Programm- und standortbezogene Monitoringvorgaben.",
+          "lawa"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Gewässermonitoring",
+            "Rhythmus abhängig von Untersuchung, Jahreszeit, behördlichem Programm und Ereignissen."
+          ],
+          [
+            "Ereignisbezogene Proben",
+            "Zusätzliche Termine z. B. bei Starkregen oder besonderen Einträgen sinnvoll."
+          ]
+        ],
+        "en": [
+          [
+            "Waterbody monitoring",
+            "Intervals depend on monitoring programme, season and site."
+          ],
+          [
+            "Event-based sampling",
+            "Additional events can be useful after rainfall or relevant discharges."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Kann vom Ufer aus beprobt werden?",
+            "Das hängt von Ziel, Durchmischung, Gewässerbreite und Erreichbarkeit der repräsentativen Probenahmestelle ab."
+          ],
+          [
+            "Warum werden Wetter und Abfluss notiert?",
+            "Sie beeinflussen Verdünnung, Stofftransport und Vergleichbarkeit."
+          ]
+        ],
+        "en": [
+          [
+            "Can samples always be taken from the bank?",
+            "Only if a representative position can be accessed for the investigation."
+          ],
+          [
+            "Why record weather and discharge?",
+            "They influence dilution, transport and comparison between measurements."
+          ]
+        ]
+      }
+    },
+    "field": {
+      "title": {
+        "de": "Vor-Ort-Parameter & Feldtechnik",
+        "en": "On-site Parameters & Field Methods"
+      },
+      "cat": {
+        "de": "Qualitätssicherung",
+        "en": "Field quality assurance"
+      },
+      "summary": {
+        "de": "Kalibrierung, Messwertstabilität, Pegeldaten, Protokolle und nachvollziehbare Probenlogistik.",
+        "en": "Calibration, stable readings, well records, sample logs and reliable sample logistics."
+      },
+      "intro": {
+        "de": "Vor-Ort-Messungen geben unmittelbare Informationen zum Probenzustand. Sie ergänzen die Laboranalytik und helfen bei der Beurteilung, ob die Entnahmebedingungen reproduzierbar sind.",
+        "en": "On-site measurements provide immediate information on the condition of the sampled medium. They complement laboratory results and help establish reproducibility."
+      },
+      "scope": {
+        "de": [
+          [
+            "Messgeräte",
+            "Geräteprüfung, Kalibrierstatus und geeignete Sensorik."
+          ],
+          [
+            "Messwerte",
+            "pH, Temperatur, Leitfähigkeit, Sauerstoff, Redox und Trübung nach Bedarf."
+          ],
+          [
+            "Probenlogistik",
+            "Kennzeichnung, Kühlung, Zeitpunkte und Probenbegleitscheine."
+          ],
+          [
+            "Feldprotokolle",
+            "Messstellen, Geräte, Bedingungen, Auffälligkeiten und Übergabekette."
+          ]
+        ],
+        "en": [
+          [
+            "Equipment",
+            "Verification, calibration and appropriate sensors."
+          ],
+          [
+            "Measurements",
+            "pH, temperature, conductivity, oxygen, redox and turbidity."
+          ],
+          [
+            "Sample logistics",
+            "Labelling, cooling, timestamps and handover documents."
+          ],
+          [
+            "Field logs",
+            "Record equipment, sites, conditions and anomalies."
+          ]
+        ]
+      },
+      "params": {
+        "de": [
+          [
+            "pH-Wert",
+            "Säure-/Basencharakter."
+          ],
+          [
+            "Temperatur",
+            "Relevanter Zustandswert für Wasser und Probe."
+          ],
+          [
+            "Leitfähigkeit",
+            "Hinweis auf gelöste Ionen."
+          ],
+          [
+            "Gelöster Sauerstoff",
+            "Oxidations- und biologische Bedingungen."
+          ],
+          [
+            "Redoxpotenzial",
+            "Geochemisches Umfeld."
+          ],
+          [
+            "Trübung",
+            "Partikelbelastung und Probennahmeeinfluss."
+          ]
+        ],
+        "en": [
+          [
+            "pH",
+            "Acid–base character."
+          ],
+          [
+            "Temperature",
+            "Critical sample condition."
+          ],
+          [
+            "Conductivity",
+            "Dissolved ionic content indicator."
+          ],
+          [
+            "Dissolved oxygen",
+            "Relevant oxidative and biological conditions."
+          ],
+          [
+            "Redox potential",
+            "Geochemical conditions."
+          ],
+          [
+            "Turbidity",
+            "Particles and possible sampling artefacts."
+          ]
+        ]
+      },
+      "rules": [
+        [
+          "DIN EN ISO 5667-3",
+          "Konservierung und Handhabung von Wasserproben.",
+          "din"
+        ],
+        [
+          "DIN EN ISO/IEC 17025",
+          "Kompetenzanforderungen an Prüf- und Kalibrierlaboratorien; keine Behauptung eigener Akkreditierung.",
+          "iso17025"
+        ],
+        [
+          "Medienbezogene Probenahmenormen",
+          "Die jeweils einschlägigen Dokumente gehen allgemeinen Checklisten vor.",
+          "din"
+        ]
+      ],
+      "freq": {
+        "de": [
+          [
+            "Messgeräteprüfung",
+            "Vor bzw. im Rahmen der Messkampagne und nach gerätespezifischen Qualitätssicherungsanforderungen."
+          ],
+          [
+            "Feldparameter",
+            "Zum Probenahmezeitpunkt beziehungsweise nach dokumentiertem Messkonzept."
+          ]
+        ],
+        "en": [
+          [
+            "Instrument checks",
+            "According to instrument requirements and the measurement campaign."
+          ],
+          [
+            "Field parameters",
+            "At sampling time or as defined by the measurement plan."
+          ]
+        ]
+      },
+      "faq": {
+        "de": [
+          [
+            "Ersetzt die Vor-Ort-Messung die Laboranalytik?",
+            "Nein. Vor-Ort-Parameter ergänzen und kontextualisieren die Laborwerte."
+          ],
+          [
+            "Warum ist Dokumentation wichtig?",
+            "Nur dokumentierte Entnahmebedingungen ermöglichen eine fachliche Interpretation und Wiederholbarkeit."
+          ]
+        ],
+        "en": [
+          [
+            "Does field measurement replace laboratory testing?",
+            "No. It complements and contextualises laboratory analysis."
+          ],
+          [
+            "Why does documentation matter?",
+            "Good records support interpretation and reproducibility."
+          ]
+        ]
+      }
+    }
+  },
+  "LISTED_WORK": {
+    "drinking": {
+      "de": [
+        "Mikrobiologische Trinkwasserprobenahme",
+        "Chemische Probenahme und Probenahme für Metalle / PFAS",
+        "Systemische Legionellenprobenahme",
+        "Aufnahme und Dokumentation von Entnahmestellen"
+      ],
+      "en": [
+        "Microbiological drinking water sampling",
+        "Chemical, metals and PFAS sampling",
+        "Systemic Legionella sampling",
+        "Outlet assessment and documentation"
+      ]
+    },
+    "groundwater": {
+      "de": [
+        "Grundwasserprobenahme und Messstellenaufnahme",
+        "Abstichmessungen und Grundwasserstandshöhen",
+        "Vor-Ort-Parameter, Pumpversuche im Probenahmekontext",
+        "Monitoring, Fließrichtungs- und Schadstoffbewertung"
+      ],
+      "en": [
+        "Groundwater sampling and well assessment",
+        "Depth-to-water measurements and hydraulic heads",
+        "Field parameters and sampling-pump operation",
+        "Monitoring and groundwater-flow assessment"
+      ]
+    },
+    "soil": {
+      "de": [
+        "Rammkernsondierung und geologische Bodenansprache",
+        "Tiefenbezogene Bodenprobenahme",
+        "Schichtenverzeichnisse und Feldprotokolle",
+        "Altlastenerkundung und Bodenluftprobenahme"
+      ],
+      "en": [
+        "Ram-core investigation and geological soil logging",
+        "Depth-specific soil sampling",
+        "Soil logs and field records",
+        "Contaminated-site and soil-gas investigations"
+      ]
+    },
+    "cooling": {
+      "de": [
+        "Nutzwasserprobenahme aus Verdunstungskühlanlagen",
+        "Legionellen- und Koloniezahl-Untersuchungen",
+        "Probenahmen an Kühltürmen und Nassabscheidern",
+        "Betriebs- und Probenahmedokumentation"
+      ],
+      "en": [
+        "Water sampling from evaporative cooling installations",
+        "Legionella and colony count sampling",
+        "Cooling-tower and wet-scrubber sampling",
+        "Sampling and operational records"
+      ]
+    },
+    "wastewater": {
+      "de": [
+        "Abwasserprobenahme an Einleit- und Kontrollstellen",
+        "Stichproben und geplante zeit-/mengenbezogene Mischproben",
+        "Vor-Ort-Parameter und Probenmanagement",
+        "Dokumentation der Entnahmebedingungen"
+      ],
+      "en": [
+        "Wastewater sampling at discharge and monitoring points",
+        "Grab and planned composite samples",
+        "On-site measurements and sample logistics",
+        "Documenting sampling conditions"
+      ]
+    },
+    "waste": {
+      "de": [
+        "Abfall- und Haufwerksprobenahme",
+        "Festlegung von Entnahmestellen und Teilproben",
+        "Misch-, Sammel- und Laborproben",
+        "Probenahmeprotokolle und Materialbeschreibung"
+      ],
+      "en": [
+        "Waste and stockpile sampling",
+        "Planning increments and sampling positions",
+        "Composite, aggregate and laboratory samples",
+        "Sampling protocols and material description"
+      ]
+    },
+    "surface": {
+      "de": [
+        "Probenahme aus Fließ- und Stillgewässern",
+        "Festlegung von Probenahmestellen",
+        "Messung ausgewählter Vor-Ort-Parameter",
+        "Gewässermonitoring und Probenlogistik"
+      ],
+      "en": [
+        "Sampling rivers, streams and standing waters",
+        "Selecting sampling locations",
+        "Selected field measurements",
+        "Surface water monitoring and sample logistics"
+      ]
+    },
+    "field": {
+      "de": [
+        "Monitoringkonzepte und Probenahmeplanung",
+        "Messstellenaufnahme und Geländedokumentation",
+        "Messungen mit kalibrierter Feldtechnik",
+        "Gefäßmanagement, Konservierung und Laborübergabe"
+      ],
+      "en": [
+        "Monitoring and field sampling plans",
+        "Monitoring-point surveys and field records",
+        "Measurements with checked field equipment",
+        "Container management, preservation and lab handover"
+      ]
+    }
+  }
+}

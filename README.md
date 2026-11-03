@@ -1,15 +1,44 @@
-# UmweltMetrik bilingual React website
+# UmweltMetrik — Glass-Hauptversion
 
-Run npm ci, npm run dev, npm run build, npm run preview and npm test.
+Statische, zweisprachige Astro-Website für umweltmetrik.de. Diese Version ersetzt die frühere React-/Version-I-Website. Alle früheren Dateien und die komplette Git-Historie bleiben über den Backup-Branch erhalten:
 
-Six React Router HashRouter pages: /, /services, /quality, /laboratories, /about and /contact. Public URLs use #/services, with service anchors such as #/services#soil. Hash routing supports refresh on GitHub Pages without rewrites. Each route updates its title and description; independent search indexing of hash routes is not guaranteed.
+`codex/backup-before-glass-2026-11-03-22-41-56`
 
-German remains default. LanguageContext stores explicit selections under umweltmetrik-language. Changing language preserves route, form values and scroll. Translations and route metadata are centralized in src/i18n/translations.js. Shared services are defined in src/serviceData.js.
+## Lokal starten
 
-The contact endpoint remains https://umweltmetrik-contact.alibahramali.workers.dev. JSON fields remain company, name, email, phone, place, service, message and website. Stable service values, honeypot, JSON POST, validation, loading, success reset and error retention are preserved. Reply-To and Resend remain backend responsibilities. No frontend API keys are added.
+Node.js >=22.12.0 und npm >=9.6.5; GitHub Actions verwendet Node.js 24.
 
-The existing GitHub Actions workflow, Vite configuration, public/CNAME, Cloudflare Worker and DNS configuration are unchanged. Build output includes CNAME. No deployment was performed.
+```sh
+npm ci --ignore-scripts
+npm run dev
+```
 
-Production build and 12 Playwright tests pass. All routes are checked in both languages at 1440/1024/768/390px, including metadata, reload, active navigation, overflow, mobile menu, keyboard Escape, persistence, scroll and anchors. Contact tests verify payload and success/error handling using intercepted responses; they do not send real email or establish live Worker/Resend delivery. A remote GitHub Actions run was not performed. Tests use /usr/bin/chromium as configured in playwright.config.js.
+Vorschau: http://127.0.0.1:4325/. Bei belegtem Port: `npm run dev -- --port 4333`.
 
-The supplied prototype/legal review notice remains. The unconfigured phone placeholder is omitted from rendered contact details.
+```sh
+npm run check
+npm run lint
+npm run build
+npm run verify:content
+npm run verify:privacy
+```
+
+`dist/` enthält die fertige Website. `src/` enthält Komponenten, Texte und Interaktionen; `public/` enthält lokale Bilder, Schriften, Lizenzdatei, Favicon und die bestehende CNAME.
+
+## Veröffentlichung
+
+Ein Push auf `main` baut und prüft die Website und veröffentlicht anschließend `dist/` über GitHub Pages. Pull Requests werden nur geprüft und nicht veröffentlicht. Domain und DNS werden dabei nicht neu konfiguriert; `umweltmetrik.de` bleibt in `public/CNAME` erhalten.
+
+## Aktueller Funktionsstand
+
+- Glass-Flächen, originales U-Logo, sticky Navigation, vollständige deutsche/englische Inhalte und neun echte Fotografien.
+- Homepage-Auswahl mit gleitender Unterstreichung und dunkler/fetter aktiver Beschriftung; auf dem Handy drei Schritte je Reihe.
+- Abschnittslinks auf dem Handy mit kurzem Farbsignal ohne dauerhafte Auswahl, aktuelle Kontaktstruktur und keine Scroll-Einblendungen auf dem Handy.
+- Bildquellen und Lizenzen sind im Footer verlinkt, Schriften und Fotos werden selbst gehostet.
+- Weiterhin Testversion mit roter Hinweisleiste und leeren Impressums-/Datenschutzseiten.
+- Das Kontaktformular validiert lokal und versendet nichts. Der zuvor vorhandene Cloudflare-Worker wird von diesem Frontend nicht aufgerufen. Seine bisherige Quelldatei ist im Backup-Branch erhalten; der externe Dienst selbst wird durch diesen Upload nicht geändert.
+- Keine Cookies, Browser-Speicherung oder Trackingdienste im Frontend; Verhalten des Hostings ist getrennt davon zu betrachten.
+
+Die Prüfsummen der früheren KI-Bilder bleiben als Ausschlussliste erhalten. Die alten KI-Dateien und die frühere Website sind nicht Teil des neuen Builds; historische Dateien liegen im Backup-Branch. Private Schlüssel, lokale Abhängigkeiten, Browserprofile und Laptop-Sicherungen werden nicht eingecheckt.
+
+Eine Rückkehr zum vorigen Stand ist über den Backup-Branch bzw. einen Revert des Austausch-Commits möglich. Die Git-Historie wurde nicht umgeschrieben.

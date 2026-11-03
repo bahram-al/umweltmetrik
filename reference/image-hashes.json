@@ -1,0 +1,15 @@
+{
+  "source": "https://umweltmetrik.de/",
+  "captured": "2026-10-31",
+  "assets": {
+    "cooling.jpg": "ee55b555c5c8406ad7c9125d01fb5c481258aa0e4c8f7e8d651bd933ca663299",
+    "drinking.jpg": "b61c4d9b0a4ef03c8362aed521d96f0519762a2b91b6ae9300251e002c994fe7",
+    "field.jpg": "d6dd59995dd97ca0412b58abf2a5efe2a8251ddeb2933547b1efa00801ae0291",
+    "groundwater.jpg": "a1333bf9386e03a519fca532f43fdc23c32a3c074d0c878e74771c4afe428698",
+    "hero.jpg": "9ae0ba6176ee11400cf08acd7c9cdf8c45a30f1b1819ba2049dd51daa1c941d7",
+    "soil.jpg": "ed3b94d1feeabaffb7ffdeb7a693276c79ec8bee84445e883fc4589cdae35faf",
+    "surface.jpg": "74e0593b3341762a6a448f0a8a62484f0e9fb7e240a60f38169fff6ee9f312f9",
+    "waste.jpg": "6cd8e97e9c1f0d0b8eb400110e2cd2cc8890dc263b79ff24c9652ca4b65dfdfe",
+    "wastewater.jpg": "488dbf30eafe7142b0ce2ab8334a2aef021cb6cac7748e9bdbfca165ae551961"
+  }
+}

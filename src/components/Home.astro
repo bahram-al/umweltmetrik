@@ -1,0 +1,35 @@
+---
+import Process from './Process.astro';
+import {href,type Lang} from '../data/site';
+const {lang}=Astro.props as {lang:Lang};
+const offers=lang==='de'?[
+ ['Umweltprobenahme','Fachgerechte Probenahme für Wasser, Boden und Abfall – mit Planung, Entnahme und Dokumentation.'],
+ ['Monitoring','Wiederkehrende Probenahmen und Vor-Ort-Parameter für Grundwasser und weitere Umweltmedien.'],
+ ['Geologische Feldarbeit','Rammkernsondierungen, geologische Ansprache und nachvollziehbare Dokumentation von Schichten und Tiefen.']
+]:[
+ ['Environmental sampling','Professional sampling of water, soil and waste – including planning, collection and documentation.'],
+ ['Monitoring','Recurring sampling and field parameters for groundwater and other environmental media.'],
+ ['Geological fieldwork','Core sampling, geological description and traceable documentation of strata and depths.']
+];
+const waves=Array.from({length:24},(_,n)=>`M-30 ${70+n*3}C240 ${-20+n*4} 380 ${235-n*1.5} 660 ${135+n*2}S1040 ${30+n*4} 1470 ${90+n*2}`);
+const preparation=lang==='de'?[
+ ['Worum geht es?','Probenmedium und Untersuchungsziel sind der Ausgangspunkt. Vorhandene Befunde oder Lagepläne helfen bei der Einordnung.'],
+ ['Was ist vor Ort wichtig?','Messstellen, Zugänglichkeit und bekannte Besonderheiten beschreiben die Situation am Einsatzort.'],
+ ['Welche Termine stehen fest?','Ein gewünschter Zeitraum oder bereits bekannte Labortermine helfen bei der Abstimmung.']
+]:[
+ ['What is the objective?','The sample medium and investigation objective are the starting point. Existing findings or site plans help put the request in context.'],
+ ['What matters on site?','Sampling points, access and any known site conditions help describe the fieldwork setting.'],
+ ['Which dates are known?','A preferred timeframe or any laboratory dates already arranged help with coordination.']
+];
+---
+<section class="landscape-hero" aria-labelledby="home-title">
+ <img class="landscape-image" src="/images/river-landscape.jpg" alt={lang==='de'?'Blick auf die bewaldete Saarschleife in Mettlach':'View across the forested Saar river bend in Mettlach'} width="2400" height="1600" fetchpriority="high" loading="eager" decoding="async"/>
+ <div class="landscape-content section-pad"><div class="landscape-copy"><h1 id="home-title" data-hero-title>{lang==='de'?<>Umweltdaten für<br class="desktop-break"/> kluge Entscheidungen.</>:<>Environmental data.<br class="desktop-break"/> Informed decisions.</>}</h1><p class="hero-description" data-reveal="rise">{lang==='de'?'Planung, Probenahme und Dokumentation für Wasser, Boden und Abfall – fachlich fundiert und praxisnah.':'Planning, sampling and documentation for water, soil and waste – grounded in expertise and field experience.'}</p></div>
+ <ul class="hero-facts" aria-label={lang==='de'?'Fachlicher Hintergrund':'Professional background'}><li data-reveal="rise">M.Sc. Geologie</li><li data-reveal="rise">{lang==='de'?'15+ Jahre Felderfahrung':'15+ years of field experience'}</li><li data-reveal="rise">{lang==='de'?'Berlin · Einsätze nach Vereinbarung':'Berlin · Fieldwork by arrangement'}</li></ul></div>
+</section>
+<section class="home-offers section-pad" aria-labelledby="offers-title"><div class="offers-heading"><h2 id="offers-title" data-reveal="rise">{lang==='de'?'Probenahme mit Weitblick.':'Sampling with perspective.'}</h2><p data-reveal="rise">{lang==='de'?'Von der Planung bis zur Laborübergabe – fachgerecht entnommen und nachvollziehbar dokumentiert.':'From planning to laboratory handover – collected professionally and documented clearly.'}</p></div>
+ <div class="offer-columns">{offers.map(([title,description],n)=><article class="offer" data-reveal="rise"><svg viewBox="0 0 48 48" aria-hidden="true" focusable="false">{n===0?<><path d="M24 4C18 13 10 21 10 29a14 14 0 0 0 28 0C38 21 30 13 24 4Z"/><path d="M17 29a7 7 0 0 0 7 7"/></>:n===1?<><path d="M7 39V27m11 12V20m12 19V13m11 26V5"/></>:<><path d="m24 5 19 10-19 10L5 15 24 5Zm-19 20 19 10 19-10M5 35l19 10 19-10"/></>}</svg><h3>{title}</h3><p>{description}</p></article>)}</div>
+ <svg class="landscape-wave" viewBox="0 0 1440 240" preserveAspectRatio="none" aria-hidden="true" focusable="false">{waves.map((d,n)=><path d={d} stroke={n%2?'#74a86f':'#9dc989'} fill="none" stroke-width=".8"/>)}</svg>
+</section>
+<Process lang={lang}/>
+<section class="project-start" aria-labelledby="project-start-title"><div class="project-start-inner section-pad"><div class="project-start-copy" data-reveal="rise"><h2 id="project-start-title">{lang==='de'?<>Gut vorbereitet.<br/>Von Anfang an.</>:<>A good start.<br/>From the outset.</>}</h2><p>{lang==='de'?'Diese drei Fragen helfen, die erste Anfrage zu strukturieren.':'These three questions help structure your initial enquiry.'}</p><a class="project-contact" href={href('contact',lang)}>{lang==='de'?'Zur Kontaktseite':'Go to contact'}</a></div><dl class="project-questions">{preparation.map(([question,answer])=><div data-reveal="rise"><dt>{question}</dt><dd>{answer}</dd></div>)}</dl></div></section>
