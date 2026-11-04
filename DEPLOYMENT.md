@@ -27,3 +27,7 @@ For rollback, inspect the backup branch or revert the replacement commit and pus
 - Offline repository/bundle audits reviewed; see SECURITY.md for scope and remaining limitations.
 
 The publication still contains the requested test-version banner, incomplete imprint and privacy drafts and a non-sending contact form. Local browser evidence does not establish real-device/Safari behavior or live email delivery. After pushing, GitHub Actions and the actual HTTPS site must be checked separately.
+
+## Contact upgrade (not activated)
+
+The Ansprechpartner field is removed. `cloudflare/worker.mjs` prepares internal notification plus acknowledgement with server-side validation, atomic shared limits and idempotent Resend batching. `npm run test:contact` runs fake-provider tests in CI. Deploying the website does **not** deploy this Worker. Cloudflare access is currently unavailable; `contactConfig.enabled` therefore remains `false`. Follow `cloudflare/README.md` to deploy/verify the backend, complete the processing notice and test real delivery before enabling the frontend.

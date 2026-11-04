@@ -7,7 +7,8 @@
     "build": "astro build",
     "preview": "astro preview --host 127.0.0.1 --port 4325",
     "check": "astro check",
-    "lint": "eslint src/scripts scripts/*.mjs",
+    "lint": "eslint src/scripts scripts/*.mjs cloudflare/*.mjs",
+    "test:contact": "node --test cloudflare/worker.test.mjs",
     "verify:privacy": "node scripts/verify-privacy.mjs",
     "verify:content": "node scripts/verify-content.mjs"
   },

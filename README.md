@@ -36,7 +36,7 @@ Ein Push auf `main` baut und prüft die Website und veröffentlicht anschließen
 - Abschnittslinks auf dem Handy mit kurzem Farbsignal ohne dauerhafte Auswahl, aktuelle Kontaktstruktur und keine Scroll-Einblendungen auf dem Handy.
 - Bildquellen und Lizenzen sind im Footer verlinkt, Schriften und Fotos werden selbst gehostet.
 - Weiterhin Testversion mit roter Hinweisleiste, als Entwurf gekennzeichnetem Impressum und Datenschutzerklärung. Der bereitgestellte deutsche Text ist auf beiden Sprachrouten verfügbar; der Hostingabschnitt wurde auf GitHub Pages angepasst. Betreiber- und E-Mail-Anbieterangaben sind noch zu vervollständigen.
-- Das Kontaktformular validiert lokal und versendet nichts. Der zuvor vorhandene Cloudflare-Worker wird von diesem Frontend nicht aufgerufen. Seine bisherige Quelldatei ist im Backup-Branch erhalten; der externe Dienst selbst wird durch diesen Upload nicht geändert.
+- Das Ansprechpartner-Feld wurde entfernt. Die neue Versandlogik für interne Nachricht und automatische Eingangsbestätigung ist vorbereitet, bleibt aber über `src/data/contact-config.ts` deaktiviert. Der Cloudflare-Kontoinhaber muss zuerst den Worker unter `cloudflare/` einrichten und beide Zustellungen prüfen; siehe `cloudflare/README.md`. Der bestehende externe Dienst wird durch einen Frontend-Upload nicht geändert.
 - Keine Cookies, Browser-Speicherung oder Trackingdienste im Frontend; Verhalten des Hostings ist getrennt davon zu betrachten.
 
 Die Prüfsummen der früheren KI-Bilder bleiben als Ausschlussliste erhalten. Die alten KI-Dateien und die frühere Website sind nicht Teil des neuen Builds; historische Dateien liegen im Backup-Branch. Private Schlüssel, lokale Abhängigkeiten, Browserprofile und Laptop-Sicherungen werden nicht eingecheckt.

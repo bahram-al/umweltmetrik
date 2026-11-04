@@ -5,7 +5,7 @@ let htmlPages=0;
 for(const file of files){
  const text=fs.readFileSync('dist/'+file,'utf8');
  if(file.endsWith('.js')){
-  assert.ok(!/\b(?:localStorage|sessionStorage|indexedDB)\b|document\s*\.\s*cookie|sendBeacon\s*\(|serviceWorker|\bfetch\s*\(/.test(text),'Storage or outgoing request API in '+file);
+  assert.ok(!/\b(?:localStorage|sessionStorage|indexedDB)\b|document\s*\.\s*cookie|sendBeacon\s*\(|serviceWorker/.test(text),'Browser storage or background tracking API in '+file);
   assert.ok(!/https?:\/\//.test(text),'Remote endpoint in '+file);
  }
  if(file.endsWith('.css'))assert.ok(!/(?:url\(\s*["']?|@import\s+["'])https?:/i.test(text),'Remote stylesheet/font/image in '+file);
@@ -30,5 +30,5 @@ for(const file of ['datenschutz','en/privacy']){
  assert.ok(!html.includes('STRATO'),'Obsolete hosting statement in '+file);
  assert.ok(html.includes('Entwurf:')||html.includes('Draft:'),'Incomplete privacy notice marked as draft: '+file);
 }
-console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; supplied imprint draft on both language routes; ten-section privacy draft on both language routes; built JS without cookie/storage/remote-request APIs; all embedded resources local.`);
+console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; imprint and privacy drafts; no cookie/storage/background tracking APIs; all embedded resources local. The contact form has an explicit, configuration-gated mail endpoint.`);
 console.log('Static checks cover the bundled frontend. Browser storage/network checks and hosting behavior are separate evidence.');

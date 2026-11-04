@@ -1,0 +1,12 @@
+{
+  "$schema": "https://unpkg.com/wrangler/config-schema.json",
+  "name": "umweltmetrik-contact",
+  "main": "worker.mjs",
+  "compatibility_date": "2026-11-04",
+  "workers_dev": true,
+  "durable_objects": {
+    "bindings": [{ "name": "CONTACT_GATEWAY", "class_name": "ContactGateway" }]
+  },
+  "migrations": [{ "tag": "contact-v2", "new_sqlite_classes": ["ContactGateway"] }],
+  "observability": { "enabled": false }
+}

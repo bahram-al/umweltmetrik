@@ -35,11 +35,15 @@ for(const lang of ['de','en']){
  const contact=htmlText(fs.readFileSync(prefix+(lang==='de'?'kontakt/':'contact/')+'index.html','utf8'));
  // Validate each original content block independently so accessible field reordering is allowed.
  for(const block of old[lang].contact.matchAll(/<(h[12]|p|label|option|button)\b[^>]*>([\s\S]*?)<\/\1>/g)){
+  if (/for="f-name"|class="form-note"/.test(block[0])) continue; // Requested removal and current delivery/privacy copy.
   const value=htmlText(block[2].replace(/[↗→←]/g,''));
   if(value)assert.ok(contact.includes(value),'Contact copy retained: '+lang+': '+value);
  }
+ const contactHTML=fs.readFileSync(prefix+(lang==='de'?'kontakt/':'contact/')+'index.html','utf8');
+ assert.ok(!/id="f-name"|name="name"/.test(contactHTML),'No contact-person field: '+lang);
+ assert.ok(contactHTML.includes('data-contact-endpoint="https://umweltmetrik-contact.alibahramali.workers.dev"'),'Fixed contact endpoint: '+lang);
 }
 for(const file of ['dist/index.html','dist/ueber-mich/index.html','dist/leistungen/index.html']){const html=fs.readFileSync(file,'utf8');assert.ok(!html.includes('Projekt besprechen'));assert.ok(!html.includes('Bildquelle:'));}
 const js=fs.readdirSync('dist/_astro').filter(x=>x.endsWith('.js')).map(x=>fs.readFileSync('dist/_astro/'+x,'utf8')).join('\n');
-assert.ok(!js.includes('workers.dev')&&!js.includes('fetch('),'No external contact submission code');
-console.log(results.join('\n'));console.log('PASS: nine AI originals excluded; historical originals retained in the backup branch, nine real photographs with bilingual credits, all sixteen DE/EN chapters, contact copy, removed CTA and no remote contact submission.');
+assert.ok(!/RESEND_API_KEY|Bearer re_/.test(js),'No mail-provider secrets in browser code');
+console.log(results.join('\n'));console.log('PASS: nine AI originals excluded; nine real photographs with bilingual credits, all sixteen DE/EN chapters, contact copy with requested field removal, fixed mail endpoint and no mail-provider secrets in the browser.');

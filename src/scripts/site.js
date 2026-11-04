@@ -159,19 +159,61 @@ mobile.addEventListener('change', syncScrollEntrances);
 reduced.addEventListener('change', syncScrollEntrances);
 reduced.addEventListener('change', () => { if (reduced.matches) document.getAnimations().forEach(animation => animation.finish()); });
 
-// Original contact wording and fields, with explicit local-only delivery behavior.
-const form = document.querySelector('[data-local-form]');
+// No cookies or browser storage: a pending request ID lives only in this page's memory.
+const form = document.querySelector('[data-contact-form]');
 if (form) {
   const requested = new URL(location.href).searchParams.get('service');
   const field = form.querySelector('[name=service]');
   if (requested && field && [...field.options].some(option => option.value === requested)) field.value = requested;
-  form.addEventListener('submit', event => {
+  let sending = false;
+  let pending = null;
+  form.addEventListener('submit', async event => {
     event.preventDefault();
+    if (sending) return;
     const status = form.querySelector('[role=status]');
     if (!form.reportValidity()) return;
-    status.textContent = lang === 'de' ? 'Lokale Vorschau: Ihre Eingaben wurden geprüft. Es wurde keine Anfrage versendet.' : 'Local preview: your entries were checked. No enquiry was sent.';
-    status.tabIndex = -1;
-    status.focus({ preventScroll: true });
+    const announce = text => {
+      status.textContent = text;
+      status.tabIndex = -1;
+      status.focus({ preventScroll: true });
+    };
+    if (form.dataset.contactEnabled !== 'true') {
+      announce(lang === 'de' ? 'Der Mailversand ist noch nicht freigeschaltet. Bitte schreiben Sie direkt an info@umweltmetrik.de.' : 'Email delivery is not enabled yet. Please email info@umweltmetrik.de directly.');
+      return;
+    }
+    const data = { ...Object.fromEntries(new FormData(form)), lang };
+    const fingerprint = JSON.stringify(data);
+    if (!pending || pending.fingerprint !== fingerprint) pending = { fingerprint, id: crypto.randomUUID() };
+    const button = form.querySelector('button[type=submit]');
+    const label = button.querySelector('span');
+    const originalLabel = label.textContent;
+    sending = true;
+    button.disabled = true;
+    form.setAttribute('aria-busy', 'true');
+    label.textContent = lang === 'de' ? 'Wird gesendet …' : 'Sending …';
+    status.textContent = '';
+    try {
+      const response = await fetch(form.dataset.contactEndpoint, {
+        method: 'POST', credentials: 'omit', referrerPolicy: 'no-referrer',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ ...data, requestId: pending.id }), signal: AbortSignal.timeout(25000),
+      });
+      const result = await response.json();
+      if (response.ok && result.accepted === true) {
+        form.reset(); pending = null;
+        announce(lang === 'de' ? 'Ihre Anfrage und die Eingangsbestätigung wurden an den Maildienst übergeben. Bitte prüfen Sie auch Ihren Spam-Ordner.' : 'Your enquiry and acknowledgement have been accepted by the email service. Please also check your spam folder.');
+      } else if (response.status === 429) {
+        announce(lang === 'de' ? 'Es wurden bereits Anfragen übermittelt. Bitte versuchen Sie es später erneut oder schreiben Sie direkt an info@umweltmetrik.de.' : 'Enquiries have already been submitted. Please try again later or email info@umweltmetrik.de directly.');
+      } else if (result.code === 'INVALID') {
+        announce(lang === 'de' ? 'Bitte prüfen Sie Ihre E-Mail-Adresse und die Länge Ihrer Angaben.' : 'Please check your email address and the length of your entries.');
+      } else throw new Error('Delivery not confirmed');
+    } catch {
+      // Keep the same ID and inputs after uncertainty; a retry cannot duplicate provider sends.
+      announce(lang === 'de' ? 'Der Versand konnte nicht bestätigt werden. Ihre Angaben bleiben erhalten. Bitte versuchen Sie es erneut oder schreiben Sie direkt an info@umweltmetrik.de.' : 'Delivery could not be confirmed. Your entries have been kept. Please try again or email info@umweltmetrik.de directly.');
+    } finally {
+      sending = false; button.disabled = false;
+      form.removeAttribute('aria-busy'); label.textContent = originalLabel;
+    }
   });
 }
 const plume = document.querySelector('.map-check input');
