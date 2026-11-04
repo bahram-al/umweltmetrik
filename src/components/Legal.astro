@@ -1,9 +1,22 @@
 ---
 import {label,type Lang,type Page} from '../data/site';
+import {privacyNotice} from '../data/privacy-notice';
+import '../styles/legal.css';
 interface Props {lang:Lang;page:Extract<Page,'imprint'|'privacy'>;}
 const {lang,page}=Astro.props;
+const escape=(value:string)=>value.replace(/[&<>"']/g,char=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[char]!));
+const format=(value:string)=>escape(value).replace(/https:\/\/[^\s<]+/g,url=>`<a href="${url}">${url}</a>`).replace(/info@umweltmetrik\.de/g,'<a href="mailto:info@umweltmetrik.de">info@umweltmetrik.de</a>');
+const rightsStart=(text:string)=>/^(Auskunft|Berichtigung|Löschung|Einschränkung|Datenübertragbarkeit) /.test(text);
 ---
-<section class="page-intro section-pad">
- <h1>{label(page,lang)}</h1>
- <!-- Rechtstexte nach Erhalt der tatsächlichen Betreiber- und Hostingangaben ergänzen. -->
-</section>
+{page==='privacy'?<section class="legal-page section-pad">
+ <h1>{lang==='de'?privacyNotice.title:'Privacy notice'}</h1>
+ <p class="legal-draft">{lang==='de'?'Entwurf: Die Angaben zum Verantwortlichen und zum E-Mail-Anbieter müssen noch vervollständigt werden.':'Draft: Details of the controller and email provider still need to be completed.'}</p>
+ {lang==='en'&&<p class="legal-language">The supplied privacy notice is currently available in German.</p>}
+ <article class="legal-document" lang="de" aria-label="Datenschutzerklärung">
+  {privacyNotice.sections.map(section=><section aria-labelledby={`privacy-${section.number}`}>
+   <h2 id={`privacy-${section.number}`}>{section.number}. {section.title}</h2>
+   {section.paragraphs.map((paragraph,index)=>rightsStart(paragraph)?(index===section.paragraphs.findIndex(rightsStart)&&<ul>{section.paragraphs.filter(rightsStart).map(item=><li set:html={format(item)} />)}</ul>):<p class:list={{'legal-placeholder':paragraph.startsWith('[Vor Veröffentlichung')}} set:html={format(paragraph)} />)}
+  </section>)}
+  <p class="legal-updated">{privacyNotice.updated}</p>
+ </article>
+</section>:<section class="page-intro section-pad"><h1>{label(page,lang)}</h1></section>}

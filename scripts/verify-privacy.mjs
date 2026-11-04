@@ -17,11 +17,18 @@ for(const file of files){
  const prefix=file.startsWith('en/')?'/en/':'/';
  for(const path of prefix==='/en/'?['legal-notice','privacy']:['impressum','datenschutz'])assert.ok(text.includes('href="'+prefix+path+'/"'),'Legal footer link in '+file);
 }
-for(const [file,title] of [['impressum','Impressum'],['datenschutz','Datenschutz'],['en/legal-notice','Legal notice'],['en/privacy','Privacy']]){
+for(const [file,title] of [['impressum','Impressum'],['en/legal-notice','Legal notice']]){
  const html=fs.readFileSync('dist/'+file+'/index.html','utf8');
  const main=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
  const visible=main.replace(/<!--[\s\S]*?-->/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
  assert.equal(visible,title,'Legal page stays empty except title: '+file);
 }
-console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; four empty legal shells; built JS without cookie/storage/remote-request APIs; all embedded resources local.`);
+for(const file of ['datenschutz','en/privacy']){
+ const html=fs.readFileSync('dist/'+file+'/index.html','utf8');
+ assert.equal((html.match(/id="privacy-\d+"/g)||[]).length,10,'Ten privacy sections: '+file);
+ for(const text of ['GitHub Pages','Vor Veröffentlichung ergänzen','4. November 2026','https://www.datenschutz-berlin.de/','mailto:info@umweltmetrik.de'])assert.ok(html.includes(text),'Privacy content retained: '+text+' in '+file);
+ assert.ok(!html.includes('STRATO'),'Obsolete hosting statement in '+file);
+ assert.ok(html.includes('Entwurf:')||html.includes('Draft:'),'Incomplete privacy notice marked as draft: '+file);
+}
+console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; two empty imprint shells; ten-section privacy draft on both language routes; built JS without cookie/storage/remote-request APIs; all embedded resources local.`);
 console.log('Static checks cover the bundled frontend. Browser storage/network checks and hosting behavior are separate evidence.');

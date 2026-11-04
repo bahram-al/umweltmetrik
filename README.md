@@ -35,7 +35,7 @@ Ein Push auf `main` baut und prüft die Website und veröffentlicht anschließen
 - Homepage-Auswahl mit gleitender Unterstreichung und dunkler/fetter aktiver Beschriftung; auf dem Handy drei Schritte je Reihe.
 - Abschnittslinks auf dem Handy mit kurzem Farbsignal ohne dauerhafte Auswahl, aktuelle Kontaktstruktur und keine Scroll-Einblendungen auf dem Handy.
 - Bildquellen und Lizenzen sind im Footer verlinkt, Schriften und Fotos werden selbst gehostet.
-- Weiterhin Testversion mit roter Hinweisleiste und leeren Impressums-/Datenschutzseiten.
+- Weiterhin Testversion mit roter Hinweisleiste, leerem Impressum und als Entwurf gekennzeichneter Datenschutzerklärung. Der bereitgestellte deutsche Text ist auf beiden Sprachrouten verfügbar; der Hostingabschnitt wurde auf GitHub Pages angepasst. Betreiber- und E-Mail-Anbieterangaben sind noch zu vervollständigen.
 - Das Kontaktformular validiert lokal und versendet nichts. Der zuvor vorhandene Cloudflare-Worker wird von diesem Frontend nicht aufgerufen. Seine bisherige Quelldatei ist im Backup-Branch erhalten; der externe Dienst selbst wird durch diesen Upload nicht geändert.
 - Keine Cookies, Browser-Speicherung oder Trackingdienste im Frontend; Verhalten des Hostings ist getrennt davon zu betrachten.
 

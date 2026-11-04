@@ -26,4 +26,4 @@ For rollback, inspect the backup branch or revert the replacement commit and pus
 - Single Anti-Slop pass: no errors/warnings, dimension-percentage advisories only. One focused Impeccable source scan returned no findings; source scans are not rendered accessibility audits. Screenshots inspected without a further design change.
 - Offline repository/bundle audits reviewed; see SECURITY.md for scope and remaining limitations.
 
-The publication still contains the requested test-version banner, empty legal pages and a non-sending contact form. Local browser evidence does not establish real-device/Safari behavior or live email delivery. After pushing, GitHub Actions and the actual HTTPS site must be checked separately.
+The publication still contains the requested test-version banner, empty imprint, incomplete privacy draft and a non-sending contact form. Local browser evidence does not establish real-device/Safari behavior or live email delivery. After pushing, GitHub Actions and the actual HTTPS site must be checked separately.
