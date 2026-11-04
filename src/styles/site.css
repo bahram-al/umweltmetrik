@@ -33,9 +33,10 @@ li{padding-left:3px;margin:0 0 8px}
 .site-header{height:104px;position:relative;z-index:5;background:var(--paper)}
 .header-inner{height:100%;max-width:1600px;margin:auto;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:40px}
 .wordmark{display:inline-flex;align-items:center;flex-shrink:0}
-.brand-word{--brand-ink:#17322f;--brand-accent:#146451;display:inline-flex;align-items:center;gap:3px;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1.2;white-space:nowrap}
-.brand-word svg{width:auto;height:.78em;height:1.095cap;aspect-ratio:110/104;transform:translateY(.05em);fill:var(--brand-ink);stroke:none;flex-shrink:0}
-.brand-name{display:inline-flex;align-items:baseline}
+.brand-word{--brand-ink:#17322f;--brand-accent:#146451;display:inline-block;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1.2;white-space:nowrap}
+.brand-name{display:inline}
+/* The U is a normal text glyph; only its small diagonal cut is masked out. */
+.brand-initial{display:inline-block;-webkit-mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-rule='evenodd' d='M0 0H100V100H0Z M0 73L37 61L39 66L0 79Z'/%3E%3C/svg%3E");mask-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cpath fill='white' fill-rule='evenodd' d='M0 0H100V100H0Z M0 73L37 61L39 66L0 79Z'/%3E%3C/svg%3E");-webkit-mask-size:100% 100%;mask-size:100% 100%;-webkit-mask-repeat:no-repeat;mask-repeat:no-repeat}
 .brand-umwelt{color:var(--brand-ink)}
 .brand-metrik{color:var(--brand-accent)}
 .desktop-nav{display:flex;align-items:center;gap:clamp(16px,1.7vw,28px);font-size:16px;font-weight:500;white-space:nowrap}

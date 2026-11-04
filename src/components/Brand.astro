@@ -1,5 +1,5 @@
 ---
-interface Props {large?:boolean;markId:string;}
-const {large=false,markId}=Astro.props;
+interface Props {large?:boolean;markId?:string;}
+const {large=false}=Astro.props;
 ---
-<span class:list={['brand-word',{'brand-large':large}]} translate="no"><svg viewBox="0 0 110 104" aria-hidden="true" focusable="false"><defs><mask id={markId} maskUnits="userSpaceOnUse" x="0" y="0" width="110" height="104"><rect width="110" height="104" fill="white" /><path d="M10 79 Q20 64 38 58" fill="none" stroke="black" stroke-width="7" stroke-linecap="round" /></mask></defs><path class="brand-glyph" mask={`url(#${markId})`} d="M4 5 H30 V51 C30 67 39 76 55 76 C72 76 81 67 81 51 V5 H107 V52 C107 84 87 100 55 100 C23 100 4 84 4 52 Z" /></svg><span class="brand-name"><span class="brand-umwelt">mwelt</span><span class="brand-metrik">Metrik</span></span></span>
+<span class:list={['brand-word',{'brand-large':large}]} translate="no"><span class="brand-name"><span class="brand-umwelt"><span class="brand-initial">U</span>mwelt</span><span class="brand-metrik">Metrik</span></span></span>
