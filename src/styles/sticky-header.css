@@ -22,7 +22,6 @@ html{scroll-padding-top:var(--navigation-offset)}
  :root{--navigation-offset:94px}
  .header-inner{height:64px;width:calc(100% - 28px);padding:0 16px;transform:translateY(8px);border-radius:24px;-webkit-backdrop-filter:blur(10px) saturate(115%);backdrop-filter:blur(10px) saturate(115%)}
  .site-header .brand-word{font-size:24px}
- .site-header .brand-word svg{height:29px;width:27px}
 }
 @supports not ((backdrop-filter:blur(1px)) or (-webkit-backdrop-filter:blur(1px))){
  .header-inner{background:#f4faf6}

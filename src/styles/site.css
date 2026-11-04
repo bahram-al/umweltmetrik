@@ -34,7 +34,7 @@ li{padding-left:3px;margin:0 0 8px}
 .header-inner{height:100%;max-width:1600px;margin:auto;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:40px}
 .wordmark{display:inline-flex;align-items:center;flex-shrink:0}
 .brand-word{--brand-ink:#17322f;--brand-accent:#146451;display:inline-flex;align-items:center;gap:3px;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1.2;white-space:nowrap}
-.brand-word svg{width:34px;height:38px;fill:var(--brand-ink);stroke:none;flex-shrink:0}
+.brand-word svg{width:auto;height:.78em;height:1.095cap;aspect-ratio:110/104;fill:var(--brand-ink);stroke:none;flex-shrink:0}
 .brand-name{display:inline-flex;align-items:baseline}
 .brand-umwelt{color:var(--brand-ink)}
 .brand-metrik{color:var(--brand-accent)}
@@ -197,7 +197,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
 .footer-top p{max-width:38ch;margin:0}
 .footer-email{font-size:20px;align-self:center}
 .footer-brand{display:inline-block;margin-bottom:25px}
-.brand-large{--brand-ink:#f5fbf7;--brand-accent:#d6eee5;font-size:32px}.brand-large svg{width:35px;height:40px}
+.brand-large{--brand-ink:#f5fbf7;--brand-accent:#d6eee5;font-size:32px}
 .footer-links{display:flex;flex-wrap:wrap;gap:6px 22px}
 .footer-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
 .footer-bottom{flex-wrap:wrap;align-items:center;display:flex;justify-content:space-between;gap:25px;font-size:16px}
@@ -216,7 +216,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px soli
 }
 @media(max-width:760px){
 .preview-banner{display:block;padding:9px var(--gutter);text-align:left}.preview-banner strong{display:block;margin-bottom:2px}
-.site-header,.menu-top{height:82px}.brand-word{font-size:25px;gap:3px}.brand-word svg{height:32px;width:29px}
+.site-header,.menu-top{height:82px}.brand-word{font-size:25px;gap:3px}
 .menu-body{grid-template-columns:1fr;gap:28px;margin-top:20px}.menu-body nav{gap:12px}.menu-link{font-size:32px}.menu-aside a{font-size:18px}
 .page-intro{padding-top:40px;padding-bottom:30px}.page-intro h1{font-size:42px;margin-bottom:23px}.page-intro>p{font-size:20px}.page-intro .intro-note{font-size:16px}
 .service-detail{grid-template-columns:1fr;gap:25px;padding-top:30px;padding-bottom:38px}.service-detail:nth-child(even) .service-detail-photo{order:0}.service-detail-photo{height:280px}.service-detail-copy h2{font-size:32px}.service-afterword{padding-top:45px;padding-bottom:50px}.facts-list{grid-template-columns:1fr 1fr;gap:30px}.facts-list dt{font-size:25px}
