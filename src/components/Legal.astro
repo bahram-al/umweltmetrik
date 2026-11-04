@@ -19,4 +19,12 @@ const rightsStart=(text:string)=>/^(Auskunft|Berichtigung|Löschung|Einschränku
   </section>)}
   <p class="legal-updated">{privacyNotice.updated}</p>
  </article>
-</section>:<section class="page-intro section-pad"><h1>{label(page,lang)}</h1></section>}
+</section>:<section class="legal-page section-pad">
+ <h1>{label(page,lang)}</h1>
+ <p class="legal-draft">{lang==='de'?'Entwurf: Die vollständigen Betreiberangaben und die ladungsfähige Anschrift müssen noch ergänzt werden.':'Draft: Full operator details and a serviceable postal address still need to be added.'}</p>
+ {lang==='en'&&<p class="legal-language">The supplied legal notice is currently available in German.</p>}
+ <article class="legal-document" lang="de" aria-label="Impressum">
+  <section aria-labelledby="imprint-operator"><h2 id="imprint-operator">UmweltMetrik</h2><p>Umweltfachliche Dienstleistungen, insbesondere Umwelt- und Trinkwasserprobenahme, Monitoring und geologische Feldarbeit.</p></section>
+  <section aria-labelledby="imprint-contact"><h2 id="imprint-contact">Kontakt</h2><p>E-Mail: <a href="mailto:info@umweltmetrik.de">info@umweltmetrik.de</a></p></section>
+ </article>
+</section>}

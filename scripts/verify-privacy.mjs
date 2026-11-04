@@ -20,8 +20,8 @@ for(const file of files){
 for(const [file,title] of [['impressum','Impressum'],['en/legal-notice','Legal notice']]){
  const html=fs.readFileSync('dist/'+file+'/index.html','utf8');
  const main=html.match(/<main\b[^>]*>([\s\S]*?)<\/main>/)[1];
- const visible=main.replace(/<!--[\s\S]*?-->/g,'').replace(/<[^>]+>/g,' ').replace(/\s+/g,' ').trim();
- assert.equal(visible,title,'Legal page stays empty except title: '+file);
+ for(const text of [title,'UmweltMetrik','Umweltfachliche Dienstleistungen, insbesondere Umwelt- und Trinkwasserprobenahme, Monitoring und geologische Feldarbeit.','mailto:info@umweltmetrik.de','imprint-contact'])assert.ok(main.includes(text),'Supplied imprint content retained: '+text+' in '+file);
+ assert.ok(main.includes('Entwurf:')||main.includes('Draft:'),'Incomplete imprint marked as draft: '+file);
 }
 for(const file of ['datenschutz','en/privacy']){
  const html=fs.readFileSync('dist/'+file+'/index.html','utf8');
@@ -30,5 +30,5 @@ for(const file of ['datenschutz','en/privacy']){
  assert.ok(!html.includes('STRATO'),'Obsolete hosting statement in '+file);
  assert.ok(html.includes('Entwurf:')||html.includes('Draft:'),'Incomplete privacy notice marked as draft: '+file);
 }
-console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; two empty imprint shells; ten-section privacy draft on both language routes; built JS without cookie/storage/remote-request APIs; all embedded resources local.`);
+console.log(`PASS: ${htmlPages} content pages (including 404) with legal footer links; supplied imprint draft on both language routes; ten-section privacy draft on both language routes; built JS without cookie/storage/remote-request APIs; all embedded resources local.`);
 console.log('Static checks cover the bundled frontend. Browser storage/network checks and hosting behavior are separate evidence.');
