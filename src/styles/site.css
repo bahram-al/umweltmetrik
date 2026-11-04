@@ -34,7 +34,7 @@ li{padding-left:3px;margin:0 0 8px}
 .header-inner{height:100%;max-width:1600px;margin:auto;padding:0 var(--gutter);display:flex;align-items:center;justify-content:space-between;gap:40px}
 .wordmark{display:inline-flex;align-items:center;flex-shrink:0}
 .brand-word{--brand-ink:#17322f;--brand-accent:#146451;display:inline-flex;align-items:center;gap:3px;font-family:Inter,-apple-system,BlinkMacSystemFont,'Segoe UI',Arial,sans-serif;font-size:28px;font-weight:800;letter-spacing:-.04em;line-height:1.2;white-space:nowrap}
-.brand-word svg{width:auto;height:.78em;height:1.095cap;aspect-ratio:110/104;fill:var(--brand-ink);stroke:none;flex-shrink:0}
+.brand-word svg{width:auto;height:.78em;height:1.095cap;aspect-ratio:110/104;transform:translateY(.05em);fill:var(--brand-ink);stroke:none;flex-shrink:0}
 .brand-name{display:inline-flex;align-items:baseline}
 .brand-umwelt{color:var(--brand-ink)}
 .brand-metrik{color:var(--brand-accent)}
