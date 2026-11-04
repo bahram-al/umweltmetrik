@@ -1,4 +1,4 @@
-// Supplied privacy text; section 2 adapted to the confirmed GitHub Pages hosting.
+// Revised privacy notice supplied by the website owner; wording retained.
 export const privacyNotice = {
   "title": "Datenschutzerklärung",
   "sections": [
@@ -15,13 +15,13 @@ export const privacyNotice = {
       "number": 2,
       "title": "Hosting und Zugriffsdaten",
       "paragraphs": [
-        "Diese Website wird über GitHub Pages bereitgestellt, einen Hostingdienst von GitHub. GitHub nennt als Datenschutz-Kontaktanschriften GitHub B.V., Prins Bernhardplein 200, 1097 JB Amsterdam, Niederlande, und GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA.",
-        "Beim Aufruf der Website werden technische Zugriffsdaten verarbeitet. Dazu gehören insbesondere die IP-Adresse des anfragenden Geräts, Datum und Uhrzeit des Zugriffs, angeforderte Seiten und Dateien sowie Informationen zum verwendeten Browser und zur zuvor besuchten Website, soweit diese vom Browser übermittelt werden. GitHub erklärt ausdrücklich, dass beim Besuch einer GitHub-Pages-Website IP-Adressen zu Sicherheitszwecken protokolliert und gespeichert werden.",
+        "Diese Website wird über GitHub Pages, einen Hostingdienst der GitHub, Inc., 88 Colin P. Kelly Jr. Street, San Francisco, CA 94107, USA, bereitgestellt.",
+        "Beim Aufruf der Website werden technische Zugriffsdaten verarbeitet. Dazu gehören insbesondere die IP-Adresse des anfragenden Geräts, Datum und Uhrzeit des Zugriffs, angeforderte Seiten und Dateien, der Antwortstatus des Servers sowie Informationen zum verwendeten Browser und zur zuvor besuchten Website, soweit diese vom Browser übermittelt werden.",
         "Die Verarbeitung dient der Bereitstellung der Website und der Gewährleistung eines sicheren und stabilen Betriebs. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse besteht darin, unser Internetangebot bereitzustellen und Störungen sowie missbräuchliche Zugriffe zu erkennen und abzuwehren.",
-        "GitHub kann personenbezogene Daten auch in den USA und weiteren Ländern verarbeiten. Nach eigenen Angaben nutzt GitHub für internationale Übermittlungen unter anderem das EU-US Data Privacy Framework und Standardvertragsklauseln. Die Speicherdauer richtet sich nach dem jeweiligen Verarbeitungszweck und den von GitHub beschriebenen Aufbewahrungsgründen.",
+        "GitHub verarbeitet diese Daten im Rahmen des Hostingbetriebs. Nach Angaben von GitHub werden die IP-Adressen von Besuchern einer GitHub-Pages-Website aus Sicherheitsgründen protokolliert und gespeichert. Wir haben keinen direkten Zugriff auf diese Zugriffsprotokolle. Eine konkrete Speicherdauer für diese Protokolle wird von GitHub nicht angegeben.",
+        "Da GitHub seinen Sitz in den USA hat, können personenbezogene Daten auch außerhalb des Europäischen Wirtschaftsraums verarbeitet werden. GitHub gibt an, für internationale Datenübermittlungen geeignete Schutzmechanismen einzusetzen, insbesondere das EU-US Data Privacy Framework und die Standardvertragsklauseln der Europäischen Kommission.",
         "Die Verarbeitung der technisch erforderlichen Verbindungsdaten ist notwendig, damit die Website an Ihr Gerät ausgeliefert werden kann.",
-        "Informationen zur Erfassung von IP-Adressen durch GitHub Pages:\nhttps://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages",
-        "Datenschutzhinweise von GitHub:\nhttps://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement"
+        "Informationen zum Datenschutz bei GitHub:\nhttps://docs.github.com/de/site-policy/privacy-policies/github-general-privacy-statement"
       ]
     },
     {
