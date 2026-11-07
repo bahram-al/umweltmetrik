@@ -10,7 +10,7 @@
 }
 html{scroll-padding-top:135px}
 body{background:var(--paper);isolation:isolate}
-body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,rgba(230,239,235,.95),rgba(234,244,240,.84)),url('/images/river-landscape.jpg') center/cover no-repeat}
+body:not(.home-page)::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(110deg,rgba(230,239,235,.95),rgba(234,244,240,.84)),url('/images/river-landscape.jpg') center/cover no-repeat}
 /* The border and inset reflection describe the requested glass edge, not a generic card. */
 :is(.header-inner,.offer,.hero-facts,.workflow-panel,.project-start-inner,.service-detail,.article-index,.article-content,.quality-card,.about-credentials){
  background:var(--glass-surface);
@@ -120,7 +120,7 @@ input:focus-visible,select:focus-visible,textarea:focus-visible{background:rgba(
 }
 @media(prefers-reduced-transparency:reduce){
  :root{--glass-surface:#f4faf6;--glass-blur:none}
- body::before{display:none}
+ body:not(.home-page)::before{display:none}
  .home-page .header-inner,.hero-facts,.contact-panel,.about-card,.site-footer{background:#123b44;-webkit-backdrop-filter:none;backdrop-filter:none}
  .menu-sheet{background:#f4faf6;-webkit-backdrop-filter:none;backdrop-filter:none}
  .button,.btn,.menu-toggle,.menu-close{-webkit-backdrop-filter:none;backdrop-filter:none}

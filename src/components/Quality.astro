@@ -1,0 +1,27 @@
+---
+import {originalPages,type Lang} from '../data/site';
+import {qualitySources} from '../data/quality-sources';
+const {lang}=Astro.props as {lang:Lang};
+const introduction=originalPages[lang].quality.match(/<h1[\s\S]*?(?=<h2 class="section-title">)/)?.[0];
+if(!introduction) throw new Error('Missing original quality introduction');
+---
+<div class="legacy-content section-pad quality-page"><section class="section"><div class="container">
+ <Fragment set:html={introduction} />
+ <h2 class="section-title">{lang==='de'?'Offizielle Quellen':'Official sources'}</h2>
+ <p class="quality-source-note">{lang==='de'?'Die genannten Grundlagen sind hier direkt verlinkt. Bei Normenreihen sind ausgewählte Teile angegeben; welche Ausgabe und welche Teile für einen Auftrag maßgeblich sind, ist projektbezogen zu prüfen. DIN-Links führen zu den offiziellen Verlagsseiten; die vollständigen Normtexte sind in der Regel kostenpflichtig.':'The references named above are linked below. Selected parts of standard series are listed; the applicable edition and parts must be checked for each project. DIN links lead to official publisher pages; full standards generally require purchase.'}</p>
+ {qualitySources.map(group=><section class="quality-source-group" aria-labelledby={`source-${group.id}`}>
+  <h3 id={`source-${group.id}`}>{group.title[lang]}</h3>
+  <div class="law-list">{group.entries.map(entry=><div class="law"><div><strong>{entry.title}</strong><small>{entry.description[lang]}</small></div><div class="quality-source-links">{entry.links.map(link=><a href={link.url} target="_blank" rel="noopener noreferrer" aria-label={`${link.label[lang]}: ${entry.title} (${lang==='de'?'neuer Tab':'new tab'})`}>{link.label[lang]}</a>)}</div></div>)}</div>
+ </section>)}
+</div></section></div>
+<style>
+.quality-source-note{font-size:17px;line-height:1.65;max-width:78ch;margin-bottom:36px;color:var(--muted)}
+.quality-source-group{margin:36px 0}
+.quality-source-group h3{font-size:24px;line-height:1.3;font-weight:500;margin:0 0 20px}
+.quality-page .law>div:first-child{min-width:0}
+.quality-page .law strong{font-size:19px;line-height:1.4;overflow-wrap:anywhere}
+.quality-page .law small{line-height:1.55;color:var(--muted);max-width:67ch}
+.quality-source-links{display:flex;gap:4px 20px;flex-wrap:wrap;flex-shrink:0}
+.quality-source-links a{display:inline-flex;align-items:center;min-height:44px}
+@media(max-width:760px){.quality-source-group h3{font-size:23px}.quality-source-note{font-size:16px}}
+</style>

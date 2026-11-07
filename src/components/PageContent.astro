@@ -2,6 +2,7 @@
 import Photo from './Photo.astro';
 import photos from '../data/photos.json';
 import Home from './Home.astro';
+import Quality from './Quality.astro';
 import Credits from './Credits.astro';
 import Legal from './Legal.astro';
 import Contact from './Contact.astro';
@@ -17,7 +18,7 @@ const mapLegacy=(html:string)=>html.replace(/[↗→←]/g,'').replace(/href="#\
 <section class="page-intro section-pad"><h1 data-reveal="rise">{lang==='de'?'Unsere Leistungen.':'Our services.'}</h1><p>{lang==='de'?'Probenahme, Messungen und Felddokumentation für Wasser, Boden und Abfall – mit Leistungsumfang, Verfahren und fachlichen Grundlagen.':'Sampling, field measurements and documentation for water, soil and waste – with service scope, methods and technical information.'}</p><p class="intro-note">{lang==='de'?'Rechtsvorschriften, technische Normen und Empfehlungen werden getrennt betrachtet. Welche Vorgaben tatsächlich gelten, hängt von Anlage, Untersuchungsziel und Auftrag ab.':'Regulations, technical standards and recommendations are distinguished. Requirements depend on the installation, objectives and the project.'}</p></section>
 <div class="service-sections">{order.map((key,n)=><section class="service-detail section-pad" id={key}><Photo id={key} lang={lang} class="service-detail-photo" /><div class="service-detail-copy"><h2 data-reveal="rise">{short[n]}</h2>{services[key].title[lang]!==short[n]&&<p class="service-original-title">{services[key].title[lang]}</p>}<p>{services[key].summary[lang]}</p><ul>{listedWork[key][lang].map(item=><li>{item}</li>)}</ul><a class="button magnetic dark-button" href={href('services',lang,key)}><span>{lang==='de'?'Leistung & Fachinformationen':'Service & technical information'}</span></a></div></section>)}</div>
 <section class="service-afterword section-pad"><h2>{lang==='de'?'Fachlich fundiert.':'Grounded in expertise.'}</h2><p>{i.heroP}</p><dl class="facts-list">{i.facts.map((fact,n)=><div><dt>{fact}</dt><dd>{i.factSub[n]}</dd></div>)}</dl></section>
-</>:page==='contact'?<Contact lang={lang} />:<>
+</>:page==='contact'?<Contact lang={lang} />:page==='quality'?<Quality lang={lang} />:<>
 {page==='about'&&<section class="about-photo-band section-pad"><figure class="about-theme-photo"><Photo id="soil" lang={lang} priority /><figcaption><a href={href('credits',lang)+'#foto-soil'}>{lang==='de'?'Themenfoto: Bodenprobenahme':'Illustrative photograph: soil sampling'} · {photos.soil.source}</a></figcaption></figure><p>{lang==='de'?'Praxisnah im Feld. Sorgfältig bei jedem Schritt.':'Practical in the field. Careful at every step.'}</p></section>}
 <div class:list={['legacy-content','section-pad',`${page}-page`]} set:html={mapLegacy(originalPages[lang][page==='about'?'about':page==='labs'?'labs':'quality'])} />
 {page==='about'&&<section class="approach-notes section-pad"><h2>{i.whyTitle}</h2><dl class="scope-list">{i.whyItems.map(q=><div><dt>{q[1]}</dt><dd>{q[2]}</dd></div>)}</dl><h2>{i.soilTitle}</h2><p>{i.soilText}</p><ul>{i.soilPoints.map(q=><li>{q}</li>)}</ul></section>}

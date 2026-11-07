@@ -1,6 +1,7 @@
 import fs from 'node:fs';
 import crypto from 'node:crypto';
 import assert from 'node:assert/strict';
+import {qualitySources} from '../src/data/quality-sources.ts';
 const data=JSON.parse(fs.readFileSync('src/data/content.json','utf8'));
 const old=JSON.parse(fs.readFileSync('src/data/original-pages.json','utf8'));
 const hashes=JSON.parse(fs.readFileSync('reference/image-hashes.json','utf8'));
@@ -31,6 +32,15 @@ for(const lang of ['de','en']){
   for(const key of ['scope','params','freq','faq'])for(const row of service[key][lang])for(const cell of row)assert.ok(rendered.includes(cell.replace(/\s+/g,' ')),`${lang}/${id}/${key}: ${cell}`);
   for(const rule of service.rules)assert.ok(rendered.includes(rule[0])&&rendered.includes(rule[1]),`${lang}/${id}/rule`);
   results.push('Full technical content retained: '+lang+'/'+id);
+ }
+ const homepage=fs.readFileSync(prefix+'index.html','utf8');
+ assert.ok(!/<img\b/i.test(homepage),'Homepage uses no photographs: '+lang);
+ assert.equal((homepage.match(/class="photo home-image-placeholder"/g)||[]).length,5,'All five workflow images replaced: '+lang);
+ assert.ok(homepage.includes('hero-image-placeholder'),'Hero photograph replaced: '+lang);
+ const quality=fs.readFileSync(prefix+(lang==='de'?'qualitaet/':'quality/')+'index.html','utf8');
+ for(const group of qualitySources)for(const entry of group.entries){
+  assert.ok(htmlText(quality).includes(entry.title),'Named quality reference present: '+entry.title+'/'+lang);
+  for(const link of entry.links)assert.ok(quality.includes(link.url),'Official source linked: '+entry.title+'/'+lang);
  }
  const contact=htmlText(fs.readFileSync(prefix+(lang==='de'?'kontakt/':'contact/')+'index.html','utf8'));
  // Validate each original content block independently so accessible field reordering is allowed.
