@@ -30,16 +30,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 1600 × 1065
 - SHA-256: e7caed1bc52a2fe0b149df13451f174527c23ffc764408a8282a89e0a71d1505
 
-## Grundwasserprobenahme am Brunnen
+## Grundwassermessstelle im Feld
 
-- Datei: public/images/real-groundwater-sampling.jpg
-- Urheber: Jennifer T. Wilson / USGS
-- Original: https://www.usgs.gov/media/images/groundwater-sample-collection
-- Lizenz laut Quelle: Public Domain (USGS) — https://www.usgs.gov/media/images/groundwater-sample-collection
-- Herkunftsnachweis: USGS photograph published 2015-04-01; named photographer; public-supply well sampling.
-- Download: https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/293516098325501.West_.JPG
-- Maße: 2448 × 3264
-- SHA-256: 0c14ddeadb972078cfbbef7c7ca41da99d5a97c32201c5bcd3e13fc37aab2656
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Grundwasser vorgegeben.
+- Datei: public/images/groundwater-monitoring-agus.jpg
+- Quelle: AGUS · agusonline.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Original und Download: https://www.agusonline.de/wp-content/uploads/2023/07/B56_rep.jpg
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Datei unverändert übernommen; nur responsiver CSS-Ausschnitt.
+- Maße: 759 × 588
+- SHA-256: 38867e5336bb6b697228c6d7da9282cefbbad882be31cb71eb43fffd13d5867c
 
 ## Bodenprobenahme und Dokumentation
 
