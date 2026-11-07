@@ -1,12 +1,14 @@
 ---
+import WorkflowPhoto from './WorkflowPhoto.astro';
 import {text,type Lang} from '../data/site';
 const {lang}=Astro.props as {lang:Lang};
+const photos=['briefing','planning','sampling','documentation','handover'] as const;
 const short=lang==='de'?['Auftrag klären','Planen','Entnehmen','Dokumentieren','Laborübergabe']:['Define the task','Plan','Sample','Document','Handover'];
 ---
 <section class="process-section section-pad" id="arbeitsweise" aria-labelledby="process-title">
 <div class="section-heading"><h2 id="process-title" data-reveal="rise">{lang==='de'?'Sorgfalt in jedem Schritt.':'Care at every stage.'}</h2><p data-reveal="rise">{lang==='de'?'Von der Abstimmung bis zur Laborübergabe.':'From defining the task to laboratory handover.'}</p></div>
 <div class="workflow" data-workflow>
 <div class="workflow-tabs" role="tablist" aria-label={lang==='de'?'Ablauf der Probenahme':'Sampling workflow'} hidden>{text[lang].work.map((_step,n)=><button type="button" role="tab" id={`step-${n}`} aria-controls={`stage-${n}`} aria-selected={n===0?'true':'false'} tabindex={n===0?0:-1} data-step={n}><span>{short[n]}</span></button>)}</div>
-<div class="workflow-panels">{text[lang].work.map((step,n)=><section class="workflow-panel" id={`stage-${n}`} data-panel={n}><div class="workflow-copy"><h3>{step[1]}</h3><p>{step[2]}</p></div><div class="photo home-image-placeholder"><span>{lang==='de'?'Platzhalter':'Image placeholder'}</span></div></section>)}</div>
+<div class="workflow-panels">{text[lang].work.map((step,n)=><section class="workflow-panel" id={`stage-${n}`} data-panel={n}><div class="workflow-copy"><h3>{step[1]}</h3><p>{step[2]}</p></div><WorkflowPhoto id={photos[n]} lang={lang} /></section>)}</div>
 </div>
 </section>

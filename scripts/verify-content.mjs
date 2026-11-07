@@ -6,6 +6,8 @@ const data=JSON.parse(fs.readFileSync('src/data/content.json','utf8'));
 const old=JSON.parse(fs.readFileSync('src/data/original-pages.json','utf8'));
 const hashes=JSON.parse(fs.readFileSync('reference/image-hashes.json','utf8'));
 const photos=JSON.parse(fs.readFileSync('src/data/photos.json','utf8'));
+const workflowPhotos=JSON.parse(fs.readFileSync('src/data/workflow-photos.json','utf8'));
+for(const photo of Object.values(workflowPhotos))for(const folder of ['public','dist'])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(folder+'/images/'+photo.filename)).digest('hex'),photo.sha256,'Supplied workflow photo bytes retained');
 const htmlText=s=>s.replace(/<[^>]*>/g,' ').replace(/&amp;/g,'&').replace(/&gt;/g,'>').replace(/&lt;/g,'<').replace(/&#39;/g,"'").replace(/&quot;/g,'"').replace(/\s+/g,' ').trim();
 const results=[];
 for(const filename of Object.keys(hashes.assets)){
@@ -34,8 +36,11 @@ for(const lang of ['de','en']){
   results.push('Full technical content retained: '+lang+'/'+id);
  }
  const homepage=fs.readFileSync(prefix+'index.html','utf8');
- assert.equal((homepage.match(/<img\b/gi)||[]).length,1,'Only the homepage hero photograph remains: '+lang);
- assert.equal((homepage.match(/class="photo home-image-placeholder"/g)||[]).length,5,'All five workflow images replaced: '+lang);
+ assert.equal((homepage.match(/<img\b/gi)||[]).length,6,'Homepage hero and five supplied workflow photographs: '+lang);
+ for(const photo of Object.values(workflowPhotos))assert.ok(homepage.includes('/images/'+photo.filename),'Supplied photograph used in workflow: '+photo.filename+'/'+lang);
+ assert.ok(!homepage.includes('home-image-placeholder'),'No workflow placeholders remain: '+lang);
+ const credits=fs.readFileSync(prefix+(lang==='de'?'bildquellen/':'image-credits/')+'index.html','utf8');
+ assert.ok(credits.includes(workflowPhotos.handover.source.url)&&credits.includes('U.S. Geological Survey'),'USGS credit and supplied link: '+lang);
  assert.ok(homepage.includes('class="landscape-image"')&&homepage.includes('/images/river-landscape.jpg'),'Original hero photograph retained: '+lang);
  const quality=fs.readFileSync(prefix+(lang==='de'?'qualitaet/':'quality/')+'index.html','utf8');
  for(const group of qualitySources)for(const entry of group.entries){
@@ -43,7 +48,7 @@ for(const lang of ['de','en']){
   for(const link of entry.links)assert.ok(quality.includes(link.url),'Official source linked: '+entry.title+'/'+lang);
  }
  const laboratories=fs.readFileSync(prefix+(lang==='de'?'labore/':'laboratories/')+'index.html','utf8');
- assert.ok(!/<img\b/i.test(laboratories)&&laboratories.includes('home-image-placeholder'),'Laboratories photograph replaced by placeholder: '+lang);
+ assert.ok(laboratories.includes('/images/'+workflowPhotos.planning.filename)&&!laboratories.includes('home-image-placeholder'),'Supplied sample-bottle photograph used for laboratories: '+lang);
  const contact=htmlText(fs.readFileSync(prefix+(lang==='de'?'kontakt/':'contact/')+'index.html','utf8'));
  // Validate each original content block independently so accessible field reordering is allowed.
  for(const block of old[lang].contact.matchAll(/<(h[12]|p|label|option|button)\b[^>]*>([\s\S]*?)<\/\1>/g)){

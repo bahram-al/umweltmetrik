@@ -1,0 +1,8 @@
+---
+import photos from '../data/workflow-photos.json';
+import type {Lang} from '../data/site';
+interface Props {id:keyof typeof photos;lang:Lang;}
+const {id,lang}=Astro.props;
+const photo=photos[id];
+---
+<div class="photo workflow-photo"><img src={`/images/${photo.filename}`} alt={photo.alt[lang]} width={photo.width} height={photo.height} style={`object-position:${photo.position}`} loading="lazy" decoding="async" /></div>

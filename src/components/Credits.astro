@@ -1,5 +1,7 @@
 ---
 import photos from '../data/photos.json';
+import workflowPhotos from '../data/workflow-photos.json';
+import WorkflowPhoto from './WorkflowPhoto.astro';
 import Photo from './Photo.astro';
 import type {Lang} from '../data/site';
 const {lang}=Astro.props as {lang:Lang};
@@ -17,6 +19,12 @@ const {lang}=Astro.props as {lang:Lang};
    <p class="credit-note">{lang==='de'?'Bilddatei unverändert übernommen; der sichtbare Ausschnitt variiert je nach Bildschirmgröße.':'Image file used unchanged; the visible crop varies with screen size.'}{id==='cooling'&&(lang==='de'?' Titel des Originals: „Closed circuit cooling towers“. © Entryadmn. Das Foto bleibt unter CC BY-SA 4.0 verfügbar.':' Original title: “Closed circuit cooling towers”. © Entryadmn. The photograph remains available under CC BY-SA 4.0.')}</p>
   </div>
  </li>)}
+ <li id="foto-workflow-handover"><WorkflowPhoto id="handover" lang={lang} /><div>
+  <h2>{lang==='de'?'Wasserproben für die Laborübergabe':'Water samples for laboratory handover'}</h2>
+  <p>{workflowPhotos.handover.source.name} · {workflowPhotos.handover.source.title}</p>
+  <p class="credit-links"><a href={workflowPhotos.handover.source.url}>{lang==='de'?'Originalfoto bei USGS':'Original photograph at USGS'}</a><span>{workflowPhotos.handover.source.license}</span></p>
+  <p class="credit-note">{lang==='de'?'Bilddatei unverändert übernommen; der sichtbare Ausschnitt variiert je nach Bildschirmgröße.':'Image file used unchanged; the visible crop varies with screen size.'}</p>
+ </div></li>
 </ol>
 
 <style>
@@ -25,7 +33,7 @@ const {lang}=Astro.props as {lang:Lang};
 .photo-credits :global(.photo){height:135px}
 .photo-credits h2{font-size:26px;line-height:1.2;margin:0 0 12px;letter-spacing:-.02em}
 .photo-credits p{font-size:18px;margin:8px 0}
-.credit-links{display:flex;flex-wrap:wrap;gap:8px 24px}
+.credit-links{display:flex;align-items:center;flex-wrap:wrap;gap:8px 24px}
 .credit-links a{display:inline-flex;align-items:center;min-height:44px;text-decoration:underline;text-underline-offset:4px}
 .photo-credits .credit-note{font-size:16px;color:var(--muted);max-width:66ch;line-height:1.6}
 @media(max-width:600px){.photo-credits{padding-bottom:48px}.photo-credits li{grid-template-columns:1fr;gap:22px;padding:28px 0}.photo-credits :global(.photo){width:100%;height:190px}.photo-credits h2{font-size:25px}.credit-links{gap:0 20px}}

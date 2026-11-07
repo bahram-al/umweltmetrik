@@ -1,0 +1,68 @@
+{
+  "briefing": {
+    "filename": "workflow-briefing.jpg",
+    "width": 2048,
+    "height": 1366,
+    "alt": {
+      "de": "Besprechung an einem Tisch mit Laptop und Unterlagen",
+      "en": "People discussing documents around a table with a laptop"
+    },
+    "position": "center top",
+    "sha256": "9bc2bbf353efe5997a76fc7792e6ef6bdf565285cb56ef28ee0b14b367625921",
+    "provenance": "Client-supplied photograph; stated Pexels origin, original page not provided."
+  },
+  "planning": {
+    "filename": "workflow-planning.jpg",
+    "width": 2048,
+    "height": 1365,
+    "alt": {
+      "de": "Beschriftete Probenflaschen mit verschiedenfarbigen Verschlüssen",
+      "en": "Labelled sample bottles with different coloured caps"
+    },
+    "position": "center",
+    "sha256": "c48f3136373711688bf7ca35dd043977c9d5f8b5eae72008d99069851d089c27",
+    "provenance": "Client-supplied photograph; stated Pexels origin, original page not provided."
+  },
+  "sampling": {
+    "filename": "workflow-sampling.jpg",
+    "width": 944,
+    "height": 531,
+    "alt": {
+      "de": "Feldmessung mit Messgeräten an einem Gewässer",
+      "en": "Field measurements using instruments beside a waterway"
+    },
+    "position": "center",
+    "sha256": "5271f75b51d0f0a1de1cc69aaffa26b90b92c38e46c69ae3d291adb7cf83f7f5",
+    "provenance": "Client-supplied photograph; stated Pexels origin, original page not provided."
+  },
+  "documentation": {
+    "filename": "workflow-documentation.jpg",
+    "width": 2048,
+    "height": 1365,
+    "alt": {
+      "de": "Hände beim Schreiben auf einem Klemmbrett",
+      "en": "Hands writing on a clipboard"
+    },
+    "position": "center",
+    "sha256": "2848063c311ed0e50f9dc2e6bdd2736effbc075cce337f12c3507da9ca0f8f0d",
+    "provenance": "Client-supplied photograph; stated Pexels origin, original page not provided."
+  },
+  "handover": {
+    "filename": "workflow-handover.jpg",
+    "width": 1336,
+    "height": 891,
+    "alt": {
+      "de": "Fünf verpackte Wasserproben mit klarer bis gelblicher Färbung",
+      "en": "Five packaged water samples ranging from clear to yellow"
+    },
+    "position": "center 58%",
+    "sha256": "27d9ca489145888c0e5d9dc805ff38f4d754ec47b1b82b11a96b2dad47e51911",
+    "provenance": "Client-supplied photograph; USGS source and Public Domain designation checked on 2026-11-07.",
+    "source": {
+      "name": "U.S. Geological Survey (USGS)",
+      "url": "https://www.usgs.gov/media/images/sample-bottles-a-line",
+      "title": "Sample Bottles in a Line",
+      "license": "Public Domain"
+    }
+  }
+}

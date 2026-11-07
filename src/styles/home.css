@@ -82,5 +82,3 @@
 .project-questions{gap:27px}
 }
 @media(max-width:420px){.desktop-break{display:none}.landscape-copy h1{font-size:40px;max-width:100%;overflow-wrap:normal}.hero-facts{display:grid;gap:9px}}
-
-.home-image-placeholder{display:grid;place-items:center;background:var(--soft);border:1px solid var(--rule);color:var(--muted);font-size:16px;border-radius:14px}
