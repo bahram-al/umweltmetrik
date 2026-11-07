@@ -42,16 +42,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 759 × 588
 - SHA-256: 38867e5336bb6b697228c6d7da9282cefbbad882be31cb71eb43fffd13d5867c
 
-## Bodenprobenahme und Dokumentation
+## Bodenprobenahme im Schurf
 
-- Datei: public/images/real-soil-sampling.jpg
-- Urheber: Kathleen M. Rowland / USGS
-- Original: https://www.usgs.gov/media/images/soil-sampling
-- Lizenz laut Quelle: Public Domain (USGS) — https://www.usgs.gov/media/images/soil-sampling
-- Herkunftsnachweis: USGS photograph published 2009-06-01; JoAnn Holloway and Ron Wiederholt collecting soil samples.
-- Download: https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/df.june2009_011.jpg
-- Maße: 1600 × 1200
-- SHA-256: 8aa304e679380f749d8ac0903e84691ae0aa02d1632a52c9741f65243c28583d
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Bodenprobenahme vorgegeben.
+- Datei: public/images/soil-sampling-trial-pit-gbh.jpg
+- Quelle: GBH Geoconsult · gbh-geoconsult.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Vom Auftraggeber benannter Quellenlink: https://www.gbh-geoconsult.de/wp-content/uploads/2022/10/ProbenahmeImSchurf-510x510.jpg
+- Verwendet wurde die höher aufgelöste angehängte JPEG-Datei des Auftraggebers, unverändert; nur responsiver CSS-Ausschnitt.
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Maße: 1600 × 1197
+- SHA-256: 6066a3283ec4e602e45e14d1b1721a53ee0578d9a46e8d20cf6060658a7996a9
 
 ## Geschlossene Kühlkreisläufe
 

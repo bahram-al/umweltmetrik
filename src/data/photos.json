@@ -66,26 +66,26 @@
     "sha256": "38867e5336bb6b697228c6d7da9282cefbbad882be31cb71eb43fffd13d5867c"
   },
   "soil": {
-    "filename": "real-soil-sampling.jpg",
+    "filename": "soil-sampling-trial-pit-gbh.jpg",
     "width": 1600,
-    "height": 1200,
+    "height": 1197,
     "title": {
-      "de": "Bodenprobenahme und Dokumentation",
-      "en": "Soil sampling and documentation"
+      "de": "Bodenprobenahme im Schurf",
+      "en": "Soil sampling in a trial pit"
     },
     "alt": {
-      "de": "Zwei Forschende entnehmen und dokumentieren Bodenproben auf einer Wiese",
-      "en": "Two researchers collect and document soil samples in a field"
+      "de": "Offener Schurf mit freigelegten Bodenschichten, Messlatte und weißem Probeneimer",
+      "en": "Open trial pit with exposed soil layers, a measuring rod and a white sampling bucket"
     },
-    "author": "Kathleen M. Rowland / USGS",
-    "source": "U.S. Geological Survey",
-    "sourceUrl": "https://www.usgs.gov/media/images/soil-sampling",
-    "license": "Public Domain (USGS)",
-    "licenseUrl": "https://www.usgs.gov/media/images/soil-sampling",
-    "evidence": "USGS photograph published 2009-06-01; JoAnn Holloway and Ron Wiederholt collecting soil samples.",
-    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/df.june2009_011.jpg",
-    "position": "50% 43%",
-    "sha256": "8aa304e679380f749d8ac0903e84691ae0aa02d1632a52c9741f65243c28583d"
+    "author": "Urheber nicht angegeben",
+    "source": "GBH Geoconsult · gbh-geoconsult.de",
+    "sourceUrl": "https://www.gbh-geoconsult.de/wp-content/uploads/2022/10/ProbenahmeImSchurf-510x510.jpg",
+    "license": "Keine freie Lizenz angegeben",
+    "licenseUrl": "https://www.gbh-geoconsult.de/wp-content/uploads/2022/10/ProbenahmeImSchurf-510x510.jpg",
+    "evidence": "Vom Auftraggeber am 07.11.2026 für Bodenprobenahme bereitgestelltes Foto und benannter Quellenlink. Die höher aufgelöste angehängte JPEG-Datei wurde byteidentisch übernommen; keine freie Lizenz oder namentliche Urheberschaft verifiziert.",
+    "downloadUrl": "https://www.gbh-geoconsult.de/wp-content/uploads/2022/10/ProbenahmeImSchurf-510x510.jpg",
+    "position": "55% 60%",
+    "sha256": "6066a3283ec4e602e45e14d1b1721a53ee0578d9a46e8d20cf6060658a7996a9"
   },
   "cooling": {
     "filename": "real-closed-circuit-cooling-towers.jpg",
