@@ -154,26 +154,26 @@
     "sha256": "d64b8d7aef704f0ad60df10914c3f27df3ed81c36ecdf8ced8e88bafe53e0592"
   },
   "surface": {
-    "filename": "real-surface-water-sampling.jpg",
-    "width": 1434,
-    "height": 807,
+    "filename": "surface-water-sampling-lanuk.png",
+    "width": 655,
+    "height": 715,
     "title": {
-      "de": "Probenahme im Oberflächenwasser",
+      "de": "Probenahme von Oberflächenwasser",
       "en": "Surface-water sampling"
     },
     "alt": {
-      "de": "Eine USGS-Fachkraft entnimmt mit einer Probenflasche am Stab eine Wasserprobe in einem Gewässer",
-      "en": "A USGS technician collects a water sample using a bottle on a sampling pole"
+      "de": "Wasser wird aus einem Edelstahl-Probenahmegefäß am Stab in eine Probenflasche gefüllt",
+      "en": "Water is poured from a stainless-steel sampling vessel on a pole into a sample bottle"
     },
-    "author": "Elizabeth Nystrom / USGS",
-    "source": "U.S. Geological Survey",
-    "sourceUrl": "https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample",
-    "license": "Public Domain (USGS)",
-    "licenseUrl": "https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample",
-    "evidence": "USGS photograph published 2017-06-27; named photographer and sampling activity.",
-    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/20170627_142104_0.jpg",
-    "position": "65% 50%",
-    "sha256": "1f7f71c4e9cf3212c60fb503c996c00bb3ca959ef948c825dd2100948c439660"
+    "author": "Urheber nicht angegeben",
+    "source": "LANUK NRW · lanuk.nrw.de",
+    "sourceUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/b/c/csm_Mikrobiologische_Probenahme_87a2703915.png",
+    "license": "Keine freie Lizenz angegeben",
+    "licenseUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/b/c/csm_Mikrobiologische_Probenahme_87a2703915.png",
+    "evidence": "Vom Auftraggeber am 07.11.2026 für Oberflächenwasser ausgewähltes Foto. Die Originaldatei unter dem angegebenen LANUK-Link wurde visuell mit dem Anhang verglichen und byteidentisch übernommen; keine freie Lizenz oder namentliche Urheberschaft verifiziert.",
+    "downloadUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/b/c/csm_Mikrobiologische_Probenahme_87a2703915.png",
+    "position": "50% 48%",
+    "sha256": "791c85cd6d2daaacb8130c6dda088f187b428830089ef904cfac9591321815e9"
   },
   "field": {
     "filename": "real-water-quality-sonde.jpg",

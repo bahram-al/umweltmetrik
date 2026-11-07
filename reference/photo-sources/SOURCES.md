@@ -88,16 +88,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 1800 × 853
 - SHA-256: d64b8d7aef704f0ad60df10914c3f27df3ed81c36ecdf8ced8e88bafe53e0592
 
-## Probenahme im Oberflächenwasser
+## Probenahme von Oberflächenwasser
 
-- Datei: public/images/real-surface-water-sampling.jpg
-- Urheber: Elizabeth Nystrom / USGS
-- Original: https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample
-- Lizenz laut Quelle: Public Domain (USGS) — https://www.usgs.gov/media/images/usgs-scientist-collecting-a-water-quality-sample
-- Herkunftsnachweis: USGS photograph published 2017-06-27; named photographer and sampling activity.
-- Download: https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/thumbnails/image/20170627_142104_0.jpg
-- Maße: 1434 × 807
-- SHA-256: 1f7f71c4e9cf3212c60fb503c996c00bb3ca959ef948c825dd2100948c439660
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Oberflächenwasser vorgegeben.
+- Datei: public/images/surface-water-sampling-lanuk.png
+- Quelle: LANUK NRW · lanuk.nrw.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Original und Download: https://www.lanuk.nrw.de/fileadmin/_processed_/b/c/csm_Mikrobiologische_Probenahme_87a2703915.png
+- Originaldatei unverändert übernommen; nur responsiver CSS-Ausschnitt.
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Maße: 655 × 715
+- SHA-256: 791c85cd6d2daaacb8130c6dda088f187b428830089ef904cfac9591321815e9
 
 ## Sensoren einer Multiparametersonde
 
