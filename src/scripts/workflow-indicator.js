@@ -33,32 +33,33 @@ export function createWorkflowIndicator(tablist, tabs, reduced, mobile) {
     };
     // Bold selection changes tab widths. Its ResizeObserver notification must not
     // cancel the spring when the destination was already measured by the click.
-    if (fromResize && animation?.playState === 'running' && Object.entries(box).every(([key, value]) => Math.abs(parseFloat(indicator.style[key]) - value) < .1)) return;
+    if (fromResize && placed && Object.entries(box).every(([key, value]) => Math.abs(parseFloat(indicator.style[key]) - value) < .1)) return;
+    const continueMotion = animate || (fromResize && animation?.playState === 'running');
     animation?.cancel();
     Object.entries(box).forEach(([key, value]) => { indicator.style[key] = `${value}px`; });
     placed = true;
-    if (!animate || reduced.matches || !previous) return;
+    if (!continueMotion || reduced.matches || !previous) return;
     const x = previous.left - targetLeft;
     const y = previous.top - targetTop;
     const sx = previous.width / targetWidth - 1;
     const sy = previous.height / targetHeight - 1;
     if (Math.abs(x) + Math.abs(y) + Math.abs(sx) + Math.abs(sy) < .1) return;
 
-    // Sample the same damped spring as the Glass preview, without adding a library.
+    // A short, underdamped spring overshoots by about 8.5%, then settles.
     // Only transform animates; sizing is assigned once at the destination.
     const frames = Array.from({ length: 41 }, (_, n) => {
       const t = n / 40;
-      const remaining = n === 40 ? 0 : Math.exp(-10 * t) * (Math.cos(8 * t) + 1.25 * Math.sin(8 * t));
+      const remaining = n === 40 ? 0 : Math.exp(-4.2 * t) * (Math.cos(5.35 * t) + (4.2 / 5.35) * Math.sin(5.35 * t));
       return { offset: t, transform: `translate(${x * remaining}px,${y * remaining}px) scale(${1 + sx * remaining},${1 + sy * remaining})` };
     });
-    animation = indicator.animate(frames, { duration: 300, easing: 'linear' });
+    animation = indicator.animate(frames, { duration: 280, easing: 'linear' });
   }
 
   // Reposition on font/layout changes, never with a per-frame measurement loop.
   const resize = new ResizeObserver(() => place(selected, false, true));
   resize.observe(tablist);
   tabs.forEach(tab => resize.observe(tab));
-  document.fonts.ready.then(() => place());
+  document.fonts.ready.then(() => place(selected, false, true));
   [mobile, reduced, forced].forEach(media => media.addEventListener('change', () => place()));
   return place;
 }
