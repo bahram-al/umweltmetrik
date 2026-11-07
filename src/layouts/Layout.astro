@@ -5,6 +5,7 @@ import '../styles/glass.css';
 import '../styles/sticky-header.css';
 import '../styles/mobile-navigation.css';
 import Brand from '../components/Brand.astro';
+import {contactConfig} from '../data/contact-config';
 import {href,label,type Lang,type Page} from '../data/site';
 interface Props {title:string;lang:Lang;page:Page;id?:string;hero?:boolean;}
 const {title,lang,page,id,hero=true}=Astro.props;
@@ -26,7 +27,7 @@ const other=lang==='de'?'en':'de';
 </head>
 <body class:list={[isHome?'home-page':'inner-page']}>
 <a class="skip-link" href="#main">{lang==='de'?'Zum Inhalt springen':'Skip to content'}</a>
-<aside class="preview-banner" aria-label={lang==='de'?'Hinweis zur Testversion':'Test version notice'}><strong>{lang==='de'?'Testversion · Website im Aufbau':'Test version · Website under development'}</strong><span>{lang==='de'?'Inhalte vorläufig. Rechtstexte noch unvollständig. Formular ohne Versand.':'Content is provisional. Legal and privacy notices are still incomplete. The form does not send.'}</span></aside>
+<aside class="preview-banner" aria-label={lang==='de'?'Hinweis zur Testversion':'Test version notice'}><strong>{lang==='de'?'Testversion · Website im Aufbau':'Test version · Website under development'}</strong><span>{lang==='de'?`Inhalte vorläufig. Rechtstexte noch unvollständig.${contactConfig.enabled?'':' Formular ohne Versand.'}`:`Content is provisional. Legal and privacy notices are still incomplete.${contactConfig.enabled?'':' The form does not send.'}`}</span></aside>
 <header class="site-header" id="header"><div class="header-inner">
 <a class="wordmark" href={href('home',lang)} aria-label={lang==='de'?'UmweltMetrik – Startseite':'UmweltMetrik – home'}><Brand markId="brand-header-cut" /></a>
 

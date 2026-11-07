@@ -1,5 +1,5 @@
 export const contactConfig = {
-  // Enable only after the upgraded Worker and both real mail deliveries have been verified.
-  enabled: false,
+  // Worker upgraded; both test emails delivered and Reply-To verified in Resend on 2026-11-07.
+  enabled: true,
   endpoint: 'https://umweltmetrik-contact.alibahramali.workers.dev',
 } as const;

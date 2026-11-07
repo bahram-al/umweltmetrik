@@ -1,4 +1,4 @@
-// Revised privacy notice supplied by the website owner; wording retained.
+// Owner-supplied notice; contact-form processing updated from deployed service and provider documentation.
 export const privacyNotice = {
   "title": "Datenschutzerklärung",
   "sections": [
@@ -40,10 +40,17 @@ export const privacyNotice = {
       "number": 4,
       "title": "Kontaktformular",
       "paragraphs": [
-        "Das auf der Website angezeigte Kontaktformular ist derzeit eine nicht für den Versand freigeschaltete Vorschau. Für Anfragen nutzen Sie bitte die E-Mail-Adresse info@umweltmetrik.de.",
-        "Bitte tragen Sie keine personenbezogenen oder vertraulichen Informationen in die Formularvorschau ein.",
-        "Vor einer Freischaltung des Formularversands werden diese Datenschutzhinweise um die tatsächliche Verarbeitung der Formulardaten ergänzt."
-      ]
+        "Wenn Sie das Kontaktformular absenden, verarbeiten wir Ihre E-Mail-Adresse und Nachricht sowie freiwillige Angaben zu Firma, Telefonnummer, Einsatzort und Leistungsbereich. Die Angaben werden über eine verschlüsselte Verbindung an einen Cloudflare Worker übermittelt und durch den Mailversanddienst Resend als interne Anfrage an info@umweltmetrik.de gesendet.",
+        "Zusätzlich versenden wir eine automatische Eingangsbestätigung an die angegebene E-Mail-Adresse. Sie enthält weder Ihre Nachricht noch die weiteren Formularangaben. Antworten auf unsere interne Benachrichtigung gehen an Ihre angegebene E-Mail-Adresse; Antworten auf die Eingangsbestätigung gehen an info@umweltmetrik.de. Das Formular meldet die Annahme durch den Maildienst, nicht den garantierten Eingang im Postfach.",
+        "Die Verarbeitung dient der Bearbeitung Ihrer Anfrage und der Eingangsbestätigung. Bei vertragsbezogenen Anfragen ist die Rechtsgrundlage Art. 6 Abs. 1 lit. b DSGVO, bei sonstigen Anfragen Art. 6 Abs. 1 lit. f DSGVO. Unser berechtigtes Interesse liegt in einer verlässlichen Bearbeitung und Rückmeldung. Die Angaben sind freiwillig; ohne E-Mail-Adresse und Nachricht ist eine Formularanfrage nicht möglich. Alternativ können Sie uns direkt per E-Mail kontaktieren.",
+        "Zur Abwehr von Missbrauch prüfen wir Eingaben, die Herkunft der Anfrage und ein für reguläre Besucher nicht sichtbares Kontrollfeld (Honeypot). Cloudflare verarbeitet dabei technisch die IP-Adresse und Verbindungsdaten. Der Worker begrenzt Anfragen je IP-Adresse und Empfänger sowie insgesamt und schützt durch eine Anfragekennung vor wiederholtem Versand. Rechtsgrundlage hierfür ist Art. 6 Abs. 1 lit. f DSGVO; unser berechtigtes Interesse ist der Schutz vor Spam, ungewollten Bestätigungen und mehrfacher Übermittlung.",
+        "Im Cloudflare Durable Object speichert unser Code ausschließlich SHA-256-Prüfwerte der IP-Adresse, E-Mail-Adresse und des Mailinhalts, eine zufällige Anfragekennung, Zähler, Zeitangaben und den Status der Übergabe an den Maildienst. Diese Prüfwerte sind pseudonymisierte Daten, keine garantierte Anonymisierung. Klartextadressen, IP-Adressen und Nachrichten werden dort durch unseren Code nicht dauerhaft gespeichert. Die Einträge laufen spätestens nach 24 Stunden ab; eine stündliche Bereinigung entfernt abgelaufene Einträge, sodass sie technisch bis zum nächsten Bereinigungslauf verbleiben können. Die Anfragekennung verbleibt im Browser nur im Arbeitsspeicher der geöffneten Seite. Unser Formular verwendet dafür keine Cookies und keinen dauerhaften Browserspeicher.",
+        "Die Worker-Aufrufprotokollierung ist für diesen Versanddienst deaktiviert. Cloudflare kann unabhängig davon eigene betriebliche und sicherheitsbezogene Daten nach seinen Datenschutzbedingungen verarbeiten. Für diese Anbieterprotokolle ist keine kontospezifische Löschfrist bestätigt. Cloudflare betreibt eine international verteilte Infrastruktur; eine ausschließlich europäische Verarbeitung ist für diesen Worker nicht konfiguriert.",
+        "Resend erhält die für den Versand erforderlichen Absender- und Empfängeradressen, Antwortadressen, Betreffzeilen und Mailinhalte sowie technische Zustellinformationen. Die Versanddomain ist verifiziert; die eingestellte Versandregion ist Irland (eu-west-1). Laut Resend steuert diese Auswahl den Versand, nicht den Speicherort: Mailinhalte und Zustellprotokolle werden in den USA gespeichert. Resend nennt für die Standardtarife Free, Pro und Scale eine Aufbewahrung von 30 Tagen; abweichende vertragliche Fristen sind hier nicht bestätigt. Für internationale Übermittlungen nennt Resend Standardvertragsklauseln in seinem DPA und das EU-US Data Privacy Framework. Ein kontospezifischer Vertragsstatus wird hiermit nicht behauptet.",
+        "Die Formularmails werden als reine Textnachrichten versendet. Es ist keine Tracking-Subdomain eingerichtet; für diese Transaktionsmails verwenden wir keine Öffnungs- oder Klickmessung und nehmen die Absender nicht in einen Newsletter auf. Die weitere Speicherung der internen Anfrage im E-Mail-Postfach und ihre Löschung richten sich nach dem Abschnitt „Kontaktaufnahme per E-Mail“; die technische Bereinigung des Workers löscht keine bereits versandten E-Mails.",
+        "Informationen der Dienstleister: https://www.cloudflare.com/privacypolicy/ und https://www.cloudflare.com/cloudflare-customer-dpa/ sowie https://resend.com/security/gdpr/ und https://resend.com/legal/dpa",
+        "[Vor Veröffentlichung ergänzen bzw. anhand der Kontounterlagen bestätigen: genaue Vertragsgesellschaften und Anschriften, anwendbare Auftragsverarbeitungs- und Übermittlungsvereinbarungen, kontospezifisch abweichende Anbieterfristen sowie Anbieter des empfangenden E-Mail-Postfachs.]"
+]
     },
     {
       "number": 5,
@@ -102,5 +109,5 @@ export const privacyNotice = {
       ]
     }
   ],
-  "updated": "Stand: 4. November 2026"
+  "updated": "Stand: 7. November 2026"
 } as const;

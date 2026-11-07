@@ -179,3 +179,23 @@ test('internal binding also rejects malformed/unvalidated payloads before dispat
   }
   assert.equal(calls.length,0);
 });
+
+test('provider fetch preserves the global receiver required by the Workers runtime', async () => {
+  const { gateway: existing, env } = setup();
+  const originalFetch = globalThis.fetch;
+  let gateway;
+  let calls = 0;
+  try {
+    globalThis.fetch = function () {
+      assert.equal(this, globalThis, 'Workers fetch rejects an incorrect receiver');
+      calls++;
+      return Promise.resolve(Response.json({ data: [{ id: 'internal' }, { id: 'acknowledgement' }] }));
+    };
+    gateway = new ContactGateway(existing.state, env);
+  } finally { globalThis.fetch = originalFetch; }
+  const response = await gateway.fetch(new Request('https://contact.internal/', {
+    method: 'POST', body: JSON.stringify({ data: input(), ipHash: 'a'.repeat(64) }),
+  }));
+  assert.equal(response.status, 200);
+  assert.equal(calls, 1);
+});

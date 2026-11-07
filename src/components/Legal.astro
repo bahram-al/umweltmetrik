@@ -10,7 +10,7 @@ const rightsStart=(text:string)=>/^(Auskunft|Berichtigung|Löschung|Einschränku
 ---
 {page==='privacy'?<section class="legal-page section-pad">
  <h1>{lang==='de'?privacyNotice.title:'Privacy notice'}</h1>
- <p class="legal-draft">{lang==='de'?'Entwurf: Die Angaben zum Verantwortlichen und zum E-Mail-Anbieter müssen noch vervollständigt werden.':'Draft: Details of the controller and email provider still need to be completed.'}</p>
+ <p class="legal-draft">{lang==='de'?'Entwurf: Die Angaben zum Verantwortlichen und zum E-Mail-Anbieter sowie die kontospezifischen Vertrags- und Anbieterangaben müssen noch vervollständigt bzw. bestätigt werden.':'Draft: Details of the controller and email provider, along with account-specific contractual and provider details, still need to be completed or confirmed.'}</p>
  {lang==='en'&&<p class="legal-language">The supplied privacy notice is currently available in German.</p>}
  <article class="legal-document" lang="de" aria-label="Datenschutzerklärung">
   {privacyNotice.sections.map(section=><section aria-labelledby={`privacy-${section.number}`}>

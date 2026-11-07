@@ -1,8 +1,17 @@
-# Contact mail service — deployment still required
+# Contact mail service
 
-The static frontend currently keeps `src/data/contact-config.ts` set to `enabled: false`. The previous live Worker sends only an internal notification and must not be used as the new two-mail service without upgrading it.
+The existing `umweltmetrik-contact` Worker was upgraded in the account serving `alibahramali.workers.dev` on 7 November 2026. The frontend is enabled after verifying delivery events and Reply-To for both test messages in Resend. The privacy notice describes the deployed processing and keeps the remaining operator, mailbox-provider and account-specific contractual information explicitly marked as incomplete.
 
-The existing account owner must deploy this Worker to `umweltmetrik-contact` in the Cloudflare account serving `alibahramali.workers.dev`. No new domain, DNS changes, SMTP password, browser cookies or frontend API key are required. Existing `RESEND_API_KEY` stays a Worker secret and must never be committed. Its sending domain must be verified in Resend for `info@umweltmetrik.de`.
+## Verified setup on 7 November 2026
+
+- Existing source/settings/version metadata were backed up outside the repository before deployment; the owner also saved the previous code and settings locally. No secret values belong in this repository or its outputs.
+- `CONTACT_GATEWAY` / `ContactGateway` uses a SQLite Durable Object with migration tag `contact-v2`. Existing `RESEND_API_KEY` remains a server-side secret. `/health` returns `contact-v2` and `configured: true` (configuration evidence only).
+- Resend shows the sending domain as verified, with sending region Ireland (`eu-west-1`). Its domain configuration offers tracking setup, with no custom tracking subdomain configured. Both messages are plain text without tracking pixels or redirected links. No DNS records or paid plans were changed.
+- The first real test failed before any provider request because Workers requires the correct receiver for the native `fetch` function. This was reproduced with workerd/Miniflare; binding fetch to `globalThis` fixed it. A regression test covers the receiver requirement. All 14 contact tests pass; a separate local workerd test with a simulated provider returned one batch call and HTTP 200.
+- The corrected test reused the original request UUID and provider idempotency key. Resend accepted one two-message batch at 12:25 UTC. The owner-provided Resend views showed **Delivered** for both the internal enquiry and acknowledgement, with the expected Reply-To in each message detail. This is provider delivery-event evidence, not a claim that a human read either message. No further real submissions are needed for frontend layout or interaction checks.
+- Resend's official GDPR documentation says the sending region does not set the storage location: email content and delivery logs are stored in the USA. Its stated standard retention for Free/Pro/Scale is 30 days. Account-specific contracts and mailbox retention remain owner follow-ups, explicitly marked in the privacy draft. See https://resend.com/security/gdpr/ and https://resend.com/legal/dpa.
+
+The following checklist also applies to future upgrades. Existing credentials must be preserved and any new real test recipients must be authorized.
 
 ## Deployment by the Cloudflare account owner
 
@@ -30,6 +39,6 @@ No automatic external deployment is configured in GitHub Actions. Frontend uploa
 
 `node --test cloudflare/worker.test.mjs` runs deterministic tests with fake provider responses and in-memory Durable Object storage. It sends no email and does not verify Cloudflare deployment, Resend credentials, DNS/domain verification or inbox delivery.
 
-Wrangler 4.157.0 `deploy --dry-run` compiled this Worker and recognized the Durable Object binding locally. This is packaging evidence, not an authenticated deployment or real Durable Object runtime test.
+Wrangler 4.157.0 `deploy --dry-run` checks packaging locally. An authenticated deployment and a real two-mail delivery test were also completed as recorded above. Node tests alone do not establish compatibility with native Workers APIs.
 
 References: [Cloudflare Durable Objects](https://developers.cloudflare.com/durable-objects/), [Resend batch API](https://resend.com/docs/api-reference/emails/send-batch-emails), [Resend idempotency](https://resend.com/docs/dashboard/emails/idempotency-keys).

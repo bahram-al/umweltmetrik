@@ -26,7 +26,9 @@ for(const [file,title] of [['impressum','Impressum'],['en/legal-notice','Legal n
 for(const file of ['datenschutz','en/privacy']){
  const html=fs.readFileSync('dist/'+file+'/index.html','utf8');
  assert.equal((html.match(/id="privacy-\d+"/g)||[]).length,10,'Ten privacy sections: '+file);
- for(const text of ['GitHub Pages','Vor Veröffentlichung ergänzen','4. November 2026','https://www.datenschutz-berlin.de/','mailto:info@umweltmetrik.de'])assert.ok(html.includes(text),'Privacy content retained: '+text+' in '+file);
+ for(const text of ['GitHub Pages','Vor Veröffentlichung ergänzen','7. November 2026','https://www.datenschutz-berlin.de/','mailto:info@umweltmetrik.de'])assert.ok(html.includes(text),'Privacy content retained: '+text+' in '+file);
+ for(const text of ['Cloudflare Worker','Resend','Eingangsbestätigung','Honeypot','24 Stunden','30 Tagen','USA','keine Öffnungs- oder Klickmessung'])assert.ok(html.includes(text),'Actual contact processing disclosed: '+text+' in '+file);
+ assert.ok(!html.includes('nicht für den Versand freigeschaltete Vorschau'),'Obsolete contact privacy text in '+file);
  assert.ok(!html.includes('STRATO'),'Obsolete hosting statement in '+file);
  assert.ok(html.includes('Entwurf:')||html.includes('Draft:'),'Incomplete privacy notice marked as draft: '+file);
 }

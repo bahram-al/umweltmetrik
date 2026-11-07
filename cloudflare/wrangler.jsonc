@@ -4,6 +4,7 @@
   "main": "worker.mjs",
   "compatibility_date": "2026-11-04",
   "workers_dev": true,
+  "preview_urls": false,
   "durable_objects": {
     "bindings": [{ "name": "CONTACT_GATEWAY", "class_name": "ContactGateway" }]
   },

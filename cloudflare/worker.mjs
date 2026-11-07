@@ -121,7 +121,7 @@ export default {
 // One Durable Object serializes the global budget, duplicate checks and recipient/IP limits.
 // It stores only hashes, counters and delivery state, never form content or raw addresses/IPs.
 export class ContactGateway {
-  constructor(state, env) { this.state = state; this.env = env; this.fetcher = globalThis.fetch; this.now = Date.now; }
+  constructor(state, env) { this.state = state; this.env = env; this.fetcher = globalThis.fetch.bind(globalThis); this.now = Date.now; }
 
   async fetch(request) {
     let raw;
