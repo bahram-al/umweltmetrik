@@ -76,16 +76,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 1280 × 853
 - SHA-256: 30452a8be5103a76d6e82843679c17d0630de25d5e8a4419cbac579569930bc1
 
-## Mineralische Haufwerke
+## Abfallprobenahme an Haufwerken
 
-- Datei: public/images/real-mineral-stockpiles.jpg
-- Urheber: distelAPPArath
-- Original: https://pixabay.com/photos/gravel-plant-open-pit-mining-2698868/
-- Lizenz laut Quelle: Pixabay Content License — https://pixabay.com/service/license-summary/
-- Herkunftsnachweis: Sony ILCE-6000; photograph published 2017-08-30.
-- Download: https://cdn.pixabay.com/photo/2017/08/30/22/50/kieswerk-2698868_1280.jpg
-- Maße: 1280 × 719
-- SHA-256: bf1c7ed60679e3b47badd098c53d6db48e0368f1936d186c8b42be5cd92c1549
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Abfallprobenahme vorgegeben.
+- Datei: public/images/waste-sampling-stockpiles-bfm.webp
+- Quelle: BFM Umwelt · bfm-umwelt.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Original und Download: https://www.bfm-umwelt.de/media/pages/seminare/sachkundelehrgang-laga-pn98/27222f9417-1759329991/seminare-pn98-1800x-q85.webp
+- Die höher aufgelöste Originaldatei wurde visuell mit dem Anhang verglichen und unverändert übernommen; nur responsiver CSS-Ausschnitt.
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Maße: 1800 × 853
+- SHA-256: d64b8d7aef704f0ad60df10914c3f27df3ed81c36ecdf8ced8e88bafe53e0592
 
 ## Probenahme im Oberflächenwasser
 

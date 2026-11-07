@@ -132,26 +132,26 @@
     "sha256": "30452a8be5103a76d6e82843679c17d0630de25d5e8a4419cbac579569930bc1"
   },
   "waste": {
-    "filename": "real-mineral-stockpiles.jpg",
-    "width": 1280,
-    "height": 719,
+    "filename": "waste-sampling-stockpiles-bfm.webp",
+    "width": 1800,
+    "height": 853,
     "title": {
-      "de": "Mineralische Haufwerke",
-      "en": "Mineral stockpiles"
+      "de": "Abfallprobenahme an Haufwerken",
+      "en": "Waste sampling from stockpiles"
     },
     "alt": {
-      "de": "Mineralische Haufwerke unter einer Förderanlage in einem Kieswerk",
-      "en": "Mineral stockpiles beneath conveyor belts at a gravel plant"
+      "de": "Haufwerke mit freigelegten Probenahmestellen und weißen Probeneimern vor einem Wald",
+      "en": "Stockpiles with exposed sampling sections and white sampling buckets in front of a forest"
     },
-    "author": "distelAPPArath",
-    "source": "Pixabay",
-    "sourceUrl": "https://pixabay.com/photos/gravel-plant-open-pit-mining-2698868/",
-    "license": "Pixabay Content License",
-    "licenseUrl": "https://pixabay.com/service/license-summary/",
-    "evidence": "Sony ILCE-6000; photograph published 2017-08-30.",
-    "downloadUrl": "https://cdn.pixabay.com/photo/2017/08/30/22/50/kieswerk-2698868_1280.jpg",
-    "position": "center",
-    "sha256": "bf1c7ed60679e3b47badd098c53d6db48e0368f1936d186c8b42be5cd92c1549"
+    "author": "Urheber nicht angegeben",
+    "source": "BFM Umwelt · bfm-umwelt.de",
+    "sourceUrl": "https://www.bfm-umwelt.de/media/pages/seminare/sachkundelehrgang-laga-pn98/27222f9417-1759329991/seminare-pn98-1800x-q85.webp",
+    "license": "Keine freie Lizenz angegeben",
+    "licenseUrl": "https://www.bfm-umwelt.de/media/pages/seminare/sachkundelehrgang-laga-pn98/27222f9417-1759329991/seminare-pn98-1800x-q85.webp",
+    "evidence": "Vom Auftraggeber am 07.11.2026 für Abfallprobenahme ausgewähltes Foto. Die Originaldatei unter dem angegebenen BFM-Link wurde visuell mit dem Anhang verglichen und byteidentisch übernommen; keine freie Lizenz oder namentliche Urheberschaft verifiziert.",
+    "downloadUrl": "https://www.bfm-umwelt.de/media/pages/seminare/sachkundelehrgang-laga-pn98/27222f9417-1759329991/seminare-pn98-1800x-q85.webp",
+    "position": "50% 60%",
+    "sha256": "d64b8d7aef704f0ad60df10914c3f27df3ed81c36ecdf8ced8e88bafe53e0592"
   },
   "surface": {
     "filename": "real-surface-water-sampling.jpg",
