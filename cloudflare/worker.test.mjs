@@ -49,7 +49,11 @@ test('valid request creates exactly two fixed-purpose mails without an Ansprechp
   assert.deepEqual(mails[1].to, [body.email]);
   assert.equal(mails[1].reply_to, 'info@umweltmetrik.de');
   assert.ok(!mails[1].text.includes(body.message));
-  assert.ok(mails.every(mail => !mail.html && mail.from === 'UmweltMetrik <info@umweltmetrik.de>'));
+  assert.ok(mails.every(mail => mail.html.includes('umweltmetrik-mail-logo.png') && mail.text && mail.from === 'UmweltMetrik <info@umweltmetrik.de>'));
+  assert.ok(mails[0].html.includes('&lt;script&gt;user content&lt;/script&gt;'));
+  assert.ok(!mails[0].html.includes('<script>'));
+  assert.ok(!mails[1].html.includes('user content'));
+  assert.ok(mails.every(mail => !mail.html.includes('visitor@example.com?') && !mail.html.includes('<script')));
   const persisted = JSON.stringify(await storage.get('ledger'));
   for (const privateValue of [body.email, body.message, '192.0.2.1']) assert.ok(!persisted.includes(privateValue));
 });
@@ -162,13 +166,15 @@ test('privacy metadata expires after 24 hours; health reports configuration, not
   await gateway.alarm();
   assert.equal(values.size, 0);
   const health = await worker.fetch(new Request('https://worker.example/health'), env);
-  assert.deepEqual(await health.json(), { version: 'contact-v2', configured: true });
+  assert.deepEqual(await health.json(), { version: 'contact-v3-branded', configured: true });
 });
 
 test('English acknowledgement stays fixed and does not reflect attacker-controlled content', () => {
   const mails = messages(validate(input({ lang: 'en', company: '<a href="https://attacker.example">click</a>', message: 'https://attacker.example' })));
   assert.ok(mails[1].subject.startsWith('We received'));
   assert.ok(!mails[1].text.includes('attacker.example'));
+  assert.ok(!mails[1].html.includes('attacker.example'));
+  assert.ok(mails[1].html.includes('Your enquiry has arrived.'));
 });
 
 test('internal binding also rejects malformed/unvalidated payloads before dispatch', async () => {
@@ -198,4 +204,18 @@ test('provider fetch preserves the global receiver required by the Workers runti
   }));
   assert.equal(response.status, 200);
   assert.equal(calls, 1);
+});
+
+
+test('HTML escapes every submitted field and logo has a fixed URL without recipient tracking', () => {
+  const mails = messages(validate(input({ company: '<img src=x onerror="bad">', place: 'A & B', phone: "'test'", message: '<a href="https://attacker.example">bad</a>\nsecond line' })));
+  assert.ok(mails[0].html.includes('&lt;img src=x onerror=&quot;bad&quot;&gt;'));
+  assert.ok(mails[0].html.includes('A &amp; B'));
+  assert.ok(mails[0].html.includes('&#39;test&#39;'));
+  assert.ok(mails[0].html.includes('&lt;/a&gt;<br>second line'));
+  for (const mail of mails) {
+    assert.equal((mail.html.match(/<img /g) || []).length, 1);
+    assert.ok(mail.html.includes('src="https://umweltmetrik.de/images/umweltmetrik-mail-logo.png"'));
+    assert.ok(!mail.html.includes('href="https://attacker.example"'));
+  }
 });

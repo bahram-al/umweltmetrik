@@ -66,3 +66,15 @@
  .contact-redesign .contact-form{border:1px solid CanvasText}
  .contact-redesign :is(input,select,textarea){border:1px solid CanvasText}
 }
+
+.contact-response{min-width:0}
+.contact-redesign .contact-form[hidden]{display:none}
+.contact-redesign .contact-success{padding-block:clamp(36px,5vw,64px)}
+.contact-success-icon{display:grid;place-items:center;width:56px;height:56px;border-radius:50%;background:var(--accent);color:var(--petrol);margin-bottom:30px}
+.contact-success-icon svg{width:32px;height:32px}
+.contact-success-eyebrow{font-size:14px;font-weight:500;color:var(--muted);margin:0 0 12px}
+.contact-redesign .contact-success h2{font-size:clamp(28px,3vw,38px);line-height:1.15;letter-spacing:-.03em;margin:0 0 20px;font-weight:500}
+.contact-success>p:not(.contact-success-eyebrow){font-size:18px;line-height:1.65;max-width:43ch;margin:0}
+.contact-redesign .contact-success>.contact-success-note{font-size:15px;color:var(--muted);margin-top:22px}
+.contact-success:focus{outline:none}
+@media(forced-colors:active){.contact-success-icon{border:1px solid CanvasText}}

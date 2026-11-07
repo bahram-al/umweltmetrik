@@ -1,5 +1,7 @@
+import { acknowledgementHTML, enquiryHTML } from './email-template.mjs';
+
 const ORIGINS = new Set(['https://umweltmetrik.de', 'https://www.umweltmetrik.de']);
-const VERSION = 'contact-v2';
+const VERSION = 'contact-v3-branded';
 const MAX_BODY = 20000;
 const DAY = 86400000;
 const TTL = DAY;
@@ -71,16 +73,19 @@ export function validate(input) {
 
 export function messages(data) {
   const english = data.lang === 'en';
-  // Plain text prevents HTML injection. The acknowledgement contains no submitted content or links.
+  // HTML escapes all submitted content; plain-text alternatives remain available.
+  // The acknowledgement never reflects submitted content or user-supplied links.
   return [
     {
       from: FROM, to: [RECIPIENT], reply_to: data.email,
       subject: `Neue Website-Anfrage${data.service ? ' – ' + SERVICES[data.service] : ''}`,
+      html: enquiryHTML(data, SERVICES[data.service]),
       text: `Neue Anfrage über umweltmetrik.de\n\nE-Mail: ${data.email}\nFirma: ${data.company || '-'}\nTelefon: ${data.phone || '-'}\nEinsatzort / PLZ: ${data.place || '-'}\nLeistungsbereich: ${SERVICES[data.service]}\n\nNachricht:\n${data.message}`,
     },
     {
       from: FROM, to: [data.email], reply_to: RECIPIENT,
       subject: english ? 'We received your enquiry – UmweltMetrik' : 'Ihre Anfrage ist eingegangen – UmweltMetrik',
+      html: acknowledgementHTML(data.lang),
       text: english
         ? 'Thank you for contacting UmweltMetrik. Your enquiry has been received and will be reviewed.\n\nThis is an automated acknowledgement, not a quotation or confirmation of an appointment.\n\nIf you did not submit an enquiry, you can ignore this email.\n\nUmweltMetrik\ninfo@umweltmetrik.de'
         : 'Vielen Dank für Ihre Nachricht an UmweltMetrik. Ihre Anfrage ist eingegangen und wird geprüft.\n\nDies ist eine automatische Eingangsbestätigung, kein Angebot und keine Terminbestätigung.\n\nFalls Sie keine Anfrage gestellt haben, können Sie diese Nachricht ignorieren.\n\nUmweltMetrik\ninfo@umweltmetrik.de',

@@ -29,6 +29,7 @@ const submit=read(/<button[^>]*>([\s\S]*?)<\/button>/).replace(/[↗→←]/g,''
    <p class="contact-lead" set:html={lead} />
    <aside class="contact-direct" set:html={direct} />
   </div>
+  <div class="contact-response">
   <form class="contact-form" id="contact-form" data-contact-form data-contact-enabled={String(contactConfig.enabled)} data-contact-endpoint={contactConfig.endpoint} aria-label={lang==='de'?'Kontaktformular':'Contact form'}>
    <fieldset class="contact-group">
     <legend set:html={groups[0]} />
@@ -48,5 +49,13 @@ const submit=read(/<button[^>]*>([\s\S]*?)<\/button>/).replace(/[↗→←]/g,''
    <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
    <p class="form-note">{note} <a href={lang==='de'?'/datenschutz/':'/en/privacy/'}>{lang==='de'?'Datenschutzerklärung':'Privacy notice'}</a></p>
   </form>
+  <section class="contact-form contact-success" data-contact-success hidden tabindex="-1" aria-labelledby="contact-success-title" role="status">
+   <span class="contact-success-icon" aria-hidden="true"><svg viewBox="0 0 32 32" fill="none"><path d="m8 16 5 5L24 10" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+   <p class="contact-success-eyebrow">{lang==='de'?'Vielen Dank für Ihre Nachricht':'Thank you for getting in touch'}</p>
+   <h2 id="contact-success-title">{lang==='de'?'Ihre Anfrage wurde gesendet.':'Your enquiry has been sent.'}</h2>
+   <p>{lang==='de'?'Wir haben Ihre Nachricht erhalten und melden uns bei Ihnen. Eine automatische Eingangsbestätigung ist per E-Mail unterwegs.':'We have received your message and will get back to you. An automated acknowledgement is on its way by email.'}</p>
+   <p class="contact-success-note">{lang==='de'?'Bitte prüfen Sie gegebenenfalls auch Ihren Spam-Ordner.':'Please also check your spam folder if needed.'}</p>
+  </section>
+  </div>
  </div>
 </section>
