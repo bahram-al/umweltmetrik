@@ -100,16 +100,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 655 × 715
 - SHA-256: 791c85cd6d2daaacb8130c6dda088f187b428830089ef904cfac9591321815e9
 
-## Sensoren einer Multiparametersonde
+## Feldmesstechnik und Vor-Ort-Parameter
 
-- Datei: public/images/real-water-quality-sonde.jpg
-- Urheber: Sarah Mahanic / USGS
-- Original: https://www.usgs.gov/media/images/water-quality-sondejpg
-- Lizenz laut Quelle: Public Domain (USGS) — https://www.usgs.gov/media/images/water-quality-sondejpg
-- Herkunftsnachweis: USGS photograph published approximately May 2022; instrument and photographer identified.
-- Download: https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/water%20quality%20sonde.jpg
-- Maße: 837 × 872
-- SHA-256: 092d131e3ddc729d969fd03348c2207720dc0a8787f4b12a9ae60399ad70e095
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Feldtechnik und Parameter vorgegeben.
+- Datei: public/images/field-measurement-equipment-lanuk.jpg
+- Quelle: LANUK NRW · lanuk.nrw.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Vom Auftraggeber benannter Quellenlink: https://www.lanuk.nrw.de/fileadmin/_processed_/4/8/csm_Messstrecken_IMG_20170620_102050_51ca82c102.jpg
+- Verwendet wurde die höher aufgelöste angehängte JPEG-Datei des Auftraggebers, unverändert; nur responsiver CSS-Ausschnitt.
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Maße: 1280 × 1280
+- SHA-256: d4c73058ed8e9e784c9210860f357079a763454a3570fad228820302c5005244
 
 ## Zusätzlich geprüfte Quellen
 

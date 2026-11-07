@@ -176,25 +176,25 @@
     "sha256": "791c85cd6d2daaacb8130c6dda088f187b428830089ef904cfac9591321815e9"
   },
   "field": {
-    "filename": "real-water-quality-sonde.jpg",
-    "width": 837,
-    "height": 872,
+    "filename": "field-measurement-equipment-lanuk.jpg",
+    "width": 1280,
+    "height": 1280,
     "title": {
-      "de": "Sensoren einer Multiparametersonde",
-      "en": "Multiparameter sonde sensors"
+      "de": "Feldmesstechnik und Vor-Ort-Parameter",
+      "en": "Field equipment and on-site parameters"
     },
     "alt": {
-      "de": "Nahaufnahme der einzelnen Sensoren einer Wasserqualitätssonde in einer behandschuhten Hand",
-      "en": "Close-up of water-quality sonde sensors held in a gloved hand"
+      "de": "Messgeräte, Sensoren, Durchflusszelle und Schlauchleitungen in einem Messfahrzeug",
+      "en": "Measuring instruments, sensors, a flow-through cell and tubing inside a field vehicle"
     },
-    "author": "Sarah Mahanic / USGS",
-    "source": "U.S. Geological Survey",
-    "sourceUrl": "https://www.usgs.gov/media/images/water-quality-sondejpg",
-    "license": "Public Domain (USGS)",
-    "licenseUrl": "https://www.usgs.gov/media/images/water-quality-sondejpg",
-    "evidence": "USGS photograph published approximately May 2022; instrument and photographer identified.",
-    "downloadUrl": "https://d9-wret.s3.us-west-2.amazonaws.com/assets/palladium/production/s3fs-public/media/images/water%20quality%20sonde.jpg",
-    "position": "50% 40%",
-    "sha256": "092d131e3ddc729d969fd03348c2207720dc0a8787f4b12a9ae60399ad70e095"
+    "author": "Urheber nicht angegeben",
+    "source": "LANUK NRW · lanuk.nrw.de",
+    "sourceUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/4/8/csm_Messstrecken_IMG_20170620_102050_51ca82c102.jpg",
+    "license": "Keine freie Lizenz angegeben",
+    "licenseUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/4/8/csm_Messstrecken_IMG_20170620_102050_51ca82c102.jpg",
+    "evidence": "Vom Auftraggeber am 07.11.2026 für Feldtechnik und Parameter bereitgestelltes Foto und benannter LANUK-Quellenlink. Das verlinkte Motiv wurde visuell verglichen; verwendet wurde die höher aufgelöste angehängte JPEG-Datei byteidentisch. Keine freie Lizenz oder namentliche Urheberschaft verifiziert.",
+    "downloadUrl": "https://www.lanuk.nrw.de/fileadmin/_processed_/4/8/csm_Messstrecken_IMG_20170620_102050_51ca82c102.jpg",
+    "position": "50% 62%",
+    "sha256": "d4c73058ed8e9e784c9210860f357079a763454a3570fad228820302c5005244"
   }
 }
