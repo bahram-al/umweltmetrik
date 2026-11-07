@@ -22,26 +22,26 @@
     "sha256": "5fc936d714bb29c81973d4b6a5de89815a4dccc68f453d7ffb2f04b64a160b20"
   },
   "drinking": {
-    "filename": "real-water-sample-laboratory.jpg",
-    "width": 1600,
-    "height": 1065,
+    "filename": "drinking-water-sampling-haustechnikdialog.jpg",
+    "width": 600,
+    "height": 453,
     "title": {
-      "de": "Untersuchung einer Wasserprobe",
-      "en": "Water sample inspection"
+      "de": "Trinkwasserprobenahme an einer Entnahmestelle",
+      "en": "Drinking-water sampling at a sampling point"
     },
     "alt": {
-      "de": "Eine Wissenschaftlerin der US-Umweltbehörde EPA prüft eine Wasserprobe im Labor",
-      "en": "An EPA scientist inspects a water sample in a laboratory"
+      "de": "Eine Trinkwasserprobe wird an einer Armatur unter isolierten Rohrleitungen in eine Probenflasche gefüllt",
+      "en": "A drinking-water sample is collected in a sample bottle from a valve beneath insulated pipes"
     },
-    "author": "Eric Vance / U.S. EPA",
-    "source": "Wikimedia Commons",
-    "sourceUrl": "https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg",
-    "license": "Public Domain (U.S. EPA)",
-    "licenseUrl": "https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg",
-    "evidence": "EPA photograph dated 2014-09-10; Flickr government-work license reviewed by Commons in 2018.",
-    "downloadUrl": "https://upload.wikimedia.org/wikipedia/commons/2/25/A_scientist_inspects_a_water_sample._%2815011059180%29.jpg",
-    "position": "50% 45%",
-    "sha256": "e7caed1bc52a2fe0b149df13451f174527c23ffc764408a8282a89e0a71d1505"
+    "author": "Urheber nicht angegeben",
+    "source": "HaustechnikDialog · haustechnikdialog.de",
+    "sourceUrl": "https://www.haustechnikdialog.de/SHKwissen/Images/Trinkwasser-Probenahme-1.jpg",
+    "license": "Keine freie Lizenz angegeben",
+    "licenseUrl": "https://www.haustechnikdialog.de/SHKwissen/Images/Trinkwasser-Probenahme-1.jpg",
+    "evidence": "Vom Auftraggeber am 07.11.2026 für Trinkwasser ausgewähltes Foto. Die Originaldatei unter dem angegebenen HaustechnikDialog-Link wurde visuell mit dem Anhang verglichen und byteidentisch übernommen; keine freie Lizenz oder namentliche Urheberschaft verifiziert.",
+    "downloadUrl": "https://www.haustechnikdialog.de/SHKwissen/Images/Trinkwasser-Probenahme-1.jpg",
+    "position": "50% 55%",
+    "sha256": "ac4d1b4a15a5e5e8934fd3d72e5b55ce8558803e4eb3266b3b0c642c5db98ea7"
   },
   "groundwater": {
     "filename": "groundwater-monitoring-agus.jpg",

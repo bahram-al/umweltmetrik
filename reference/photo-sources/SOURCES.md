@@ -19,16 +19,17 @@ Die sichtbaren Bildquellenseiten unter /bildquellen/ und /en/image-credits/ nenn
 - Maße: 2400 × 1600
 - SHA-256: 5fc936d714bb29c81973d4b6a5de89815a4dccc68f453d7ffb2f04b64a160b20
 
-## Untersuchung einer Wasserprobe
+## Trinkwasserprobenahme an einer Entnahmestelle
 
-- Datei: public/images/real-water-sample-laboratory.jpg
-- Urheber: Eric Vance / U.S. EPA
-- Original: https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg
-- Lizenz laut Quelle: Public Domain (U.S. EPA) — https://commons.wikimedia.org/wiki/File:A_scientist_inspects_a_water_sample._(15011059180).jpg
-- Herkunftsnachweis: EPA photograph dated 2014-09-10; Flickr government-work license reviewed by Commons in 2018.
-- Download: https://upload.wikimedia.org/wikipedia/commons/2/25/A_scientist_inspects_a_water_sample._%2815011059180%29.jpg
-- Maße: 1600 × 1065
-- SHA-256: e7caed1bc52a2fe0b149df13451f174527c23ffc764408a8282a89e0a71d1505
+- Aktualisiert: 07.11.2026, ausdrücklich vom Auftraggeber als Ersatz für Trinkwasser vorgegeben.
+- Datei: public/images/drinking-water-sampling-haustechnikdialog.jpg
+- Quelle: HaustechnikDialog · haustechnikdialog.de
+- Urheber: nicht angegeben; kein namentlicher Urheber verifiziert.
+- Original und Download: https://www.haustechnikdialog.de/SHKwissen/Images/Trinkwasser-Probenahme-1.jpg
+- Originaldatei unverändert übernommen; nur responsiver CSS-Ausschnitt.
+- Lizenz: keine freie Lizenz angegeben; aus dem Quellenlink wird keine Nutzungserlaubnis abgeleitet.
+- Maße: 600 × 453
+- SHA-256: ac4d1b4a15a5e5e8934fd3d72e5b55ce8558803e4eb3266b3b0c642c5db98ea7
 
 ## Grundwassermessstelle im Feld
 
