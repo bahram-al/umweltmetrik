@@ -34,9 +34,9 @@ for(const lang of ['de','en']){
   results.push('Full technical content retained: '+lang+'/'+id);
  }
  const homepage=fs.readFileSync(prefix+'index.html','utf8');
- assert.ok(!/<img\b/i.test(homepage),'Homepage uses no photographs: '+lang);
+ assert.equal((homepage.match(/<img\b/gi)||[]).length,1,'Only the homepage hero photograph remains: '+lang);
  assert.equal((homepage.match(/class="photo home-image-placeholder"/g)||[]).length,5,'All five workflow images replaced: '+lang);
- assert.ok(homepage.includes('hero-image-placeholder'),'Hero photograph replaced: '+lang);
+ assert.ok(homepage.includes('class="landscape-image"')&&homepage.includes('/images/river-landscape.jpg'),'Original hero photograph retained: '+lang);
  const quality=fs.readFileSync(prefix+(lang==='de'?'qualitaet/':'quality/')+'index.html','utf8');
  for(const group of qualitySources)for(const entry of group.entries){
   assert.ok(htmlText(quality).includes(entry.title),'Named quality reference present: '+entry.title+'/'+lang);
