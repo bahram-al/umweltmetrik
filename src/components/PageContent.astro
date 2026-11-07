@@ -22,5 +22,5 @@ const mapLegacy=(html:string)=>html.replace(/[↗→←]/g,'').replace(/href="#\
 {page==='about'&&<section class="about-photo-band section-pad"><figure class="about-theme-photo"><Photo id="soil" lang={lang} priority /><figcaption><a href={href('credits',lang)+'#foto-soil'}>{lang==='de'?'Themenfoto: Bodenprobenahme':'Illustrative photograph: soil sampling'} · {photos.soil.source}</a></figcaption></figure><p>{lang==='de'?'Praxisnah im Feld. Sorgfältig bei jedem Schritt.':'Practical in the field. Careful at every step.'}</p></section>}
 <div class:list={['legacy-content','section-pad',`${page}-page`]} set:html={mapLegacy(originalPages[lang][page==='about'?'about':page==='labs'?'labs':'quality'])} />
 {page==='about'&&<section class="approach-notes section-pad"><h2>{i.whyTitle}</h2><dl class="scope-list">{i.whyItems.map(q=><div><dt>{q[1]}</dt><dd>{q[2]}</dd></div>)}</dl><h2>{i.soilTitle}</h2><p>{i.soilText}</p><ul>{i.soilPoints.map(q=><li>{q}</li>)}</ul></section>}
-{page==='labs'&&<section class="laboratory-image section-pad"><Photo id="field" lang={lang} /></section>}
+{page==='labs'&&<section class="laboratory-image section-pad"><div class="photo home-image-placeholder"><span>{lang==='de'?'Platzhalter':'Image placeholder'}</span></div></section>}
 </>}

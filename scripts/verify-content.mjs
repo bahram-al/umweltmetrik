@@ -42,6 +42,8 @@ for(const lang of ['de','en']){
   assert.ok(htmlText(quality).includes(entry.title),'Named quality reference present: '+entry.title+'/'+lang);
   for(const link of entry.links)assert.ok(quality.includes(link.url),'Official source linked: '+entry.title+'/'+lang);
  }
+ const laboratories=fs.readFileSync(prefix+(lang==='de'?'labore/':'laboratories/')+'index.html','utf8');
+ assert.ok(!/<img\b/i.test(laboratories)&&laboratories.includes('home-image-placeholder'),'Laboratories photograph replaced by placeholder: '+lang);
  const contact=htmlText(fs.readFileSync(prefix+(lang==='de'?'kontakt/':'contact/')+'index.html','utf8'));
  // Validate each original content block independently so accessible field reordering is allowed.
  for(const block of old[lang].contact.matchAll(/<(h[12]|p|label|option|button)\b[^>]*>([\s\S]*?)<\/\1>/g)){
