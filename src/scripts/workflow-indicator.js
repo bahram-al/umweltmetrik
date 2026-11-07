@@ -52,7 +52,7 @@ export function createWorkflowIndicator(tablist, tabs, reduced, mobile) {
       const remaining = n === 40 ? 0 : Math.exp(-4.2 * t) * (Math.cos(5.35 * t) + (4.2 / 5.35) * Math.sin(5.35 * t));
       return { offset: t, transform: `translate(${x * remaining}px,${y * remaining}px) scale(${1 + sx * remaining},${1 + sy * remaining})` };
     });
-    animation = indicator.animate(frames, { duration: 280, easing: 'linear' });
+    animation = indicator.animate(frames, { duration: 420, easing: 'linear' });
   }
 
   // Reposition on font/layout changes, never with a per-frame measurement loop.
