@@ -6,4 +6,4 @@ const {id,lang,priority=false,class:className=''}=Astro.props;
 const photo=photos[id as keyof typeof photos];
 if(!photo) throw new Error(`Unknown photograph: ${id}`);
 ---
-<div class:list={['photo',className]}><img src={`/images/${photo.filename}`} alt={photo.alt[lang]} width={photo.width} height={photo.height} style={`object-position:${photo.position}`} loading={priority?'eager':'lazy'} decoding="async" fetchpriority={priority?'high':'auto'} /></div>
+<div class:list={['photo',className]}><img src={`/images/${photo.filename}`} alt={photo.alt[lang]} width={photo.width} height={photo.height} style={`object-position:${photo.position};object-fit:${'fit' in photo?photo.fit:'cover'}`} loading={priority?'eager':'lazy'} decoding="async" fetchpriority={priority?'high':'auto'} /></div>

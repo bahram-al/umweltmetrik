@@ -18,10 +18,10 @@ assert.equal(Object.keys(photos).length,9);
 for(const [id,photo] of Object.entries(photos)){
  for(const folder of ['public','dist'])assert.equal(crypto.createHash('sha256').update(fs.readFileSync(folder+'/images/'+photo.filename)).digest('hex'),photo.sha256);
  assert.ok(!Object.values(hashes.assets).includes(photo.sha256),'Replacement differs from AI originals');
- for(const key of ['author','sourceUrl','license','licenseUrl','evidence'])assert.ok(photo[key],'Provenance present: '+id+'/'+key);
+ for(const key of ['author','license','evidence'])assert.ok(photo[key],'Provenance present: '+id+'/'+key);
  for(const lang of ['de','en']){
   const html=fs.readFileSync(lang==='de'?'dist/bildquellen/index.html':'dist/en/image-credits/index.html','utf8');
-  assert.ok(html.includes(photo.filename)&&html.includes(photo.sourceUrl.replaceAll('&','&amp;'))&&htmlText(html).includes(photo.author),'Credit for '+id+'/'+lang);
+  assert.ok(html.includes(photo.filename)&&(!photo.sourceUrl||html.includes(photo.sourceUrl.replaceAll('&','&amp;')))&&htmlText(html).includes(photo.author),'Credit for '+id+'/'+lang);
  }
  results.push('Real photograph and bilingual source credit verified: '+id);
 }

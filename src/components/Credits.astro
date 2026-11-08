@@ -15,7 +15,7 @@ const {lang}=Astro.props as {lang:Lang};
  {Object.entries(photos).map(([id,photo])=><li id={`foto-${id}`}>
   <Photo id={id} lang={lang} />
   <div><h2>{photo.title[lang]}</h2><p>{photo.author} · {photo.source}</p>
-   <p class="credit-links"><a href={photo.sourceUrl}>{lang==='de'?'Originalfoto':'Original photograph'}</a><a href={photo.licenseUrl}>{photo.license}</a></p>
+   <p class="credit-links">{photo.sourceUrl&&<a href={photo.sourceUrl}>{lang==='de'?'Originalfoto':'Original photograph'}</a>}{photo.licenseUrl?<a href={photo.licenseUrl}>{photo.license}</a>:<span>{photo.license}</span>}</p>
    <p class="credit-note">{lang==='de'?'Bilddatei unverändert übernommen; der sichtbare Ausschnitt variiert je nach Bildschirmgröße.':'Image file used unchanged; the visible crop varies with screen size.'}{id==='cooling'&&(lang==='de'?' Titel des Originals: „Closed circuit cooling towers“. © Entryadmn. Das Foto bleibt unter CC BY-SA 4.0 verfügbar.':' Original title: “Closed circuit cooling towers”. © Entryadmn. The photograph remains available under CC BY-SA 4.0.')}</p>
   </div>
  </li>)}

@@ -110,26 +110,27 @@
     "sha256": "05f6fbfb82d4ab3f3eccba6d7a2505ca9e17115177dfaa5695599424cc0c2574"
   },
   "wastewater": {
-    "filename": "real-wastewater-treatment-plant.jpg",
-    "width": 1280,
-    "height": 853,
+    "filename": "wastewater-sampling-supplied.jpg",
+    "width": 391,
+    "height": 526,
     "title": {
-      "de": "Kläranlage in Kielce",
-      "en": "Wastewater treatment plant in Kielce"
+      "de": "Abwasserprobenahme",
+      "en": "Wastewater sampling"
     },
     "alt": {
-      "de": "Luftaufnahme einer Kläranlage mit runden und rechteckigen Behandlungsbecken in Kielce, Polen",
-      "en": "Aerial photograph of a wastewater treatment plant with circular and rectangular basins in Kielce, Poland"
+      "de": "Abfüllen einer Wasserprobe aus einer Probenahmeeinrichtung in eine Probenflasche mit Schutzhandschuhen",
+      "en": "Gloved hands filling a sample bottle from a water sampling device"
     },
-    "author": "Michal Jarmoluk (jarmoluk)",
-    "source": "Pixabay",
-    "sourceUrl": "https://pixabay.com/photos/treatment-plant-wastewater-2826986/",
-    "license": "Pixabay Content License",
-    "licenseUrl": "https://pixabay.com/service/license-summary/",
-    "evidence": "Published 2017-10-07; also credited by USGS Water Science School to Michal Jarmoluk.",
-    "downloadUrl": "https://cdn.pixabay.com/photo/2017/10/07/16/26/treatment-plant-wastewater-2826986_1280.jpg",
-    "position": "50% 65%",
-    "sha256": "30452a8be5103a76d6e82843679c17d0630de25d5e8a4419cbac579569930bc1"
+    "author": "Urheber nicht angegeben",
+    "source": "Vom Auftraggeber bereitgestelltes Foto",
+    "sourceUrl": null,
+    "license": "Keine Lizenzangabe übermittelt",
+    "licenseUrl": null,
+    "evidence": "Vom Auftraggeber am 08.11.2026 für die Abwasserprobenahme bereitgestellte JPEG-Datei, byteidentisch übernommen. Kein Quellenlink oder Urheber übermittelt.",
+    "downloadUrl": null,
+    "position": "center",
+    "fit": "contain",
+    "sha256": "60c9a9c5de735a9670b7ccb9bf25842ea933c9eb8f73d0b9a5611f9e64d61d60"
   },
   "waste": {
     "filename": "waste-sampling-stockpiles-bfm.webp",
